@@ -131,7 +131,7 @@ def load_graph(path="data/openalex_graph.gpickle"):
 if __name__ == "__main__":
     papers = fetch_papers_by_topic(
         topic="diabetes",
-        max_papers=5000,
+        max_papers=50000,
         email="roni.brinn@gmail.com"
     )
     G = build_citation_graph(papers)

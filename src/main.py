@@ -14,11 +14,11 @@ from stability import compute_stability_scores
 from rif import compute_filtered_rif, compute_weighted_rif, print_rif_comparison
 
 # Configuration
-N_ITERATIONS = 5      # Number of perturbation iterations per year
+N_ITERATIONS = 500      # Number of perturbation iterations per year
 FRACTION = 0.3        # Fraction of edges to remove per iteration
 THRESHOLD = 0.5       # Stability threshold for Filtered RIF
-YEAR_START = 2004     # First target year
-YEAR_END = 2015       # Last target year
+YEAR_START = 2000     # First target year
+YEAR_END = 2024       # Last target year
 
 
 def build_pyg_data(G):
