@@ -64,7 +64,8 @@ if __name__ == "__main__":
     # Load data
     data, G = load_pubmed()
     G = assign_synthetic_metadata(G)
-    model = build_model(num_features=data.num_node_features)
+    from train import load_trained_model
+    model = load_trained_model(num_features=data.num_node_features)
 
     all_results = []
 
