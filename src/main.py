@@ -4,13 +4,14 @@ main.py - Main pipeline for RIF evaluation across multiple years.
 
 import torch
 import pandas as pd
+import networkx as nx
 from torch_geometric.data import Data
 from openalex_loader import load_graph
 from graph_builder import compute_baseline_if
 from model import build_model
 from perturbation import perturb_edges, compute_reconstruction_scores, track_reconstruction
 from stability import compute_stability_scores
-from rif import compute_filtered_rif, compute_weighted_rif, print_rif_comparison
+from rif import compute_filtered_rif, compute_weighted_rif, print_rif_comparisonson
 
 # Configuration
 N_ITERATIONS = 5      # Number of perturbation iterations per year
@@ -25,6 +26,8 @@ def build_pyg_data(G):
     Converts a NetworkX graph to a PyTorch Geometric Data object.
     Uses node degree as the single feature.
     """
+    # Remap nodes to consecutive integers
+    G = nx.convert_node_labels_to_integers(G)
     num_nodes = G.number_of_nodes()
 
     # Use degree as node feature
@@ -40,7 +43,7 @@ def build_pyg_data(G):
     else:
         edge_index = torch.tensor(edges, dtype=torch.long).t().contiguous()
 
-    return Data(x=degrees, edge_index=edge_index, num_nodes=num_nodes)
+    return Data(x=degrees, edge_index=edge_index, num_nodes=num_nodes), G
 
 
 def run_pipeline(data, G, target_year, model):
@@ -87,7 +90,7 @@ def save_results(results, path="results/rif_results_openalex.csv"):
 if __name__ == "__main__":
     # Load OpenAlex graph
     G = load_graph()
-    data = build_pyg_data(G)
+    data, G = build_pyg_data(G)
     model = build_model(num_features=1)
 
     all_results = []
