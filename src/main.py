@@ -4,8 +4,9 @@ main.py - Main pipeline for RIF evaluation across multiple years.
 
 import torch
 import pandas as pd
-from data_loader import load_pubmed
-from graph_builder import assign_synthetic_metadata, compute_baseline_if
+from torch_geometric.data import Data
+from openalex_loader import load_graph
+from graph_builder import compute_baseline_if
 from model import build_model
 from perturbation import perturb_edges, compute_reconstruction_scores, track_reconstruction
 from stability import compute_stability_scores
@@ -16,7 +17,30 @@ N_ITERATIONS = 5      # Number of perturbation iterations per year
 FRACTION = 0.3        # Fraction of edges to remove per iteration
 THRESHOLD = 0.5       # Stability threshold for Filtered RIF
 YEAR_START = 2004     # First target year
-YEAR_END = 2010       # Last target year
+YEAR_END = 2015       # Last target year
+
+
+def build_pyg_data(G):
+    """
+    Converts a NetworkX graph to a PyTorch Geometric Data object.
+    Uses node degree as the single feature.
+    """
+    num_nodes = G.number_of_nodes()
+
+    # Use degree as node feature
+    degrees = torch.tensor(
+        [[G.degree(n)] for n in range(num_nodes)],
+        dtype=torch.float
+    )
+
+    # Build edge_index
+    edges = list(G.edges())
+    if len(edges) == 0:
+        edge_index = torch.zeros((2, 0), dtype=torch.long)
+    else:
+        edge_index = torch.tensor(edges, dtype=torch.long).t().contiguous()
+
+    return Data(x=degrees, edge_index=edge_index, num_nodes=num_nodes)
 
 
 def run_pipeline(data, G, target_year, model):
@@ -51,7 +75,7 @@ def run_pipeline(data, G, target_year, model):
     return baseline_if, filtered_rif, weighted_rif
 
 
-def save_results(results, path="results/rif_results.csv"):
+def save_results(results, path="results/rif_results_openalex.csv"):
     """
     Saves yearly results to a CSV file.
     """
@@ -61,11 +85,10 @@ def save_results(results, path="results/rif_results.csv"):
 
 
 if __name__ == "__main__":
-    # Load data
-    data, G = load_pubmed()
-    G = assign_synthetic_metadata(G)
-    from train import load_trained_model
-    model = load_trained_model(num_features=data.num_node_features)
+    # Load OpenAlex graph
+    G = load_graph()
+    data = build_pyg_data(G)
+    model = build_model(num_features=1)
 
     all_results = []
 
