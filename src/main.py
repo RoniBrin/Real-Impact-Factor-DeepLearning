@@ -91,7 +91,11 @@ if __name__ == "__main__":
     # Load OpenAlex graph
     G = load_graph()
     data, G = build_pyg_data(G)
+    from train_openalex import train, build_pyg_data
     model = build_model(num_features=1)
+    model.load_state_dict(torch.load("results/graphsage_openalex.pt"))
+    model.eval()
+    print("Loaded trained OpenAlex model")
 
     all_results = []
 
