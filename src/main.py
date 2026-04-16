@@ -11,7 +11,7 @@ from graph_builder import compute_baseline_if
 from model import build_model
 from perturbation import perturb_edges, compute_reconstruction_scores, track_reconstruction
 from stability import compute_stability_scores
-from rif import compute_filtered_rif, compute_weighted_rif, print_rif_comparisonson
+from rif import compute_filtered_rif, compute_weighted_rif, print_rif_comparison
 
 # Configuration
 N_ITERATIONS = 5      # Number of perturbation iterations per year
