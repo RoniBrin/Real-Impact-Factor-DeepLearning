@@ -5,6 +5,7 @@ main.py - Main pipeline for RIF evaluation across multiple years.
 import torch
 import pandas as pd
 import networkx as nx
+from torch_geometric import data
 from torch_geometric.data import Data
 from openalex_loader import load_graph
 from graph_builder import compute_baseline_if
@@ -51,6 +52,9 @@ def run_pipeline(data, G, target_year, model):
     Runs the full perturbation and RIF pipeline for a single target year.
     Returns baseline IF, filtered RIF, and weighted RIF.
     """
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    data.x = data.x.to(device)
+    data.edge_index = data.edge_index.to(device)
     reconstruction_counts = {}
     removal_counts = {}
 

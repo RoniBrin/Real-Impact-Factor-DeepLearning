@@ -40,17 +40,17 @@ def decode(z, edge_index):
     dst = z[edge_index[1]]
     return (src * dst).sum(dim=1)
 
-
 def build_model(num_features, hidden_channels=64, out_channels=32):
     """
     Builds and returns a GraphSAGE model.
     """
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     model = GraphSAGE(
         in_channels=num_features,
         hidden_channels=hidden_channels,
         out_channels=out_channels
-    )
-    print(f"Model built: input={num_features}, hidden={hidden_channels}, output={out_channels}")
+    ).to(device)
+    print(f"Model built: input={num_features}, hidden={hidden_channels}, output={out_channels}, device={device}")
     return model
 
 
