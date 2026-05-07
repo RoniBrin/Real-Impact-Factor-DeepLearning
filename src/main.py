@@ -20,32 +20,28 @@ FRACTION = 0.3        # Fraction of edges to remove per iteration
 THRESHOLD = 0.5       # Stability threshold for Filtered RIF
 YEAR_START = 2000     # First target year
 YEAR_END = 2024       # Last target year
-
-
 def build_pyg_data(G):
     """
     Converts a NetworkX graph to a PyTorch Geometric Data object.
     Uses node degree as the single feature.
     """
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    
     # Remap nodes to consecutive integers
     G = nx.convert_node_labels_to_integers(G)
     num_nodes = G.number_of_nodes()
 
     # Use degree as node feature
-    degrees = torch.tensor(
-        [[G.degree(n)] for n in range(num_nodes)],
-        dtype=torch.float
-    )
+    degrees = torch.tensor([[G.degree(n)] for n in range(num_nodes)],dtype=torch.float).to(device)
 
     # Build edge_index
     edges = list(G.edges())
     if len(edges) == 0:
-        edge_index = torch.zeros((2, 0), dtype=torch.long)
+        edge_index = torch.zeros((2, 0), dtype=torch.long).to(device)
     else:
-        edge_index = torch.tensor(edges, dtype=torch.long).t().contiguous()
+        edge_index = torch.tensor(edges, dtype=torch.long).t().contiguous().to(device)
 
     return Data(x=degrees, edge_index=edge_index, num_nodes=num_nodes), G
-
 
 def run_pipeline(data, G, target_year, model):
     """
