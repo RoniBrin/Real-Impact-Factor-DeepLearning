@@ -16,6 +16,8 @@ def build_pyg_data(G):
     Converts OpenAlex NetworkX graph to PyTorch Geometric Data object.
     Uses node degree as the single feature.
     """
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
     # Remap nodes to consecutive integers
     G = nx.convert_node_labels_to_integers(G)
     num_nodes = G.number_of_nodes()
@@ -24,11 +26,11 @@ def build_pyg_data(G):
     degrees = torch.tensor(
         [[G.degree(n)] for n in range(num_nodes)],
         dtype=torch.float
-    )
+    ).to(device)
 
     # Build edge_index
     edges = list(G.edges())
-    edge_index = torch.tensor(edges, dtype=torch.long).t().contiguous()
+    edge_index = torch.tensor(edges, dtype=torch.long).t().contiguous().to(device)
 
     return Data(x=degrees, edge_index=edge_index, num_nodes=num_nodes), G
 
@@ -38,6 +40,7 @@ def train_epoch(model, optimizer, data):
     Runs one training epoch using positive and negative edge sampling.
     Returns the loss value for this epoch.
     """
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     model.train()
     optimizer.zero_grad()
 
@@ -52,15 +55,15 @@ def train_epoch(model, optimizer, data):
         edge_index=data.edge_index,
         num_nodes=data.num_nodes,
         num_neg_samples=pos_edge_index.shape[1]
-    )
+    ).to(device)
 
     # Compute scores
     pos_scores = (z[pos_edge_index[0]] * z[pos_edge_index[1]]).sum(dim=1)
     neg_scores = (z[neg_edge_index[0]] * z[neg_edge_index[1]]).sum(dim=1)
 
     # Loss
-    pos_labels = torch.ones(pos_scores.shape[0])
-    neg_labels = torch.zeros(neg_scores.shape[0])
+    pos_labels = torch.ones(pos_scores.shape[0]).to(device)
+    neg_labels = torch.zeros(neg_scores.shape[0]).to(device)
     scores = torch.cat([pos_scores, neg_scores])
     labels = torch.cat([pos_labels, neg_labels])
 
