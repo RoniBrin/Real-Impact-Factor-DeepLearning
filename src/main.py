@@ -62,15 +62,12 @@ def run_pipeline(data, G, target_year, model):
     model.eval()
     for i in range(N_ITERATIONS):
         with torch.no_grad():
-            perturbed_edge_index, removed_edges = perturb_edges(
-                data.edge_index, fraction=FRACTION
-            )
+            perturbed_edge_index, removed_edges = perturb_edges(data.edge_index, fraction=FRACTION)
             z = model(data.x, perturbed_edge_index)
             scores = compute_reconstruction_scores(z, removed_edges)
-        reconstruction_counts, removal_counts = track_reconstruction(
-            reconstruction_counts, removal_counts, removed_edges, scores, THRESHOLD
-        )
-
+        reconstruction_counts, removal_counts = track_reconstruction(reconstruction_counts, removal_counts, removed_edges, scores, THRESHOLD)
+        if (i + 1) % 5 == 0:
+            print(f"  Iteration {i + 1}/{N_ITERATIONS} completed")
     # Compute stability scores
     stability_scores = compute_stability_scores(reconstruction_counts, removal_counts)
 
