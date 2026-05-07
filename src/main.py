@@ -15,7 +15,7 @@ from stability import compute_stability_scores
 from rif import compute_filtered_rif, compute_weighted_rif, print_rif_comparison
 
 # Configuration
-N_ITERATIONS = 10     # Number of perturbation iterations per year
+N_ITERATIONS = 500     # Number of perturbation iterations per year
 FRACTION = 0.3        # Fraction of edges to remove per iteration
 THRESHOLD = 0.5       # Stability threshold for Filtered RIF
 YEAR_START = 2000     # First target year
