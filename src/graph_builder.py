@@ -45,7 +45,7 @@ def compute_baseline_if(G, target_year):
     Computes the Baseline Impact Factor for each journal in target year Y.
     IF = citations received by papers from Y-1 and Y-2,
     where citing papers are also from Y-1 or Y-2.
-    Counts incoming edges (predecessors) to avoid double counting.
+    Only journals with at least one citation are included.
     """
     relevant_nodes = set(
         node for node in G.nodes()
@@ -62,21 +62,23 @@ def compute_baseline_if(G, target_year):
                         if G.nodes[predecessor].get('year') in (target_year - 1, target_year - 2))
         journal_citations[journal] = journal_citations.get(journal, 0) + citations
 
-    # Print detailed breakdown
+    # Print detailed breakdown (only journals with citations)
     print(f"\nDetailed IF breakdown for year {target_year}:")
     print(f"{'Journal':<20} {'Papers':>8} {'Citations':>10} {'IF':>8}")
     print("-" * 50)
     for journal in journal_papers:
         papers = journal_papers[journal]
         citations = journal_citations.get(journal, 0)
-        if_score = round(citations / papers, 4) if papers > 0 else 0.0
-        print(f"{journal:<20} {papers:>8} {citations:>10} {if_score:>8}")
+        if citations > 0:  # רק כתבי עת עם ציטוטים
+            if_score = round(citations / papers, 4)
+            print(f"{journal:<20} {papers:>8} {citations:>10} {if_score:>8}")
 
     baseline_if = {}
     for journal in journal_papers:
         papers = journal_papers[journal]
         citations = journal_citations.get(journal, 0)
-        baseline_if[journal] = round(citations / papers, 4) if papers > 0 else 0.0
+        if citations > 0:  # רק כתבי עת עם ציטוטים
+            baseline_if[journal] = round(citations / papers, 4)
 
     return baseline_if
 
