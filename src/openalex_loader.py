@@ -17,7 +17,7 @@ def fetch_papers_by_field(field="Medicine", max_papers=50000, email="roni.brinn@
     base_url = "https://api.openalex.org/works"
 
     params = {
-        "filter": "topics.field.display_name:Medicine,has_references:true",
+        "filter": f"topics.field.display_name:{field},has_references:true",
         "select": "id,title,publication_year,primary_location,referenced_works",
         "per_page": 200,
         "cursor": cursor,
