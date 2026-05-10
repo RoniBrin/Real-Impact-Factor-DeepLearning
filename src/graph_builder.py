@@ -59,7 +59,8 @@ def compute_baseline_if(G, target_year):
         journal = G.nodes[node].get('journal', 'Unknown')
         journal_papers[journal] = journal_papers.get(journal, 0) + 1
         citations = sum(1 for neighbor in G.neighbors(node)
-                        if neighbor not in relevant_nodes)
+            if neighbor not in relevant_nodes
+            and G.nodes[neighbor].get('year') == target_year)
         journal_citations[journal] = journal_citations.get(journal, 0) + citations
 
     # Print detailed breakdown

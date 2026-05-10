@@ -54,8 +54,9 @@ def compute_weighted_rif(G, target_year, stability_scores):
         journal = G.nodes[node].get('journal', 'Unknown')
         journal_papers[journal] = journal_papers.get(journal, 0) + 1
 
-        for neighbor in G.neighbors(node):
-            if neighbor not in relevant_nodes:
+    for neighbor in G.neighbors(node):
+        citing_year = G.nodes[neighbor].get('year')
+        if neighbor not in relevant_nodes and citing_year == target_year:
                 edge = (min(node, neighbor), max(node, neighbor))
                 score = stability_scores.get(edge, 0.0)
                 # Weight citation by stability score
