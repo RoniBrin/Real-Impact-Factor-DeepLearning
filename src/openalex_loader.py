@@ -2,37 +2,33 @@
 openalex_loader.py - Fetching real citation data from OpenAlex API.
 """
 
-import email
-
 import requests
 import networkx as nx
 import time
 
 
-def fetch_papers_by_topic(topic="diabetes", max_papers=5000, email="your@email.com"):
+def fetch_papers_by_field(field="Medicine", max_papers=50000, email="roni.brinn@gmail.com"):
     """
-    Fetches papers from OpenAlex API by topic.
+    Fetches papers from OpenAlex API by field of study.
     Returns a list of papers with metadata.
     """
     papers = []
     cursor = "*"
     base_url = "https://api.openalex.org/works"
 
-    headers = {}
-
     params = {
-        "filter": "default.search:diabetes,has_references:true",
+        "filter": f"primary_topic.field.display_name:{field},has_references:true",
         "select": "id,title,publication_year,primary_location,referenced_works",
         "per_page": 200,
         "cursor": cursor,
         "mailto": email
     }
 
-    print(f"Fetching papers about '{topic}' from OpenAlex...")
+    print(f"Fetching papers from field '{field}' from OpenAlex...")
 
     while len(papers) < max_papers:
         params["cursor"] = cursor
-        response = requests.get(base_url, params=params, headers=headers)
+        response = requests.get(base_url, params=params)
 
         if response.status_code != 200:
             print(f"Error: {response.status_code}")
@@ -47,12 +43,11 @@ def fetch_papers_by_topic(topic="diabetes", max_papers=5000, email="your@email.c
         papers.extend(results)
         print(f"  Fetched {len(papers)} papers so far...")
 
-        # Get next cursor
         cursor = data.get("meta", {}).get("next_cursor")
         if not cursor:
             break
 
-        time.sleep(0.1)  # Rate limiting
+        time.sleep(0.1)
 
     print(f"Total papers fetched: {len(papers)}")
     return papers[:max_papers]
@@ -65,10 +60,8 @@ def build_citation_graph(papers):
     """
     G = nx.DiGraph()
 
-    # Map OpenAlex IDs to node indices
     paper_ids = {paper["id"]: i for i, paper in enumerate(papers)}
 
-    # Add nodes with metadata
     for paper in papers:
         node_id = paper_ids[paper["id"]]
         year = paper.get("publication_year")
@@ -80,7 +73,6 @@ def build_citation_graph(papers):
 
         G.add_node(node_id, year=year, journal=journal, openalex_id=paper["id"])
 
-    # Add edges (citations)
     for paper in papers:
         src = paper_ids[paper["id"]]
         for ref in paper.get("referenced_works", []):
@@ -110,6 +102,7 @@ def get_graph_stats(G):
     for journal, count in journal_counts:
         print(f"    {journal}: {count} papers")
 
+
 def save_graph(G, path="data/openalex_graph.gpickle"):
     """Saves the graph to disk."""
     import pickle
@@ -127,10 +120,9 @@ def load_graph(path="data/openalex_graph.gpickle"):
     return G
 
 
-
 if __name__ == "__main__":
-    papers = fetch_papers_by_topic(
-        topic="diabetes",
+    papers = fetch_papers_by_field(
+        field="Medicine",
         max_papers=50000,
         email="roni.brinn@gmail.com"
     )

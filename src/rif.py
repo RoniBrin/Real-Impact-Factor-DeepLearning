@@ -1,12 +1,51 @@
 """
-rif.py - Computing the Real Impact Factor (RIF) using edge stability scores.
+graph_builder.py - Building temporal subgraphs and computing Baseline IF.
 """
 
+import random
+import networkx as nx
 
-def compute_filtered_rif(G, target_year, stability_scores, threshold=0.5):
+
+def assign_synthetic_metadata(G, journals=None, year_range=(2000, 2020)):
     """
-    Computes Filtered RIF for each journal in target year Y.
-    Excludes citations with stability score below the threshold.
+    Assigns synthetic year and journal metadata to each node.
+    Used for development and testing before OpenAlex integration.
+    """
+    if journals is None:
+        journals = ["Nature", "Science", "PubMed Central", "NEJM", "Lancet"]
+
+    for node in G.nodes():
+        G.nodes[node]['year'] = random.randint(year_range[0], year_range[1])
+        G.nodes[node]['journal'] = random.choice(journals)
+
+    print(f"Assigned synthetic metadata to {G.number_of_nodes()} nodes")
+    print(f"Year range: {year_range[0]} - {year_range[1]}")
+    print(f"Journals: {journals}")
+    return G
+
+
+def extract_time_window(G, target_year):
+    """
+    Extracts a subgraph for a given target year Y.
+    Includes papers published in Y-1 and Y-2,
+    and citation edges between them.
+    """
+    relevant_nodes = [
+        node for node in G.nodes()
+        if G.nodes[node].get('year') in (target_year - 1, target_year - 2)
+    ]
+    subgraph = G.subgraph(relevant_nodes).copy()
+    print(f"Year {target_year}: {subgraph.number_of_nodes()} nodes, "
+          f"{subgraph.number_of_edges()} edges")
+    return subgraph
+
+
+def compute_baseline_if(G, target_year):
+    """
+    Computes the Baseline Impact Factor for each journal in target year Y.
+    IF = citations received by papers from Y-1 and Y-2,
+    where citing papers are also from Y-1 or Y-2.
+    Counts incoming edges (predecessors) to avoid double counting.
     """
     relevant_nodes = set(
         node for node in G.nodes()
@@ -19,107 +58,39 @@ def compute_filtered_rif(G, target_year, stability_scores, threshold=0.5):
     for node in relevant_nodes:
         journal = G.nodes[node].get('journal', 'Unknown')
         journal_papers[journal] = journal_papers.get(journal, 0) + 1
+        citations = sum(1 for predecessor in G.predecessors(node)
+                        if G.nodes[predecessor].get('year') in (target_year - 1, target_year - 2))
+        journal_citations[journal] = journal_citations.get(journal, 0) + citations
 
-        for neighbor in G.neighbors(node):
-            if neighbor not in relevant_nodes:
-                edge = (min(node, neighbor), max(node, neighbor))
-                score = stability_scores.get(edge, 0.0)
-                # Only count citation if stability score exceeds threshold
-                if score >= threshold:
-                    journal_citations[journal] = journal_citations.get(journal, 0) + 1
-
-    filtered_rif = {}
+    # Print detailed breakdown
+    print(f"\nDetailed IF breakdown for year {target_year}:")
+    print(f"{'Journal':<20} {'Papers':>8} {'Citations':>10} {'IF':>8}")
+    print("-" * 50)
     for journal in journal_papers:
         papers = journal_papers[journal]
         citations = journal_citations.get(journal, 0)
-        filtered_rif[journal] = round(citations / papers, 4) if papers > 0 else 0.0
+        if_score = round(citations / papers, 4) if papers > 0 else 0.0
+        print(f"{journal:<20} {papers:>8} {citations:>10} {if_score:>8}")
 
-    return filtered_rif
-
-
-def compute_weighted_rif(G, target_year, stability_scores):
-    """
-    Computes Weighted RIF for each journal in target year Y.
-    Each citation is weighted by its stability score.
-    """
-    relevant_nodes = set(
-        node for node in G.nodes()
-        if G.nodes[node].get('year') in (target_year - 1, target_year - 2)
-    )
-
-    journal_citations = {}
-    journal_papers = {}
-
-    for node in relevant_nodes:
-        journal = G.nodes[node].get('journal', 'Unknown')
-        journal_papers[journal] = journal_papers.get(journal, 0) + 1
-
-    for neighbor in G.neighbors(node):
-        citing_year = G.nodes[neighbor].get('year')
-        if neighbor not in relevant_nodes and citing_year == target_year:
-                edge = (min(node, neighbor), max(node, neighbor))
-                score = stability_scores.get(edge, 0.0)
-                # Weight citation by stability score
-                journal_citations[journal] = journal_citations.get(journal, 0) + score
-
-    weighted_rif = {}
+    baseline_if = {}
     for journal in journal_papers:
         papers = journal_papers[journal]
         citations = journal_citations.get(journal, 0)
-        weighted_rif[journal] = round(citations / papers, 4) if papers > 0 else 0.0
+        baseline_if[journal] = round(citations / papers, 4) if papers > 0 else 0.0
 
-    return weighted_rif
-
-
-def print_rif_comparison(baseline_if, filtered_rif, weighted_rif, target_year):
-    """
-    Prints a comparison table of Baseline IF, Filtered RIF, and Weighted RIF.
-    """
-    print(f"\nIF vs RIF Comparison for year {target_year}:")
-    print(f"{'Journal':<20} {'Baseline IF':>12} {'Filtered RIF':>13} {'Weighted RIF':>13}")
-    print("-" * 60)
-    for journal in baseline_if:
-        b_if = baseline_if.get(journal, 0)
-        f_rif = filtered_rif.get(journal, 0)
-        w_rif = weighted_rif.get(journal, 0)
-        print(f"{journal:<20} {b_if:>12} {f_rif:>13} {w_rif:>13}")
+    return baseline_if
 
 
 if __name__ == "__main__":
-    import torch
     from data_loader import load_pubmed
-    from graph_builder import assign_synthetic_metadata, compute_baseline_if
-    from model import build_model
-    from perturbation import perturb_edges, compute_reconstruction_scores, track_reconstruction
-    from stability import compute_stability_scores
 
     data, G = load_pubmed()
     G = assign_synthetic_metadata(G)
-    model = build_model(num_features=data.num_node_features)
 
-    # Run perturbation iterations
-    reconstruction_counts = {}
-    removal_counts = {}
-
-    print("\nRunning 5 perturbation iterations...")
-    model.eval()
-    for i in range(5):
-        with torch.no_grad():
-            perturbed_edge_index, removed_edges = perturb_edges(data.edge_index, fraction=0.3)
-            z = model(data.x, perturbed_edge_index)
-            scores = compute_reconstruction_scores(z, removed_edges)
-        reconstruction_counts, removal_counts = track_reconstruction(
-            reconstruction_counts, removal_counts, removed_edges, scores
-        )
-        print(f"  Iteration {i+1} done")
-
-    # Compute stability scores
-    stability_scores = compute_stability_scores(reconstruction_counts, removal_counts)
-
-    # Compute all metrics
     target_year = 2010
+    subgraph = extract_time_window(G, target_year)
     baseline_if = compute_baseline_if(G, target_year)
-    filtered_rif = compute_filtered_rif(G, target_year, stability_scores)
-    weighted_rif = compute_weighted_rif(G, target_year, stability_scores)
 
-    print_rif_comparison(baseline_if, filtered_rif, weighted_rif, target_year)
+    print(f"\nBaseline IF for year {target_year}:")
+    for journal, if_score in sorted(baseline_if.items(), key=lambda x: x[1], reverse=True):
+        print(f"  {journal}: {if_score}")

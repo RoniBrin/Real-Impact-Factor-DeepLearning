@@ -43,24 +43,23 @@ def extract_time_window(G, target_year):
 def compute_baseline_if(G, target_year):
     """
     Computes the Baseline Impact Factor for each journal in target year Y.
-    IF = total citations received / number of papers published.
+    IF = citations received by papers from Y-1 and Y-2,
+    where citing papers are also from Y-1 or Y-2.
+    Counts incoming edges (predecessors) to avoid double counting.
     """
-    # Papers published in Y-1 and Y-2
     relevant_nodes = set(
         node for node in G.nodes()
         if G.nodes[node].get('year') in (target_year - 1, target_year - 2)
     )
 
-    # Count citations and papers per journal
     journal_citations = {}
     journal_papers = {}
 
     for node in relevant_nodes:
         journal = G.nodes[node].get('journal', 'Unknown')
         journal_papers[journal] = journal_papers.get(journal, 0) + 1
-        citations = sum(1 for neighbor in G.neighbors(node)
-            if neighbor not in relevant_nodes
-            and G.nodes[neighbor].get('year') == target_year)
+        citations = sum(1 for predecessor in G.predecessors(node)
+                        if G.nodes[predecessor].get('year') in (target_year - 1, target_year - 2))
         journal_citations[journal] = journal_citations.get(journal, 0) + citations
 
     # Print detailed breakdown
@@ -73,7 +72,6 @@ def compute_baseline_if(G, target_year):
         if_score = round(citations / papers, 4) if papers > 0 else 0.0
         print(f"{journal:<20} {papers:>8} {citations:>10} {if_score:>8}")
 
-    # Compute IF
     baseline_if = {}
     for journal in journal_papers:
         papers = journal_papers[journal]
