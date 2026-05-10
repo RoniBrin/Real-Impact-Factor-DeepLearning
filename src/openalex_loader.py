@@ -7,9 +7,10 @@ import networkx as nx
 import time
 
 
-def fetch_papers_by_field(field="Medicine", max_papers=50000, email="roni.brinn@gmail.com"):
+def fetch_papers_by_field(field_id="fields/27", max_papers=50000, email="roni.brinn@gmail.com"):
     """
     Fetches papers from OpenAlex API by field of study.
+    field_id: OpenAlex field ID (e.g. fields/27 = Medicine)
     Returns a list of papers with metadata.
     """
     papers = []
@@ -17,14 +18,14 @@ def fetch_papers_by_field(field="Medicine", max_papers=50000, email="roni.brinn@
     base_url = "https://api.openalex.org/works"
 
     params = {
-        "filter": f"concepts.display_name:{field},has_references:true",
+        "filter": f"topics.field.id:{field_id},has_references:true",
         "select": "id,title,publication_year,primary_location,referenced_works",
         "per_page": 200,
         "cursor": cursor,
         "mailto": email
     }
 
-    print(f"Fetching papers from field '{field}' from OpenAlex...")
+    print(f"Fetching papers from field '{field_id}' from OpenAlex...")
 
     while len(papers) < max_papers:
         params["cursor"] = cursor
@@ -122,7 +123,7 @@ def load_graph(path="data/openalex_graph.gpickle"):
 
 if __name__ == "__main__":
     papers = fetch_papers_by_field(
-        field="Medicine",
+        field_id="fields/27",  # Medicine
         max_papers=50000,
         email="roni.brinn@gmail.com"
     )
