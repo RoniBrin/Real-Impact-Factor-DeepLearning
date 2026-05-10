@@ -74,15 +74,24 @@ def run_pipeline(data, G, target_year, model):
 
     return baseline_if, filtered_rif, weighted_rif
 
-
-def save_results(results, path="results/rif_results_openalex.csv"):
+def save_results(results, csv_path="results/rif_results_openalex.csv", excel_path="results/rif_results_openalex.xlsx"):
     """
-    Saves yearly results to a CSV file.
+    Saves yearly results to both CSV and Excel files.
     """
     df = pd.DataFrame(results)
-    df.to_csv(path, index=False)
-    print(f"\nResults saved to {path}")
-
+    
+    # Save CSV
+    df.to_csv(csv_path, index=False)
+    print(f"Results saved to {csv_path}")
+    
+    # Save Excel with auto-filter and frozen header
+    with pd.ExcelWriter(excel_path, engine="openpyxl") as writer:
+        df.to_excel(writer, index=False, sheet_name="RIF Results")
+        worksheet = writer.sheets["RIF Results"]
+        worksheet.auto_filter.ref = worksheet.dimensions
+        worksheet.freeze_panes = "A2"
+    
+    print(f"Results saved to {excel_path}")
 
 if __name__ == "__main__":
     # Load OpenAlex graph
