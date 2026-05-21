@@ -16,12 +16,12 @@ from stability import compute_stability_scores, summarize_stability
 from rif import compute_filtered_rif, compute_weighted_rif, print_rif_comparison
 
 # Configuration
-YEAR_START   = 2012
+YEAR_START   = 2018
 YEAR_END     = 2022
-MAX_PAPERS   = 10000     # Papers fetched per year from OpenAlex
-N_ITERATIONS = 200       # Perturbation iterations per year
-FRACTION     = 0.3       # Fraction of edges removed per iteration
-THRESHOLD    = 0.5       # Stability threshold for Filtered RIF
+MAX_PAPERS   = 3000
+N_ITERATIONS = 100
+FRACTION     = 0.3
+THRESHOLD    = 0.5
 GRAPH_DIR    = "/content/drive/MyDrive/RIF/graphs"
 RESULTS_CSV  = "/content/drive/MyDrive/RIF/rif_results.csv"
 RESULTS_XLSX = "/content/drive/MyDrive/RIF/rif_results.xlsx"
@@ -100,8 +100,8 @@ def run_perturbation(pyg_data, model):
 
 
 def save_results(results):
-    """Saves results list to CSV and Excel."""
-    os.makedirs("results", exist_ok=True)
+    """Saves results list to CSV and Excel after every year."""
+    os.makedirs(os.path.dirname(RESULTS_CSV), exist_ok=True)
     df = pd.DataFrame(results)
 
     df.to_csv(RESULTS_CSV, index=False)
@@ -116,6 +116,7 @@ def save_results(results):
 
 
 if __name__ == "__main__":
+    os.makedirs(GRAPH_DIR, exist_ok=True)
     all_results = []
 
     for target_year in range(YEAR_START, YEAR_END + 1):
@@ -154,5 +155,8 @@ if __name__ == "__main__":
                 "weighted_rif": weighted_rif.get(journal, 0),
             })
 
-    save_results(all_results)
+        # Step 6 - save after every year in case of disconnection
+        save_results(all_results)
+        print(f"Results saved after year {target_year}")
+
     print("\nPipeline complete!")
