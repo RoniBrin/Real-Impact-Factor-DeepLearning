@@ -22,9 +22,9 @@ MAX_PAPERS   = 10000     # Papers fetched per year from OpenAlex
 N_ITERATIONS = 200       # Perturbation iterations per year
 FRACTION     = 0.3       # Fraction of edges removed per iteration
 THRESHOLD    = 0.5       # Stability threshold for Filtered RIF
-GRAPH_DIR    = "data/graphs"
-RESULTS_CSV  = "results/rif_results.csv"
-RESULTS_XLSX = "results/rif_results.xlsx"
+GRAPH_DIR    = "/content/drive/MyDrive/RIF/graphs"
+RESULTS_CSV  = "/content/drive/MyDrive/RIF/rif_results.csv"
+RESULTS_XLSX = "/content/drive/MyDrive/RIF/rif_results.xlsx"
 
 
 def build_pyg_data(G):
