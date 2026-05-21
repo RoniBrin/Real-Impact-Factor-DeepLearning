@@ -1,98 +1,59 @@
 """
-graph_builder.py - Building temporal subgraphs and computing Baseline IF.
+graph_builder.py - Computing Baseline IF from a citation graph.
 """
 
-import random
 import networkx as nx
-
-
-def assign_synthetic_metadata(G, journals=None, year_range=(2000, 2020)):
-    """
-    Assigns synthetic year and journal metadata to each node.
-    Used for development and testing before OpenAlex integration.
-    """
-    if journals is None:
-        journals = ["Nature", "Science", "PubMed Central", "NEJM", "Lancet"]
-
-    for node in G.nodes():
-        G.nodes[node]['year'] = random.randint(year_range[0], year_range[1])
-        G.nodes[node]['journal'] = random.choice(journals)
-
-    print(f"Assigned synthetic metadata to {G.number_of_nodes()} nodes")
-    print(f"Year range: {year_range[0]} - {year_range[1]}")
-    print(f"Journals: {journals}")
-    return G
-
-
-def extract_time_window(G, target_year):
-    """
-    Extracts a subgraph for a given target year Y.
-    Includes papers published in Y-1 and Y-2,
-    and citation edges between them.
-    """
-    relevant_nodes = [
-        node for node in G.nodes()
-        if G.nodes[node].get('year') in (target_year - 1, target_year - 2)
-    ]
-    subgraph = G.subgraph(relevant_nodes).copy()
-    print(f"Year {target_year}: {subgraph.number_of_nodes()} nodes, "
-          f"{subgraph.number_of_edges()} edges")
-    return subgraph
 
 
 def compute_baseline_if(G, target_year):
     """
-    Computes the Baseline Impact Factor for each journal in target year Y.
-    IF = citations received by papers from Y-1 and Y-2,
-    where citing papers are also from Y-1 or Y-2.
-    Only journals with at least one citation are included.
+    Computes the Baseline Impact Factor for every journal in the graph.
+    IF(Y) = citations received by journal papers from Y-1 and Y-2,
+            where citing papers are also from Y-1 or Y-2.
+    Only journals with at least one paper are included.
     """
-    relevant_nodes = set(
-        node for node in G.nodes()
-        if G.nodes[node].get('year') in (target_year - 1, target_year - 2)
-    )
+    relevant_years = (target_year - 1, target_year - 2)
 
+    journal_papers    = {}
     journal_citations = {}
-    journal_papers = {}
 
-    for node in relevant_nodes:
-        journal = G.nodes[node].get('journal', 'Unknown')
+    for node in G.nodes():
+        year    = G.nodes[node].get("year")
+        journal = G.nodes[node].get("journal", "Unknown")
+
+        if year not in relevant_years:
+            continue
+
         journal_papers[journal] = journal_papers.get(journal, 0) + 1
-        citations = sum(1 for predecessor in G.predecessors(node)
-                        if G.nodes[predecessor].get('year') in (target_year - 1, target_year - 2))
-        journal_citations[journal] = journal_citations.get(journal, 0) + citations
 
-    # Print detailed breakdown (only journals with citations)
-    print(f"\nDetailed IF breakdown for year {target_year}:")
-    print(f"{'Journal':<20} {'Papers':>8} {'Citations':>10} {'IF':>8}")
-    print("-" * 50)
-    for journal in journal_papers:
-        papers = journal_papers[journal]
-        citations = journal_citations.get(journal, 0)
-        if citations > 0:  # רק כתבי עת עם ציטוטים
-            if_score = round(citations / papers, 4)
-            print(f"{journal:<20} {papers:>8} {citations:>10} {if_score:>8}")
+        # Count incoming citations from papers in Y-1 or Y-2
+        for predecessor in G.predecessors(node):
+            pred_year = G.nodes[predecessor].get("year")
+            if pred_year in relevant_years:
+                journal_citations[journal] = journal_citations.get(journal, 0) + 1
+
+    print(f"\nBaseline IF breakdown for year {target_year}:")
+    print(f"{'Journal':<45} {'Papers':>8} {'Citations':>10} {'IF':>8}")
+    print("-" * 75)
 
     baseline_if = {}
-    for journal in journal_papers:
-        papers = journal_papers[journal]
+    for journal, papers in sorted(journal_papers.items()):
         citations = journal_citations.get(journal, 0)
-        if citations > 0:  # רק כתבי עת עם ציטוטים
-            baseline_if[journal] = round(citations / papers, 4)
+        if papers > 0:
+            if_score = round(citations / papers, 4)
+            baseline_if[journal] = if_score
+            print(f"{journal:<45} {papers:>8} {citations:>10} {if_score:>8}")
 
     return baseline_if
 
 
 if __name__ == "__main__":
-    from data_loader import load_pubmed
+    from openalex_loader import build_citation_graph
 
-    data, G = load_pubmed()
-    G = assign_synthetic_metadata(G)
+    TARGET_YEAR = 2018
+    G = build_citation_graph(TARGET_YEAR, max_papers=10000)
+    baseline_if = compute_baseline_if(G, TARGET_YEAR)
 
-    target_year = 2010
-    subgraph = extract_time_window(G, target_year)
-    baseline_if = compute_baseline_if(G, target_year)
-
-    print(f"\nBaseline IF for year {target_year}:")
-    for journal, if_score in sorted(baseline_if.items(), key=lambda x: x[1], reverse=True):
-        print(f"  {journal}: {if_score}")
+    print(f"\nTop journals by IF for {TARGET_YEAR}:")
+    for journal, score in sorted(baseline_if.items(), key=lambda x: x[1], reverse=True)[:20]:
+        print(f"  {journal}: {score}")
