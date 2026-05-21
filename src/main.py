@@ -31,24 +31,26 @@ def build_pyg_data(G):
     """
     Converts a NetworkX DiGraph to a PyTorch Geometric Data object.
     Uses node degree as the single node feature.
+    Returns pyg_data and G_int with integer node labels matching stability scores.
     """
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-    G = nx.convert_node_labels_to_integers(G)
-    num_nodes = G.number_of_nodes()
+    # Convert to integer labels so node IDs match edge keys in stability_scores
+    G_int = nx.convert_node_labels_to_integers(G)
+    num_nodes = G_int.number_of_nodes()
 
     degrees = torch.tensor(
-        [[G.degree(n)] for n in range(num_nodes)],
+        [[G_int.degree(n)] for n in range(num_nodes)],
         dtype=torch.float
     ).to(device)
 
-    edges = list(G.edges())
+    edges = list(G_int.edges())
     if edges:
         edge_index = torch.tensor(edges, dtype=torch.long).t().contiguous().to(device)
     else:
         edge_index = torch.zeros((2, 0), dtype=torch.long).to(device)
 
-    return Data(x=degrees, edge_index=edge_index, num_nodes=num_nodes), G
+    return Data(x=degrees, edge_index=edge_index, num_nodes=num_nodes), G_int
 
 
 def get_or_build_graph(target_year):
@@ -131,17 +133,17 @@ if __name__ == "__main__":
             print(f"  No edges for {target_year}, skipping.")
             continue
 
-        # Step 2 - convert to PyG and train model
+        # Step 2 - convert to PyG with integer node labels, train model
         pyg_data, G_int = build_pyg_data(G)
         model = train_model(pyg_data, epochs=50)
 
         # Step 3 - perturbation and stability scores
         stability_scores = run_perturbation(pyg_data, model)
 
-        # Step 4 - compute IF and RIF on original graph
-        baseline_if  = compute_baseline_if(G, target_year)
-        filtered_rif = compute_filtered_rif(G, target_year, stability_scores, THRESHOLD)
-        weighted_rif = compute_weighted_rif(G, target_year, stability_scores)
+        # Step 4 - compute IF and RIF on G_int so node IDs match stability_scores
+        baseline_if  = compute_baseline_if(G_int, target_year)
+        filtered_rif = compute_filtered_rif(G_int, target_year, stability_scores, THRESHOLD)
+        weighted_rif = compute_weighted_rif(G_int, target_year, stability_scores)
 
         print_rif_comparison(baseline_if, filtered_rif, weighted_rif, target_year)
 
