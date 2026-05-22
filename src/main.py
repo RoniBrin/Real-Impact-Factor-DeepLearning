@@ -35,7 +35,6 @@ def build_pyg_data(G):
     """
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-    # Convert to integer labels so node IDs match edge keys in stability_scores
     G_int = nx.convert_node_labels_to_integers(G)
     num_nodes = G_int.number_of_nodes()
 
@@ -71,7 +70,9 @@ def get_or_build_graph(target_year):
 
 def run_perturbation(pyg_data, model):
     """
-    Runs the perturbation loop and returns stability scores for all edges.
+    Runs the perturbation loop and returns stability scores and dynamic threshold.
+    Dynamic threshold is set to the median stability score so that filtering
+    always has a meaningful effect regardless of model confidence distribution.
     """
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     pyg_data.x          = pyg_data.x.to(device)
@@ -98,7 +99,18 @@ def run_perturbation(pyg_data, model):
 
     stability_scores = compute_stability_scores(reconstruction_counts, removal_counts)
     summarize_stability(stability_scores)
-    return stability_scores
+
+    # Dynamic threshold: median of all stability scores
+    # This ensures ~50% of citations are filtered regardless of model output range
+    if stability_scores:
+        scores_list = sorted(stability_scores.values())
+        dynamic_threshold = scores_list[len(scores_list) // 2]
+        print(f"  Dynamic threshold (median): {dynamic_threshold:.4f}")
+    else:
+        dynamic_threshold = THRESHOLD
+        print(f"  No stability scores computed, using default threshold: {THRESHOLD}")
+
+    return stability_scores, dynamic_threshold
 
 
 def save_results(results):
@@ -137,12 +149,12 @@ if __name__ == "__main__":
         pyg_data, G_int = build_pyg_data(G)
         model = train_model(pyg_data, epochs=50)
 
-        # Step 3 - perturbation and stability scores
-        stability_scores = run_perturbation(pyg_data, model)
+        # Step 3 - perturbation and stability scores with dynamic threshold
+        stability_scores, dynamic_threshold = run_perturbation(pyg_data, model)
 
         # Step 4 - compute IF and RIF on G_int so node IDs match stability_scores
         baseline_if  = compute_baseline_if(G_int, target_year)
-        filtered_rif = compute_filtered_rif(G_int, target_year, stability_scores, THRESHOLD)
+        filtered_rif = compute_filtered_rif(G_int, target_year, stability_scores, dynamic_threshold)
         weighted_rif = compute_weighted_rif(G_int, target_year, stability_scores)
 
         print_rif_comparison(baseline_if, filtered_rif, weighted_rif, target_year)
@@ -150,11 +162,12 @@ if __name__ == "__main__":
         # Step 5 - store results
         for journal in baseline_if:
             all_results.append({
-                "year":         target_year,
-                "journal":      journal,
-                "baseline_if":  baseline_if.get(journal, 0),
-                "filtered_rif": filtered_rif.get(journal, 0),
-                "weighted_rif": weighted_rif.get(journal, 0),
+                "year":              target_year,
+                "journal":           journal,
+                "baseline_if":       baseline_if.get(journal, 0),
+                "filtered_rif":      filtered_rif.get(journal, 0),
+                "weighted_rif":      weighted_rif.get(journal, 0),
+                "stability_threshold": round(dynamic_threshold, 4),
             })
 
         # Step 6 - save after every year in case of disconnection
