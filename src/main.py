@@ -29,23 +29,30 @@ RESULTS_XLSX = "/content/drive/MyDrive/RIF/rif_results.xlsx"
 
 def build_pyg_data(G):
     """
-    Converts a NetworkX DiGraph to a PyTorch Geometric Data object.
-    Returns pyg_data, G_int, and mappings between integer and original node ids.
-    Node attributes (year, journal) are preserved in G; G_int is used only for training.
+    Converts a NetworkX DiGraph to PyG Data with 4 node features:
+    [year, degree, in_degree, out_degree] — normalized.
+    Returns pyg_data, G_int, int_to_node mapping.
     """
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-    # Build explicit mapping before conversion
-    nodes = list(G.nodes())
+    nodes       = list(G.nodes())
     int_to_node = {i: node for i, node in enumerate(nodes)}
+    G_int       = nx.convert_node_labels_to_integers(G)
+    num_nodes   = G_int.number_of_nodes()
 
-    G_int = nx.convert_node_labels_to_integers(G)
-    num_nodes = G_int.number_of_nodes()
+    features = []
+    for n in range(num_nodes):
+        orig    = int_to_node[n]
+        year    = G.nodes[orig].get("year", 0) or 0
+        deg     = G_int.degree(n)
+        in_deg  = G_int.in_degree(n)
+        out_deg = G_int.out_degree(n)
+        features.append([float(year), float(deg), float(in_deg), float(out_deg)])
 
-    degrees = torch.tensor(
-        [[G_int.degree(n)] for n in range(num_nodes)],
-        dtype=torch.float
-    ).to(device)
+    x = torch.tensor(features, dtype=torch.float)
+    # normalize each feature column
+    x = (x - x.mean(dim=0)) / (x.std(dim=0) + 1e-8)
+    x = x.to(device)
 
     edges = list(G_int.edges())
     if edges:
@@ -53,34 +60,27 @@ def build_pyg_data(G):
     else:
         edge_index = torch.zeros((2, 0), dtype=torch.long).to(device)
 
-    pyg_data = Data(x=degrees, edge_index=edge_index, num_nodes=num_nodes)
+    pyg_data = Data(x=x, edge_index=edge_index, num_nodes=num_nodes)
     return pyg_data, G_int, int_to_node
 
 
 def convert_stability_scores(stability_scores_int, int_to_node):
-    """
-    Converts stability scores keyed by integer node pairs
-    back to original node id pairs, to match edges in G.
-    """
+    """Converts integer-keyed stability scores back to original node id pairs."""
     converted = {}
     for (u_int, v_int), score in stability_scores_int.items():
         u_orig = int_to_node.get(u_int, u_int)
         v_orig = int_to_node.get(v_int, v_int)
-        edge = (min(u_orig, v_orig), max(u_orig, v_orig))
+        edge   = (min(u_orig, v_orig), max(u_orig, v_orig))
         converted[edge] = score
     return converted
 
 
 def get_or_build_graph(target_year):
-    """
-    Loads graph from disk if cached, otherwise fetches from OpenAlex and saves.
-    """
+    """Loads graph from disk if cached, otherwise fetches from OpenAlex and saves."""
     path = os.path.join(GRAPH_DIR, f"graph_{target_year}.gpickle")
-
     if os.path.exists(path):
         print(f"Loading cached graph for {target_year}...")
         return load_graph(path)
-
     print(f"Building graph for {target_year} from OpenAlex...")
     G = build_citation_graph(target_year, max_papers=MAX_PAPERS)
     save_graph(G, path)
@@ -89,8 +89,9 @@ def get_or_build_graph(target_year):
 
 def run_perturbation(pyg_data, model):
     """
-    Runs the perturbation loop and returns integer-keyed stability scores
-    and a dynamic threshold based on the median stability score.
+    Runs perturbation loop.
+    Dynamic threshold = 80th percentile of stability scores,
+    ensuring the least stable 20% of citations are filtered.
     """
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     pyg_data.x          = pyg_data.x.to(device)
@@ -112,26 +113,28 @@ def run_perturbation(pyg_data, model):
             reconstruction_counts, removal_counts, removed_edges, scores, THRESHOLD
         )
 
-        if (i + 1) % 50 == 0:
+        if (i + 1) % 25 == 0:
             print(f"  Perturbation {i+1}/{N_ITERATIONS}")
 
     stability_scores = compute_stability_scores(reconstruction_counts, removal_counts)
     summarize_stability(stability_scores)
 
-    # Dynamic threshold: median stability score ensures ~50% of edges are filtered
+    # Dynamic threshold: 80th percentile
+    # filters the least stable 20% of citations
     if stability_scores:
-        scores_list = sorted(stability_scores.values())
-        dynamic_threshold = scores_list[len(scores_list) // 2]
-        print(f"  Dynamic threshold (median): {dynamic_threshold:.4f}")
+        scores_list     = sorted(stability_scores.values())
+        idx             = int(len(scores_list) * 0.8)
+        dynamic_threshold = scores_list[min(idx, len(scores_list) - 1)]
+        print(f"  Dynamic threshold (80th percentile): {dynamic_threshold:.4f}")
     else:
         dynamic_threshold = THRESHOLD
-        print(f"  No stability scores, using default threshold: {THRESHOLD}")
+        print(f"  No stability scores, using default: {THRESHOLD}")
 
     return stability_scores, dynamic_threshold
 
 
 def save_results(results):
-    """Saves results list to CSV and Excel after every year."""
+    """Saves results to CSV and Excel after every year."""
     os.makedirs(os.path.dirname(RESULTS_CSV), exist_ok=True)
     df = pd.DataFrame(results)
 
@@ -155,42 +158,43 @@ if __name__ == "__main__":
         print(f"  TARGET YEAR: {target_year}")
         print(f"{'='*60}")
 
-        # Step 1 - load or build graph with original node ids and attributes
+        # Step 1 — load or build graph
         G = get_or_build_graph(target_year)
-
         if G.number_of_edges() == 0:
             print(f"  No edges for {target_year}, skipping.")
             continue
 
-        # Step 2 - convert to PyG for training, keep int->original mapping
+        # Step 2 — build PyG data with 4 features
         pyg_data, G_int, int_to_node = build_pyg_data(G)
-        model = train_model(pyg_data, epochs=50)
 
-        # Step 3 - perturbation produces integer-keyed stability scores
+        # Step 3 — train model
+        model = train_model(pyg_data, epochs=100)
+
+        # Step 4 — perturbation + stability
         stability_scores_int, dynamic_threshold = run_perturbation(pyg_data, model)
 
-        # Step 4 - convert stability scores back to original node id pairs
+        # Step 5 — convert scores to original node ids
         stability_scores = convert_stability_scores(stability_scores_int, int_to_node)
 
-        # Step 5 - compute IF and RIF on G (original) so year/journal attributes work
+        # Step 6 — compute IF and RIF on original G
         baseline_if  = compute_baseline_if(G, target_year)
         filtered_rif = compute_filtered_rif(G, target_year, stability_scores, dynamic_threshold)
         weighted_rif = compute_weighted_rif(G, target_year, stability_scores)
 
         print_rif_comparison(baseline_if, filtered_rif, weighted_rif, target_year)
 
-        # Step 6 - store results
+        # Step 7 — collect results
         for journal in baseline_if:
             all_results.append({
-                "year":               target_year,
-                "journal":            journal,
-                "baseline_if":        baseline_if.get(journal, 0),
-                "filtered_rif":       filtered_rif.get(journal, 0),
-                "weighted_rif":       weighted_rif.get(journal, 0),
+                "year":                target_year,
+                "journal":             journal,
+                "baseline_if":         baseline_if.get(journal, 0),
+                "filtered_rif":        filtered_rif.get(journal, 0),
+                "weighted_rif":        weighted_rif.get(journal, 0),
                 "stability_threshold": round(dynamic_threshold, 4),
             })
 
-        # Step 7 - save after every year in case of disconnection
+        # Step 8 — save after every year
         save_results(all_results)
         print(f"Results saved after year {target_year}")
 

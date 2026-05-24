@@ -1,61 +1,67 @@
 """
-openalex_loader.py - Fetching real citation data from OpenAlex API.
-Two-step fetch: papers from Y-1/Y-2, then their citers from Y-1/Y-2.
+openalex_loader.py - Fetches citation graphs from OpenAlex API with backoff.
 """
 
+import time
 import requests
 import networkx as nx
-import time
 import pickle
 import os
 
+BASE_URL = "https://api.openalex.org"
+HEADERS  = {"User-Agent": "RIF-Research/1.0 (mailto:roni.brinn@gmail.com)"}
 
-EMAIL    = "roni.brinn@gmail.com"
-BASE_URL = "https://api.openalex.org/works"
-FIELD_ID = "fields/27"  # Medicine
+MEDICINE_FIELD = "fields/27"
+PAPER_TYPE     = "article"
 
 
-def _get(params, retries=3):
-    """
-    Sends a GET request to OpenAlex with retry logic.
-    Returns parsed JSON or None on failure.
-    """
+def _get(url, params, retries=5):
+    """GET with exponential backoff on 429/5xx."""
     for attempt in range(retries):
         try:
-            response = requests.get(BASE_URL, params=params, timeout=30)
-            if response.status_code == 200:
-                return response.json()
-            print(f"  HTTP {response.status_code}, retry {attempt+1}/{retries}")
-        except Exception as e:
-            print(f"  Request error: {e}, retry {attempt+1}/{retries}")
-        time.sleep(1)
+            r = requests.get(url, params=params, headers=HEADERS, timeout=30)
+            if r.status_code == 200:
+                return r.json()
+            elif r.status_code == 429:
+                wait = 2 ** attempt * 5  # 5, 10, 20, 40, 80 seconds
+                print(f"  HTTP 429, waiting {wait}s (attempt {attempt+1}/{retries})")
+                time.sleep(wait)
+            elif r.status_code >= 500:
+                wait = 2 ** attempt * 2
+                print(f"  HTTP {r.status_code}, waiting {wait}s (attempt {attempt+1}/{retries})")
+                time.sleep(wait)
+            else:
+                print(f"  HTTP {r.status_code}, skipping")
+                return None
+        except requests.exceptions.RequestException as e:
+            wait = 2 ** attempt * 3
+            print(f"  Request error: {e}, waiting {wait}s")
+            time.sleep(wait)
     return None
 
 
-def fetch_papers_by_years(year1, year2, max_papers=10000, email=EMAIL):
-    """
-    Fetches up to max_papers articles from the medical field
-    published in year1 or year2.
-    Returns a list of paper dicts: id, year, journal.
-    """
+def _fetch_papers(year_start, year_end, max_papers):
+    """Fetches up to max_papers medical articles from year_start to year_end."""
     papers = []
     cursor = "*"
+    per_page = 200
 
-    params = {
-        "filter":   f"topics.field.id:{FIELD_ID},"
-                    f"publication_year:{year1}|{year2},"
-                    f"type:article",
-        "select":   "id,publication_year,primary_location",
-        "per_page": 200,
-        "cursor":   cursor,
-        "mailto":   email,
-    }
+    filter_str = (
+        f"primary_topic.field.id:{MEDICINE_FIELD},"
+        f"type:{PAPER_TYPE},"
+        f"publication_year:{year_start}-{year_end}"
+    )
 
-    print(f"Fetching papers for years {year1}-{year2} (max {max_papers})...")
+    print(f"Fetching papers for years {year_start}-{year_end} (max {max_papers})...")
 
     while len(papers) < max_papers:
-        params["cursor"] = cursor
-        data = _get(params)
+        params = {
+            "filter":   filter_str,
+            "per-page": per_page,
+            "cursor":   cursor,
+            "select":   "id,publication_year,primary_location,cited_by_count",
+        }
+        data = _get(f"{BASE_URL}/works", params)
         if not data:
             break
 
@@ -64,98 +70,66 @@ def fetch_papers_by_years(year1, year2, max_papers=10000, email=EMAIL):
             break
 
         for p in results:
-            journal = "Unknown"
-            loc = p.get("primary_location")
-            if loc and loc.get("source"):
-                journal = loc["source"].get("display_name", "Unknown")
-
-            papers.append({
-                "id":      p["id"],
-                "year":    p.get("publication_year"),
-                "journal": journal,
-            })
-
-        print(f"  Fetched {len(papers)} papers so far...")
+            if len(papers) >= max_papers:
+                break
+            pid     = p.get("id", "")
+            year    = p.get("publication_year")
+            source  = p.get("primary_location") or {}
+            src     = source.get("source") or {}
+            journal = src.get("display_name", "Unknown")
+            if pid and year:
+                papers.append({"id": pid, "year": year, "journal": journal})
 
         cursor = data.get("meta", {}).get("next_cursor")
         if not cursor:
             break
 
-        time.sleep(0.1)
+        print(f"  Fetched {len(papers)} papers so far...")
+        time.sleep(0.15)  # polite delay between pages
 
-    papers = papers[:max_papers]
     print(f"Total papers fetched: {len(papers)}")
     return papers
 
 
-def fetch_citers(paper_id, year1, year2, email=EMAIL):
-    """
-    Fetches all articles that cited paper_id, published in year1 or year2.
-    Returns a list of citer dicts: id, year, journal.
-    """
-    citers = []
-    cursor = "*"
-
+def _fetch_citers(paper_id, year_start, year_end):
+    """Returns list of paper ids that cited paper_id, published in year_start-year_end."""
+    filter_str = (
+        f"cites:{paper_id},"
+        f"primary_topic.field.id:{MEDICINE_FIELD},"
+        f"type:{PAPER_TYPE},"
+        f"publication_year:{year_start}-{year_end}"
+    )
     params = {
-        "filter":   f"cites:{paper_id},"
-                    f"publication_year:{year1}|{year2},"
-                    f"type:article",
+        "filter":   filter_str,
+        "per-page": 200,
         "select":   "id,publication_year,primary_location",
-        "per_page": 200,
-        "cursor":   cursor,
-        "mailto":   email,
     }
+    data = _get(f"{BASE_URL}/works", params)
+    if not data:
+        return []
 
-    while True:
-        params["cursor"] = cursor
-        data = _get(params)
-        if not data:
-            break
-
-        results = data.get("results", [])
-        if not results:
-            break
-
-        for p in results:
-            journal = "Unknown"
-            loc = p.get("primary_location")
-            if loc and loc.get("source"):
-                journal = loc["source"].get("display_name", "Unknown")
-
-            citers.append({
-                "id":      p["id"],
-                "year":    p.get("publication_year"),
-                "journal": journal,
-            })
-
-        cursor = data.get("meta", {}).get("next_cursor")
-        if not cursor:
-            break
-
-        time.sleep(0.05)
-
+    citers = []
+    for p in data.get("results", []):
+        pid  = p.get("id", "")
+        year = p.get("publication_year")
+        source  = p.get("primary_location") or {}
+        src     = source.get("source") or {}
+        journal = src.get("display_name", "Unknown")
+        if pid and year:
+            citers.append({"id": pid, "year": year, "journal": journal})
     return citers
 
 
-def build_citation_graph(target_year, max_papers=10000, email=EMAIL):
+def build_citation_graph(target_year, max_papers=3000):
     """
-    Builds a directed citation graph for a given target year.
-
-    Step 1: fetch up to max_papers from Y-1 and Y-2.
-    Step 2: for each paper, fetch all citers from Y-1 and Y-2.
-    Step 3: build graph — nodes are papers, edges are citation links.
-
-    All nodes carry year and journal attributes.
-    Returns a NetworkX DiGraph.
+    Builds a directed citation graph for target_year.
+    Nodes = papers from (target_year-2, target_year-1).
+    Edges = citer -> cited, both from that window.
     """
-    year1 = target_year - 2
-    year2 = target_year - 1
+    y1 = target_year - 1
+    y2 = target_year - 2
 
-    # Step 1 - fetch base papers
-    papers = fetch_papers_by_years(year1, year2, max_papers, email)
-    if not papers:
-        print("No papers fetched, returning empty graph.")
-        return nx.DiGraph()
+    papers = _fetch_papers(y2, y1, max_papers)
 
     G = nx.DiGraph()
     paper_ids = set()
@@ -164,46 +138,29 @@ def build_citation_graph(target_year, max_papers=10000, email=EMAIL):
         G.add_node(p["id"], year=p["year"], journal=p["journal"])
         paper_ids.add(p["id"])
 
-    # Step 2 - fetch citers for each paper
     print(f"\nFetching citers for {len(papers)} papers...")
-    for i, paper in enumerate(papers):
-        citers = fetch_citers(paper["id"], year1, year2, email)
 
-        for citer in citers:
-            if citer["id"] not in G:
-                G.add_node(citer["id"], year=citer["year"], journal=citer["journal"])
-            # Edge direction: citer -> cited paper
-            G.add_edge(citer["id"], paper["id"])
+    for i, p in enumerate(papers):
+        citers = _fetch_citers(p["id"], y2, y1)
+        for c in citers:
+            # add citer node if not present
+            if c["id"] not in paper_ids:
+                G.add_node(c["id"], year=c["year"], journal=c["journal"])
+                paper_ids.add(c["id"])
+            G.add_edge(c["id"], p["id"])  # citer -> cited
 
         if (i + 1) % 100 == 0:
-            print(f"  Processed {i+1}/{len(papers)} papers "
-                  f"| Nodes: {G.number_of_nodes()} "
-                  f"| Edges: {G.number_of_edges()}")
+            print(f"  Processed {i+1}/{len(papers)} papers | "
+                  f"Nodes: {G.number_of_nodes()} | Edges: {G.number_of_edges()}")
+
+        # polite delay — reduces 429s significantly
+        time.sleep(0.2)
 
     print(f"\nGraph complete: {G.number_of_nodes()} nodes, {G.number_of_edges()} edges")
     return G
 
 
-def get_graph_stats(G):
-    """Prints basic statistics about the graph."""
-    from collections import Counter
-
-    years    = [G.nodes[n]["year"]    for n in G.nodes() if G.nodes[n].get("year")]
-    journals = [G.nodes[n]["journal"] for n in G.nodes()]
-
-    print(f"\nGraph Statistics:")
-    print(f"  Nodes:           {G.number_of_nodes()}")
-    print(f"  Edges:           {G.number_of_edges()}")
-    if years:
-        print(f"  Year range:      {min(years)} - {max(years)}")
-    print(f"  Unique journals: {len(set(journals))}")
-    print(f"  Top 10 journals by paper count:")
-    for journal, count in Counter(journals).most_common(10):
-        print(f"    {journal}: {count}")
-
-
 def save_graph(G, path):
-    """Saves a NetworkX graph to disk using pickle."""
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "wb") as f:
         pickle.dump(G, f)
@@ -211,15 +168,7 @@ def save_graph(G, path):
 
 
 def load_graph(path):
-    """Loads a NetworkX graph from disk."""
     with open(path, "rb") as f:
         G = pickle.load(f)
     print(f"Graph loaded: {G.number_of_nodes()} nodes, {G.number_of_edges()} edges")
     return G
-
-
-if __name__ == "__main__":
-    TARGET_YEAR = 2018
-    G = build_citation_graph(TARGET_YEAR, max_papers=10000)
-    get_graph_stats(G)
-    save_graph(G, f"data/graphs/graph_{TARGET_YEAR}.gpickle")

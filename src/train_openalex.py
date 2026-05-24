@@ -1,110 +1,65 @@
 """
-train_openalex.py - Training GraphSAGE on the OpenAlex citation graph.
+train_openalex.py - Trains GraphSAGE on an OpenAlex citation graph.
 """
 
 import torch
 import torch.nn.functional as F
-import networkx as nx
 from torch_geometric.data import Data
-from torch_geometric.utils import negative_sampling
-from openalex_loader import load_graph
-from model import build_model
+from model import GraphSAGE
 
 
-def build_pyg_data(G):
+def train(pyg_data, epochs=100, lr=0.01, hidden=128, out=64):
     """
-    Converts OpenAlex NetworkX graph to PyTorch Geometric Data object.
-    Uses node degree as the single feature.
+    Trains GraphSAGE with link prediction (dot-product decoder).
+    Uses a learning rate scheduler that halves LR every 30 epochs.
+    Returns trained model.
     """
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-    # Remap nodes to consecutive integers
-    G = nx.convert_node_labels_to_integers(G)
-    num_nodes = G.number_of_nodes()
+    in_channels = pyg_data.x.shape[1]
+    model = GraphSAGE(in_channels, hidden, out).to(device)
 
-    # Use degree as node feature
-    degrees = torch.tensor(
-        [[G.degree(n)] for n in range(num_nodes)],
-        dtype=torch.float
-    ).to(device)
+    print(f"Model built: input={in_channels}, hidden={hidden}, output={out}, device={device}")
 
-    # Build edge_index
-    edges = list(G.edges())
-    edge_index = torch.tensor(edges, dtype=torch.long).t().contiguous().to(device)
-
-    return Data(x=degrees, edge_index=edge_index, num_nodes=num_nodes), G
-
-
-def train_epoch(model, optimizer, data):
-    """
-    Runs one training epoch using positive and negative edge sampling.
-    Returns the loss value for this epoch.
-    """
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    model.train()
-    optimizer.zero_grad()
-
-    # Forward pass
-    z = model(data.x, data.edge_index)
-
-    # Positive edges
-    pos_edge_index = data.edge_index
-
-    # Negative edges
-    neg_edge_index = negative_sampling(
-        edge_index=data.edge_index,
-        num_nodes=data.num_nodes,
-        num_neg_samples=pos_edge_index.shape[1]
-    ).to(device)
-
-    # Compute scores
-    pos_scores = (z[pos_edge_index[0]] * z[pos_edge_index[1]]).sum(dim=1)
-    neg_scores = (z[neg_edge_index[0]] * z[neg_edge_index[1]]).sum(dim=1)
-
-    # Loss
-    pos_labels = torch.ones(pos_scores.shape[0]).to(device)
-    neg_labels = torch.zeros(neg_scores.shape[0]).to(device)
-    scores = torch.cat([pos_scores, neg_scores])
-    labels = torch.cat([pos_labels, neg_labels])
-
-    loss = F.binary_cross_entropy_with_logits(scores, labels)
-    loss.backward()
-    optimizer.step()
-
-    return loss.item()
-
-
-def train(data, epochs=50, lr=0.01, hidden=64, out=32):
-    """
-    Full training loop for GraphSAGE on OpenAlex graph.
-    Returns the trained model.
-    """
-    model = build_model(
-        num_features=1,
-        hidden_channels=hidden,
-        out_channels=out
-    )
     optimizer = torch.optim.Adam(model.parameters(), lr=lr)
+    scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=30, gamma=0.5)
 
-    print(f"\nStarting training on OpenAlex graph for {epochs} epochs...")
+    x          = pyg_data.x.to(device)
+    edge_index = pyg_data.edge_index.to(device)
+    num_nodes  = pyg_data.num_nodes
+    num_edges  = edge_index.shape[1]
+
+    print(f"\nStarting training for {epochs} epochs...")
+
+    model.train()
     for epoch in range(1, epochs + 1):
-        loss = train_epoch(model, optimizer, data)
+        optimizer.zero_grad()
+
+        z = model(x, edge_index)
+
+        # positive pairs: real edges
+        src, dst = edge_index[0], edge_index[1]
+        pos_score = (z[src] * z[dst]).sum(dim=1)
+
+        # negative pairs: random non-edges
+        neg_src = torch.randint(0, num_nodes, (num_edges,), device=device)
+        neg_dst = torch.randint(0, num_nodes, (num_edges,), device=device)
+        neg_score = (z[neg_src] * z[neg_dst]).sum(dim=1)
+
+        # binary cross-entropy loss
+        pos_loss = F.binary_cross_entropy_with_logits(
+            pos_score, torch.ones_like(pos_score)
+        )
+        neg_loss = F.binary_cross_entropy_with_logits(
+            neg_score, torch.zeros_like(neg_score)
+        )
+        loss = pos_loss + neg_loss
+        loss.backward()
+        optimizer.step()
+        scheduler.step()
+
         if epoch % 10 == 0:
-            print(f"  Epoch {epoch:>3} | Loss: {loss:.4f}")
+            print(f"  Epoch {epoch:3d} | Loss: {loss.item():.4f} | LR: {scheduler.get_last_lr()[0]:.5f}")
 
     print("Training complete!")
     return model
-
-
-if __name__ == "__main__":
-    # Load OpenAlex graph
-    G = load_graph()
-    data, G = build_pyg_data(G)
-    print(f"Graph: {data.num_nodes} nodes, {data.edge_index.shape[1]} edges")
-
-    # Train model
-    model = train(data, epochs=50)
-
-    # Save model
-    torch.save(model.state_dict(), "results/graphsage_openalex.pt")
-    print("Model saved to results/graphsage_openalex.pt")
