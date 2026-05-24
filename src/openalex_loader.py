@@ -14,7 +14,7 @@ import pickle
 import os
 
 BASE_URL              = "https://api.openalex.org"
-HEADERS               = {"User-Agent": "RIF-Research/1.0 (mailto:roni.brinn@gmail.com)"}
+HEADERS = {"User-Agent": "RIF-Research/1.0 (mailto:roni.brinn@gmail.com)"}
 PAPER_TYPE            = "article"
 MIN_PAPERS            = 20
 TOP_JOURNALS          = 100
@@ -86,7 +86,7 @@ def fetch_top_journals(top_n=TOP_JOURNALS):
             })
 
         page += 1
-        time.sleep(0.2)
+        time.sleep(2)
 
     print(f"  Fetched {len(journals)} journals")
     return journals
