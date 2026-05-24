@@ -48,11 +48,11 @@ def _get(url, params, retries=5):
 
 def fetch_top_journals(top_n=TOP_JOURNALS):
     """
-    Fetches top N health sciences journals sorted by cited_by_count.
-    Uses domain 4 (Health Sciences) to filter out non-medical journals.
-    Returns list of dicts: {id, display_name, cited_by_count, works_count}
+    Fetches top N journals sorted by cited_by_count.
+    No domain filter — top journals are inherently medical/scientific.
     """
-    print(f"Fetching top {top_n} health sciences journals by cited_by_count...")
+    print(f"Fetching top {top_n} journals by cited_by_count...")
+    time.sleep(3)  # initial pause to avoid rate limit
 
     journals = []
     per_page = 100
@@ -60,8 +60,7 @@ def fetch_top_journals(top_n=TOP_JOURNALS):
 
     while len(journals) < top_n:
         params = {
-            "filter":   f"type:journal,"
-                        f"topics.domain.id:{HEALTH_SCIENCES_DOMAIN}",
+            "filter":   "type:journal",
             "sort":     "cited_by_count:desc",
             "per-page": per_page,
             "page":     page,
@@ -86,11 +85,10 @@ def fetch_top_journals(top_n=TOP_JOURNALS):
             })
 
         page += 1
-        time.sleep(2)
+        time.sleep(0.5)  # longer pause between pages
 
     print(f"  Fetched {len(journals)} journals")
     return journals
-
 
 def get_papers_count(journal_id, year_start, year_end):
     """Returns paper count for a journal in the given time window."""
