@@ -99,68 +99,40 @@ def fetch_top_journals(top_n=TOP_JOURNALS):
 # Step 2: Quality filter per journal
 # ─────────────────────────────────────────────
 
-def get_journal_counts(journal_id, year_start, year_end):
-    """
-    Returns (papers_count, citations_count) for a journal in the time window.
-    Uses meta.count only — no paper fetching.
-    """
-    # papers published in window
-    params_papers = {
+def get_papers_count(journal_id, year_start, year_end):
+    """Returns paper count for a journal in the given time window."""
+    params = {
         "filter":   f"primary_location.source.id:{journal_id},"
                     f"publication_year:{year_start}-{year_end},"
                     f"type:{PAPER_TYPE}",
         "per-page": 1,
         "select":   "id",
     }
-    data = _get(f"{BASE_URL}/works", params_papers)
-    papers_count = data.get("meta", {}).get("count", 0) if data else 0
-
-    time.sleep(0.15)
-
-    # citations received by those papers from within the same window
-    params_cites = {
-        "filter": f"cited_by.primary_location.source.id:{journal_id},"
-                f"publication_year:{year_start}-{year_end},"
-                f"type:{PAPER_TYPE}",
-        "per-page": 1,
-        "select":   "id",
-    }
-    data = _get(f"{BASE_URL}/works", params_cites)
-    citations_count = data.get("meta", {}).get("count", 0) if data else 0
-
-    time.sleep(0.15)
-
-    return papers_count, citations_count
+    data = _get(f"{BASE_URL}/works", params)
+    return data.get("meta", {}).get("count", 0) if data else 0
 
 
 def filter_journals(journals, year_start, year_end):
     """
-    Keeps only journals with papers >= MIN_PAPERS and citations >= MIN_CITATIONS.
-    Returns filtered list with added papers_count, citations_count, baseline_if.
+    Keeps only journals with papers >= MIN_PAPERS.
+    Citations will be computed from the graph after construction.
     """
-    print(f"\nApplying quality filter "
-          f"(papers>={MIN_PAPERS}, citations>={MIN_CITATIONS})...")
+    print(f"\nApplying quality filter (papers>={MIN_PAPERS})...")
 
     filtered = []
     for i, j in enumerate(journals):
-        papers, citations = get_journal_counts(j["id"], year_start, year_end)
+        papers = get_papers_count(j["id"], year_start, year_end)
 
-        if papers >= MIN_PAPERS and citations >= MIN_CITATIONS:
-            baseline_if = round(citations / papers, 4)
-            filtered.append({
-                **j,
-                "papers_count":   papers,
-                "citations_count": citations,
-                "baseline_if":    baseline_if,
-            })
-            print(f"  ✓ {j['display_name']:<50} "
-                  f"papers={papers:4d}  citations={citations:5d}  IF={baseline_if:.4f}")
+        if papers >= MIN_PAPERS:
+            filtered.append({**j, "papers_count": papers})
+            print(f"  ✓ {j['display_name']:<50} papers={papers:5d}")
         else:
-            print(f"  ✗ {j['display_name']:<50} "
-                  f"papers={papers:4d}  citations={citations:5d}  (filtered out)")
+            print(f"  ✗ {j['display_name']:<50} papers={papers:5d} (filtered out)")
 
         if (i + 1) % 10 == 0:
             print(f"  Checked {i+1}/{len(journals)} journals...")
+
+        time.sleep(0.15)
 
     print(f"\nJournals after filter: {len(filtered)}/{len(journals)}")
     return filtered
