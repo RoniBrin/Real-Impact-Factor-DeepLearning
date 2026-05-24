@@ -105,10 +105,10 @@ def get_journal_counts(journal_id, year_start, year_end):
     Uses meta.count only — no paper fetching.
     """
     # papers published in window
-    params_papers = {
-        "filter":   f"primary_location.source.id:{journal_id},"
-                    f"publication_year:{year_start}-{year_end},"
-                    f"type:{PAPER_TYPE}",
+    params_cites = {
+        "filter":f"cited_by.primary_location.source.id:{journal_id},"
+                f"publication_year:{year_start}-{year_end},"
+                f"type:{PAPER_TYPE}",
         "per-page": 1,
         "select":   "id",
     }
