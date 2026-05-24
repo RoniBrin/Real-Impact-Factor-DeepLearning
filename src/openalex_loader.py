@@ -64,9 +64,8 @@ def fetch_top_journals(top_n=TOP_JOURNALS):
 
     while len(journals) < top_n:
         params = {
-            "filter":   f"topics.field.id:{MEDICINE_FIELD},"
-                        f"type:journal",
-            "sort":     "cited_by_count:desc",
+            "filter": f"type:journal",
+            "sort":   "cited_by_count:desc",
             "per-page": per_page,
             "page":     page,
             "select":   "id,display_name,cited_by_count,works_count",
