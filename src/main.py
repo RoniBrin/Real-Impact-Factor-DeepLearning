@@ -123,13 +123,19 @@ def run_perturbation(pyg_data, model):
     summarize_stability(stability_scores)
 
     if stability_scores:
-        scores_list       = sorted(stability_scores.values())
-        idx               = int(len(scores_list) * 0.2)
-        dynamic_threshold = scores_list[min(idx, len(scores_list) - 1)]
-        print(f"  Dynamic threshold (20th pct): {dynamic_threshold:.4f}")
+        scores_list = sorted(stability_scores.values())
+
+        print(f"  Score min:    {scores_list[0]:.4f}")
+        print(f"  Score 25th:   {scores_list[int(len(scores_list)*0.25)]:.4f}")
+        print(f"  Score median: {scores_list[len(scores_list)//2]:.4f}")
+        print(f"  Score 75th:   {scores_list[int(len(scores_list)*0.75)]:.4f}")
+        print(f"  Score max:    {scores_list[-1]:.4f}")
+
+        # median splits scores 50/50 — always meaningful
+        dynamic_threshold = scores_list[len(scores_list) // 2]
+        print(f"  Dynamic threshold (median): {dynamic_threshold:.4f}")
     else:
         dynamic_threshold = THRESHOLD
-
     return stability_scores, dynamic_threshold
 
 
