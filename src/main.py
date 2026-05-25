@@ -1,18 +1,14 @@
 """
-main.py - Main RIF pipeline using journal-first architecture.
+main.py - Main RIF pipeline using medical topic-based architecture.
 """
 
 import os
-import pickle
 import torch
 import pandas as pd
 import networkx as nx
 from torch_geometric.data import Data
 
-from openalex_loader import (
-    build_citation_graph, save_graph, load_graph,
-    save_journals, load_journals
-)
+from openalex_loader import build_citation_graph, save_graph, load_graph
 from graph_builder import compute_baseline_if
 from train_openalex import train as train_model
 from perturbation import perturb_edges, compute_reconstruction_scores, track_reconstruction
@@ -25,14 +21,17 @@ YEAR_END     = 2022
 N_ITERATIONS = 100
 FRACTION     = 0.3
 THRESHOLD    = 0.5
-TOP_JOURNALS = 100
 GRAPH_DIR    = "/content/drive/MyDrive/RIF/graphs"
 RESULTS_CSV  = "/content/drive/MyDrive/RIF/rif_results.csv"
 RESULTS_XLSX = "/content/drive/MyDrive/RIF/rif_results.xlsx"
 
 
 def build_pyg_data(G):
-    """Converts DiGraph to PyG Data with 4 normalized node features."""
+    """
+    Converts DiGraph to PyG Data with 4 normalized node features:
+    [year, degree, in_degree, out_degree].
+    Returns pyg_data, G_int, int_to_node mapping.
+    """
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     nodes       = list(G.nodes())
@@ -77,25 +76,24 @@ def convert_stability_scores(stability_scores_int, int_to_node):
 
 
 def get_or_build_graph(target_year):
-    """Loads graph and journals from cache, or builds fresh."""
-    graph_path   = os.path.join(GRAPH_DIR, f"graph_{target_year}.gpickle")
-    journal_path = os.path.join(GRAPH_DIR, f"journals_{target_year}.pkl")
+    """Loads graph from cache if available, otherwise builds from OpenAlex."""
+    graph_path = os.path.join(GRAPH_DIR, f"graph_{target_year}.gpickle")
 
-    if os.path.exists(graph_path) and os.path.exists(journal_path):
+    if os.path.exists(graph_path):
         print(f"Loading cached graph for {target_year}...")
-        G        = load_graph(graph_path)
-        journals = load_journals(journal_path)
-        return G, journals
+        return load_graph(graph_path)
 
     print(f"Building graph for {target_year} from OpenAlex...")
-    G, journals = build_citation_graph(target_year, top_n=TOP_JOURNALS)
+    G = build_citation_graph(target_year)
     save_graph(G, graph_path)
-    save_journals(journals, journal_path)
-    return G, journals
+    return G
 
 
 def run_perturbation(pyg_data, model):
-    """Runs perturbation loop. Threshold = 80th percentile."""
+    """
+    Runs perturbation loop.
+    Dynamic threshold = 80th percentile of stability scores.
+    """
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     pyg_data.x          = pyg_data.x.to(device)
     pyg_data.edge_index = pyg_data.edge_index.to(device)
@@ -160,23 +158,25 @@ if __name__ == "__main__":
         print(f"  TARGET YEAR: {target_year}")
         print(f"{'='*60}")
 
-        # Step 1+2+3+4: get graph
-        G, journals = get_or_build_graph(target_year)
+        # Step 1: load or build graph
+        G = get_or_build_graph(target_year)
         if G.number_of_edges() == 0:
             print(f"  No edges for {target_year}, skipping.")
             continue
 
-        # Step 5: build PyG + train
+        # Step 2: build PyG data
         pyg_data, G_int, int_to_node = build_pyg_data(G)
+
+        # Step 3: train model
         model = train_model(pyg_data, epochs=100)
 
-        # Step 6: perturbation + stability
+        # Step 4: perturbation + stability
         stability_scores_int, dynamic_threshold = run_perturbation(
             pyg_data, model)
         stability_scores = convert_stability_scores(
             stability_scores_int, int_to_node)
 
-        # Step 7: compute IF and RIF
+        # Step 5: compute IF and RIF
         baseline_if  = compute_baseline_if(G, target_year)
         filtered_rif = compute_filtered_rif(
             G, target_year, stability_scores, dynamic_threshold)
@@ -186,7 +186,7 @@ if __name__ == "__main__":
         print_rif_comparison(baseline_if, filtered_rif, weighted_rif,
                              target_year)
 
-        # collect results
+        # Step 6: collect results
         for journal in baseline_if:
             all_results.append({
                 "year":                target_year,
@@ -197,6 +197,7 @@ if __name__ == "__main__":
                 "stability_threshold": round(dynamic_threshold, 4),
             })
 
+        # Step 7: save after every year
         save_results(all_results)
         print(f"Results saved after year {target_year}")
 
