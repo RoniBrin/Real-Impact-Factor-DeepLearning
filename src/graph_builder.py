@@ -2,14 +2,11 @@
 graph_builder.py - Computes Baseline IF from the citation graph.
 """
 
-import networkx as nx
-
 
 def compute_baseline_if(G, target_year):
     """
     Computes Baseline IF for every journal in the graph.
-    IF(Y) = citations received by journal papers from Y-1,Y-2
-            where citing papers are also from Y-1 or Y-2.
+    IF(Y) = citations received / papers published in Y-1, Y-2.
     Only journals with papers >= 20 and citations > 0 are included.
     """
     relevant_years = (target_year - 1, target_year - 2)
