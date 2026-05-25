@@ -27,18 +27,11 @@ def perturb_edges(edge_index, fraction=0.3):
 def compute_reconstruction_scores(z, removed_edges):
     """
     Computes similarity scores for removed edges using dot product.
-    Normalizes scores using z-score so threshold=0.5 is meaningful.
+    Returns sigmoid of raw dot product scores.
     """
     src    = z[removed_edges[0]]
     dst    = z[removed_edges[1]]
     scores = (src * dst).sum(dim=1)
-
-    # normalize: zero mean, unit std
-    mean   = scores.mean()
-    std    = scores.std() + 1e-8
-    scores = (scores - mean) / std
-
-    # shift to 0-1 range using sigmoid after normalization
     return torch.sigmoid(scores)
 
 def track_reconstruction(reconstruction_counts, removal_counts, removed_edges, scores, threshold=0.5):
