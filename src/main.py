@@ -124,9 +124,9 @@ def run_perturbation(pyg_data, model):
 
     if stability_scores:
         scores_list       = sorted(stability_scores.values())
-        idx               = int(len(scores_list) * 0.8)
+        idx               = int(len(scores_list) * 0.2)
         dynamic_threshold = scores_list[min(idx, len(scores_list) - 1)]
-        print(f"  Dynamic threshold (80th pct): {dynamic_threshold:.4f}")
+        print(f"  Dynamic threshold (20th pct): {dynamic_threshold:.4f}")
     else:
         dynamic_threshold = THRESHOLD
 
