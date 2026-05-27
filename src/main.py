@@ -125,6 +125,11 @@ def run_perturbation(pyg_data, model):
 
     return stability_scores, THRESHOLD
 
+import json
+scores_path = os.path.join(GRAPH_DIR, f"stability_scores_{target_year}.json")
+with open(scores_path, "w") as f:
+    json.dump(list(stability_scores.values()), f)
+
 def save_results(results):
     """Saves results to CSV and Excel."""
     os.makedirs(os.path.dirname(RESULTS_CSV), exist_ok=True)
