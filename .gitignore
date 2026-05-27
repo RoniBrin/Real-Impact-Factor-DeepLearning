@@ -2,4 +2,8 @@ venv/
 __pycache__/
 *.pyc
 data/
-results/
+results/*
+!results/rif_results.csv
+!results/rif_results.xlsx
+!results/figures/
+!results/figures/*
