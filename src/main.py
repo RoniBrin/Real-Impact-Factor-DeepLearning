@@ -121,14 +121,15 @@ def run_perturbation(pyg_data, model):
         reconstruction_counts, removal_counts)
     summarize_stability(stability_scores)
 
+    import json
+    scores_path = os.path.join(GRAPH_DIR, f"stability_scores_{target_year}.json")
+    with open(scores_path, "w") as f:
+        json.dump(list(stability_scores.values()), f)
+
     print(f"  Threshold : {THRESHOLD}")
 
     return stability_scores, THRESHOLD
 
-import json
-scores_path = os.path.join(GRAPH_DIR, f"stability_scores_{target_year}.json")
-with open(scores_path, "w") as f:
-    json.dump(list(stability_scores.values()), f)
 
 def save_results(results):
     """Saves results to CSV and Excel."""
