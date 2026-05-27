@@ -22,8 +22,8 @@ N_ITERATIONS = 100
 FRACTION     = 0.3
 THRESHOLD    = 0.7
 GRAPH_DIR    = "/content/drive/MyDrive/RIF/graphs"
-RESULTS_CSV  = "/content/drive/MyDrive/RIF/rif_results.csv"
-RESULTS_XLSX = "/content/drive/MyDrive/RIF/rif_results.xlsx"
+RESULTS_CSV  = "/content/drive/MyDrive/RIF/rif_results_v2.csv"
+RESULTS_XLSX = "/content/drive/MyDrive/RIF/rif_results_v2.xlsx"
 
 
 def build_pyg_data(G):

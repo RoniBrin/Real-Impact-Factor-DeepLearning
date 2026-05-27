@@ -9,10 +9,10 @@ import seaborn as sns
 import os
 
 RESULTS_CSV = os.path.join(
-    os.path.dirname(__file__), "../results/rif_results.csv"
+    os.path.dirname(__file__), "../results/rif_results_v2.csv"
 )
 OUTPUT_DIR = os.path.join(
-    os.path.dirname(__file__), "../results/figures"
+    os.path.dirname(__file__), "../results/figures_v2"
 )
 
 TOP_JOURNALS = [
