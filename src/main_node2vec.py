@@ -27,28 +27,26 @@ RESULTS_CSV  = "/content/drive/MyDrive/RIF/rif_results_node2vec.csv"
 RESULTS_XLSX = "/content/drive/MyDrive/RIF/rif_results_node2vec.xlsx"
 
 
-def build_pyg_data(G):
+def build_edge_index(G, nodes):
     """
-    Converts DiGraph to PyG Data.
-    Node2Vec only needs edge_index — no node features required.
-    Returns pyg_data, int_to_node mapping.
+    Converts DiGraph edges to PyG edge_index using node order from nodes list.
+    Returns edge_index tensor and int_to_node mapping.
     """
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
-    nodes       = list(G.nodes())
+    device      = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    node_to_int = {node: i for i, node in enumerate(nodes)}
     int_to_node = {i: node for i, node in enumerate(nodes)}
-    G_int       = nx.convert_node_labels_to_integers(G)
-    num_nodes   = G_int.number_of_nodes()
 
-    edges = list(G_int.edges())
+    edges = [(node_to_int[u], node_to_int[v])
+             for u, v in G.edges()
+             if u in node_to_int and v in node_to_int]
+
     if edges:
         edge_index = torch.tensor(
             edges, dtype=torch.long).t().contiguous().to(device)
     else:
         edge_index = torch.zeros((2, 0), dtype=torch.long).to(device)
 
-    pyg_data = Data(edge_index=edge_index, num_nodes=num_nodes)
-    return pyg_data, int_to_node
+    return edge_index, int_to_node
 
 
 def convert_stability_scores(stability_scores_int, int_to_node):
@@ -76,13 +74,13 @@ def get_or_build_graph(target_year):
     return G
 
 
-def run_perturbation_node2vec(pyg_data, embeddings, target_year):
+def run_perturbation_node2vec(edge_index, embeddings, target_year):
     """
     Runs perturbation loop using Node2Vec embeddings.
     Uses fixed threshold = THRESHOLD.
     """
     device     = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    edge_index = pyg_data.edge_index.to(device)
+    edge_index = edge_index.to(device)
     z          = embeddings.to(device)
 
     reconstruction_counts = {}
@@ -147,25 +145,23 @@ if __name__ == "__main__":
             print(f"  No edges for {target_year}, skipping.")
             continue
 
-        # Step 2: build PyG data
-        pyg_data, int_to_node = build_pyg_data(G)
-
-        # Step 3: train Node2Vec
-        embeddings = train_node2vec(
-            edge_index=pyg_data.edge_index,
-            num_nodes=pyg_data.num_nodes,
+        # Step 2: train Node2Vec — works on NetworkX graph directly
+        embeddings, nodes = train_node2vec(
+            G,
             embedding_dim=64,
             walk_length=20,
-            context_size=10,
-            walks_per_node=10,
+            num_walks=10,
+            workers=2,
             epochs=50,
-            lr=0.01,
-            batch_size=128,
+            window=10,
         )
+
+        # Step 3: build edge_index using same node order as embeddings
+        edge_index, int_to_node = build_edge_index(G, nodes)
 
         # Step 4: perturbation + stability
         stability_scores_int, threshold = run_perturbation_node2vec(
-            pyg_data, embeddings, target_year)
+            edge_index, embeddings, target_year)
         stability_scores = convert_stability_scores(
             stability_scores_int, int_to_node)
 
