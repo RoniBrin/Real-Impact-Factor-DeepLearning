@@ -6,6 +6,7 @@ Works with NetworkX graphs directly.
 import torch
 import numpy as np
 import networkx as nx
+import multiprocessing
 from node2vec import Node2Vec as N2V
 
 
@@ -27,7 +28,7 @@ def train_node2vec(G, embedding_dim=64, walk_length=20, num_walks=10,
         dimensions=embedding_dim,
         walk_length=walk_length,
         num_walks=num_walks,
-        workers=workers,
+        workers=multiprocessing.cpu_count(),
         quiet=True,
     )
 
