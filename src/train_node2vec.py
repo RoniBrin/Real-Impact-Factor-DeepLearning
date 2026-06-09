@@ -32,13 +32,15 @@ def train_node2vec(G, embedding_dim=64, walk_length=20, num_walks=10,
         quiet=True,
     )
 
+    print(f"  Computing random walks and training...")
+    
     model = node2vec.fit(
         window=window,
         min_count=1,
         batch_words=4,
         epochs=epochs,
     )
-
+    
     print("Node2Vec training complete!")
 
     # build embedding tensor indexed by integer node id
