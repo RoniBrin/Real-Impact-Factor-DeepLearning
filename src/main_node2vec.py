@@ -19,7 +19,7 @@ from rif import compute_filtered_rif, compute_weighted_rif, print_rif_comparison
 # Configuration
 YEAR_START   = 2018
 YEAR_END     = 2022
-N_ITERATIONS = 100
+N_ITERATIONS = 50
 FRACTION     = 0.3
 THRESHOLD    = 0.7
 GRAPH_DIR    = "/content/drive/MyDrive/RIF/graphs"
@@ -150,9 +150,9 @@ if __name__ == "__main__":
             G,
             embedding_dim=64,
             walk_length=20,
-            num_walks=10,
+            num_walks=5,
             workers=2,
-            epochs=50,
+            epochs=30,
             window=10,
         )
 
