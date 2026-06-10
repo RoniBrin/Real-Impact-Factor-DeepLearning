@@ -16,24 +16,20 @@ RESULTS_CSV  = "/content/drive/MyDrive/RIF/rif_results_v2.csv"
 GRAPHS_DIR   = "/content/drive/MyDrive/RIF/graphs"
 OUTPUT_DIR   = os.path.join(os.path.dirname(__file__), "../results/figures_graphsage")
 
-TOP_JOURNALS = [
-    "New England Journal of Medicine",
-    "The Lancet",
-    "JAMA",
-    "Nature",
-    "Nature Medicine",
-    "Cell",
-    "Science",
-    "BMJ",
-    "The Lancet Oncology",
-    "Circulation",
-]
-
 
 def load_results():
     df = pd.read_csv(RESULTS_CSV)
     print(f"Loaded {len(df)} rows | {df['journal'].nunique()} journals | years: {sorted(df['year'].unique())}")
-    return df
+
+    top_journals = (
+        df.groupby("journal")["baseline_if"]
+        .mean()
+        .sort_values(ascending=False)
+        .head(10)
+        .index.tolist()
+    )
+
+    return df, top_journals
 
 
 def load_stability_scores(year=2018):
@@ -47,17 +43,13 @@ def load_stability_scores(year=2018):
 # ─────────────────────────────────────────────
 
 def plot_stability_histogram(year=2018):
-    """
-    Histogram of stability scores for a representative year.
-    Wide distribution = model discriminates between stable and unstable citations.
-    """
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     scores = load_stability_scores(year)
 
     fig, ax = plt.subplots(figsize=(9, 5))
     ax.hist(scores, bins=30, color="#4C72B0", edgecolor="white", linewidth=0.5)
     ax.axvline(x=0.7, color="red", linestyle="--", linewidth=1.5, label="Threshold = 0.7")
-    ax.set_title(f"Stability Score Distribution — GraphSAGE ({year})", fontsize=14)
+    ax.set_title(f"Stability Score Distribution - GraphSAGE ({year})", fontsize=14)
     ax.set_xlabel("Stability Score", fontsize=12)
     ax.set_ylabel("Number of Citation Edges", fontsize=12)
     ax.legend(fontsize=11)
@@ -68,37 +60,19 @@ def plot_stability_histogram(year=2018):
     print(f"Saved -> {path}")
 
 
-def plot_stability_by_journal(df, year=2020):
-    """
-    Box plot of stability scores per journal.
-    Different journals attract qualitatively different citations.
-    """
+def plot_stability_by_journal(df, top_journals, year=2020):
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-    df_year = df[df["year"] == year].copy()
-    df_year["rif_drop_pct"] = (
-        (df_year["baseline_if"] - df_year["weighted_rif"])
-        / df_year["baseline_if"].replace(0, float("nan"))
-        * 100
-    )
+    df_year  = df[df["year"] == year].copy()
+    df_plot  = df_year[df_year["journal"].isin(top_journals)].copy()
 
-    top_journals = (
-        df_year[df_year["journal"].isin(TOP_JOURNALS)]
-        .sort_values("baseline_if", ascending=False)
-        ["journal"].tolist()
-    )
-
-    if not top_journals:
-        top_journals = (
-            df_year.nlargest(10, "baseline_if")["journal"].tolist()
-        )
-
-    df_plot = df_year[df_year["journal"].isin(top_journals)].copy()
+    if df_plot.empty:
+        df_plot = df_year.nlargest(10, "baseline_if").copy()
 
     fig, ax = plt.subplots(figsize=(14, 6))
     journals_ordered = df_plot.sort_values("baseline_if", ascending=False)["journal"].tolist()
 
-    x = np.arange(len(journals_ordered))
+    x     = np.arange(len(journals_ordered))
     width = 0.35
 
     baseline = [df_plot[df_plot["journal"] == j]["baseline_if"].values[0] for j in journals_ordered]
@@ -126,10 +100,6 @@ def plot_stability_by_journal(df, year=2020):
 # ─────────────────────────────────────────────
 
 def plot_citation_stability_heatmap(df):
-    """
-    Heatmap: journals x stability bins.
-    Shows what fraction of each journal's citations fall in each stability range.
-    """
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     df = df.copy()
@@ -157,7 +127,7 @@ def plot_citation_stability_heatmap(df):
         cmap="YlOrRd", linewidths=0.5, ax=ax,
         cbar_kws={"label": "RIF Reduction (%)"}
     )
-    ax.set_title("Citation Instability Heatmap — Top 15 Journals by IF", fontsize=13)
+    ax.set_title("Citation Instability Heatmap - Top 15 Journals by IF", fontsize=13)
     ax.set_xlabel("Year", fontsize=11)
     ax.set_ylabel("Journal", fontsize=11)
     plt.tight_layout()
@@ -172,12 +142,7 @@ def plot_citation_stability_heatmap(df):
 # Group 3: Proving RIF is better than IF
 # ─────────────────────────────────────────────
 
-def plot_if_vs_rif_scatter(df, year=2020):
-    """
-    Scatter: Baseline IF vs Weighted RIF.
-    Points below diagonal = journals with unstable citations.
-    This is the most important visualization in the project.
-    """
+def plot_if_vs_rif_scatter(df, top_journals, year=2020):
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     df_year = df[df["year"] == year].copy()
@@ -194,7 +159,7 @@ def plot_if_vs_rif_scatter(df, year=2020):
     ax.plot([0, max_val], [0, max_val], color="red",
             linestyle="--", linewidth=1.2, label="IF = RIF (no change)")
 
-    for _, row in df_year[df_year["journal"].isin(TOP_JOURNALS)].iterrows():
+    for _, row in df_year[df_year["journal"].isin(top_journals)].iterrows():
         ax.annotate(
             row["journal"].split()[0],
             (row["baseline_if"], row["weighted_rif"]),
@@ -204,7 +169,7 @@ def plot_if_vs_rif_scatter(df, year=2020):
 
     ax.set_xlabel("Baseline IF", fontsize=12)
     ax.set_ylabel("Weighted RIF", fontsize=12)
-    ax.set_title(f"Baseline IF vs Weighted RIF — GraphSAGE ({year})", fontsize=13)
+    ax.set_title(f"Baseline IF vs Weighted RIF - GraphSAGE ({year})", fontsize=13)
     ax.legend(fontsize=10)
     ax.grid(linestyle="--", alpha=0.3)
     plt.tight_layout()
@@ -216,10 +181,6 @@ def plot_if_vs_rif_scatter(df, year=2020):
 
 
 def plot_rank_change(df, year=2020, top_n=20):
-    """
-    Rank change plot: IF rank vs RIF rank for top journals.
-    Journals that drop = inflated IF due to unstable citations.
-    """
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     df_year = df[df["year"] == year].copy()
@@ -244,7 +205,7 @@ def plot_rank_change(df, year=2020, top_n=20):
     ax.set_xticks([0, 1])
     ax.set_xticklabels(["Rank by IF", "Rank by RIF"], fontsize=11)
     ax.set_ylabel("Rank", fontsize=11)
-    ax.set_title(f"Journal Rank Change: IF → RIF ({year})", fontsize=13)
+    ax.set_title(f"Journal Rank Change: IF to RIF ({year})", fontsize=13)
     ax.grid(axis="y", linestyle="--", alpha=0.3)
     plt.tight_layout()
 
@@ -255,10 +216,6 @@ def plot_rank_change(df, year=2020, top_n=20):
 
 
 def plot_if_rif_difference_histogram(df):
-    """
-    Histogram of (Baseline IF - Weighted RIF) across all journals and years.
-    Shows how much IF overestimates impact on average.
-    """
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     df = df.copy()
@@ -269,9 +226,9 @@ def plot_if_rif_difference_histogram(df):
     ax.axvline(x=0, color="red", linestyle="--", linewidth=1.5, label="No difference")
     ax.axvline(x=df["diff"].mean(), color="orange", linestyle="--",
                linewidth=1.5, label=f"Mean = {df['diff'].mean():.3f}")
-    ax.set_xlabel("Baseline IF − Weighted RIF", fontsize=12)
+    ax.set_xlabel("Baseline IF - Weighted RIF", fontsize=12)
     ax.set_ylabel("Number of Journals", fontsize=12)
-    ax.set_title("Distribution of IF Overestimation (IF − RIF)", fontsize=13)
+    ax.set_title("How Much Does IF Overestimate Impact? (IF minus RIF)", fontsize=13)
     ax.legend(fontsize=10)
     plt.tight_layout()
 
@@ -286,10 +243,6 @@ def plot_if_rif_difference_histogram(df):
 # ─────────────────────────────────────────────
 
 def plot_threshold_sensitivity(df):
-    """
-    Shows average Weighted RIF across years for different threshold values.
-    If curves are close together, the method is robust.
-    """
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     thresholds = [0.5, 0.6, 0.7, 0.8, 0.9]
@@ -308,7 +261,7 @@ def plot_threshold_sensitivity(df):
 
     ax.set_xlabel("Year", fontsize=12)
     ax.set_ylabel("Average Weighted RIF", fontsize=12)
-    ax.set_title("Threshold Sensitivity Analysis", fontsize=13)
+    ax.set_title("Sensitivity to Stability Threshold", fontsize=13)
     ax.legend(fontsize=10)
     ax.xaxis.set_major_locator(ticker.MaxNLocator(integer=True))
     ax.grid(linestyle="--", alpha=0.4)
@@ -326,12 +279,12 @@ def plot_threshold_sensitivity(df):
 
 if __name__ == "__main__":
     os.makedirs(OUTPUT_DIR, exist_ok=True)
-    df = load_results()
+    df, top_journals = load_results()
 
     plot_stability_histogram(year=2018)
-    plot_stability_by_journal(df, year=2020)
+    plot_stability_by_journal(df, top_journals, year=2020)
     plot_citation_stability_heatmap(df)
-    plot_if_vs_rif_scatter(df, year=2020)
+    plot_if_vs_rif_scatter(df, top_journals, year=2020)
     plot_rank_change(df, year=2020, top_n=20)
     plot_if_rif_difference_histogram(df)
     plot_threshold_sensitivity(df)

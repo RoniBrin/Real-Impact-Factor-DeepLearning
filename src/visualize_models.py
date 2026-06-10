@@ -29,15 +29,7 @@ def load_all():
     return df, df_gs, df_vg, df_n2v
 
 
-# ─────────────────────────────────────────────
-# Graph 8: Average Stability by Model
-# ─────────────────────────────────────────────
-
 def plot_avg_stability_by_model(df):
-    """
-    Bar chart: average weighted RIF per model per year.
-    If all models agree, the finding is model-independent.
-    """
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     years  = sorted(df["year"].unique())
@@ -59,7 +51,7 @@ def plot_avg_stability_by_model(df):
     ax.set_xticklabels(years)
     ax.set_xlabel("Year", fontsize=12)
     ax.set_ylabel("Average Weighted RIF", fontsize=12)
-    ax.set_title("Average Weighted RIF by Model and Year", fontsize=13)
+    ax.set_title("Average Weighted RIF per Model and Year", fontsize=13)
     ax.legend(fontsize=10)
     ax.grid(axis="y", linestyle="--", alpha=0.4)
     plt.tight_layout()
@@ -70,15 +62,7 @@ def plot_avg_stability_by_model(df):
     print(f"Saved -> {path}")
 
 
-# ─────────────────────────────────────────────
-# Graph 9: RIF Correlation Across Models
-# ─────────────────────────────────────────────
-
 def plot_rif_correlation(df_gs, df_vg, df_n2v, year=2020):
-    """
-    Scatter: GraphSAGE RIF vs VGAE RIF vs Node2Vec RIF.
-    Points on diagonal = models agree on journal rankings.
-    """
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     merge_cols = ["journal", "year", "weighted_rif"]
@@ -112,7 +96,7 @@ def plot_rif_correlation(df_gs, df_vg, df_n2v, year=2020):
         ax.legend(fontsize=9)
         ax.grid(linestyle="--", alpha=0.3)
 
-    fig.suptitle(f"RIF Correlation Across Models ({year})", fontsize=13)
+    fig.suptitle(f"How Well Do the Models Agree? RIF Correlation ({year})", fontsize=13)
     plt.tight_layout()
 
     path = os.path.join(OUTPUT_DIR, f"9_rif_correlation_{year}.png")
@@ -121,15 +105,7 @@ def plot_rif_correlation(df_gs, df_vg, df_n2v, year=2020):
     print(f"Saved -> {path}")
 
 
-# ─────────────────────────────────────────────
-# Graph 10: RIF Reduction Rate by Model
-# ─────────────────────────────────────────────
-
 def plot_rif_reduction_by_model(df):
-    """
-    Bar chart: average % reduction from IF to Weighted RIF per model per year.
-    Shows that all models agree IF overestimates, but by different amounts.
-    """
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     df = df.copy()
@@ -158,7 +134,7 @@ def plot_rif_reduction_by_model(df):
     ax.set_xticklabels(years)
     ax.set_xlabel("Year", fontsize=12)
     ax.set_ylabel("Average IF Reduction (%)", fontsize=12)
-    ax.set_title("Average RIF Reduction Rate by Model and Year", fontsize=13)
+    ax.set_title("How Much Does Each Model Reduce IF? (2018-2022)", fontsize=13)
     ax.legend(fontsize=10)
     ax.grid(axis="y", linestyle="--", alpha=0.4)
     plt.tight_layout()
@@ -169,15 +145,7 @@ def plot_rif_reduction_by_model(df):
     print(f"Saved -> {path}")
 
 
-# ─────────────────────────────────────────────
-# Graph 11: IF vs RIF Scatter per Model
-# ─────────────────────────────────────────────
-
 def plot_if_vs_rif_per_model(df_gs, df_vg, df_n2v, year=2020):
-    """
-    Three scatter plots side by side: IF vs Weighted RIF for each model.
-    Shows each model consistently reduces IF, by different amounts.
-    """
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     fig, axes = plt.subplots(1, 3, figsize=(18, 6))
@@ -206,7 +174,7 @@ def plot_if_vs_rif_per_model(df_gs, df_vg, df_n2v, year=2020):
         ax.legend(fontsize=9)
         ax.grid(linestyle="--", alpha=0.3)
 
-    fig.suptitle("Baseline IF vs Weighted RIF — All Models", fontsize=14)
+    fig.suptitle(f"IF vs Weighted RIF - Comparing All Three Models ({year})", fontsize=14)
     plt.tight_layout()
 
     path = os.path.join(OUTPUT_DIR, f"11_if_vs_rif_all_models_{year}.png")
@@ -214,10 +182,6 @@ def plot_if_vs_rif_per_model(df_gs, df_vg, df_n2v, year=2020):
     plt.show()
     print(f"Saved -> {path}")
 
-
-# ─────────────────────────────────────────────
-# Main
-# ─────────────────────────────────────────────
 
 if __name__ == "__main__":
     os.makedirs(OUTPUT_DIR, exist_ok=True)
