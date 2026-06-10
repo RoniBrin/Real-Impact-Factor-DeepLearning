@@ -122,6 +122,100 @@ def plot_rif_correlation(df_gs, df_vg, df_n2v, year=2020):
 
 
 # ─────────────────────────────────────────────
+# Graph 10: RIF Reduction Rate by Model
+# ─────────────────────────────────────────────
+
+def plot_rif_reduction_by_model(df):
+    """
+    Bar chart: average % reduction from IF to Weighted RIF per model per year.
+    Shows that all models agree IF overestimates, but by different amounts.
+    """
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+    df = df.copy()
+    df["reduction_pct"] = (
+        (df["baseline_if"] - df["weighted_rif"])
+        / df["baseline_if"].replace(0, float("nan"))
+        * 100
+    ).fillna(0)
+
+    years  = sorted(df["year"].unique())
+    models = ["GraphSAGE", "VGAE", "Node2Vec"]
+    x      = np.arange(len(years))
+    width  = 0.25
+    colors = ["#4C72B0", "#DD8452", "#55A868"]
+
+    fig, ax = plt.subplots(figsize=(10, 5))
+
+    for i, (model, color) in enumerate(zip(models, colors)):
+        vals = [
+            df[(df["model"] == model) & (df["year"] == y)]["reduction_pct"].mean()
+            for y in years
+        ]
+        ax.bar(x + i * width, vals, width, label=model, color=color, alpha=0.85)
+
+    ax.set_xticks(x + width)
+    ax.set_xticklabels(years)
+    ax.set_xlabel("Year", fontsize=12)
+    ax.set_ylabel("Average IF Reduction (%)", fontsize=12)
+    ax.set_title("Average RIF Reduction Rate by Model and Year", fontsize=13)
+    ax.legend(fontsize=10)
+    ax.grid(axis="y", linestyle="--", alpha=0.4)
+    plt.tight_layout()
+
+    path = os.path.join(OUTPUT_DIR, "10_rif_reduction_by_model.png")
+    plt.savefig(path, dpi=150)
+    plt.show()
+    print(f"Saved -> {path}")
+
+
+# ─────────────────────────────────────────────
+# Graph 11: IF vs RIF Scatter per Model
+# ─────────────────────────────────────────────
+
+def plot_if_vs_rif_per_model(df_gs, df_vg, df_n2v, year=2020):
+    """
+    Three scatter plots side by side: IF vs Weighted RIF for each model.
+    Shows each model consistently reduces IF, by different amounts.
+    """
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+    fig, axes = plt.subplots(1, 3, figsize=(18, 6))
+
+    for ax, (df_m, model, color) in zip(axes, [
+        (df_gs,  "GraphSAGE", "#4C72B0"),
+        (df_vg,  "VGAE",      "#DD8452"),
+        (df_n2v, "Node2Vec",  "#55A868"),
+    ]):
+        df_year = df_m[df_m["year"] == year].copy()
+        df_year = df_year[df_year["baseline_if"] > 0]
+
+        ax.scatter(
+            df_year["baseline_if"], df_year["weighted_rif"],
+            alpha=0.5, color=color, s=15
+        )
+
+        max_val = max(df_year["baseline_if"].max(),
+                      df_year["weighted_rif"].max()) * 1.05
+        ax.plot([0, max_val], [0, max_val], color="red",
+                linestyle="--", linewidth=1.2, label="IF = RIF")
+
+        ax.set_xlabel("Baseline IF", fontsize=11)
+        ax.set_ylabel("Weighted RIF", fontsize=11)
+        ax.set_title(f"{model} ({year})", fontsize=12)
+        ax.legend(fontsize=9)
+        ax.grid(linestyle="--", alpha=0.3)
+
+    fig.suptitle("Baseline IF vs Weighted RIF — All Models", fontsize=14)
+    plt.tight_layout()
+
+    path = os.path.join(OUTPUT_DIR, f"11_if_vs_rif_all_models_{year}.png")
+    plt.savefig(path, dpi=150)
+    plt.show()
+    print(f"Saved -> {path}")
+
+
+# ─────────────────────────────────────────────
 # Main
 # ─────────────────────────────────────────────
 
@@ -131,5 +225,7 @@ if __name__ == "__main__":
 
     plot_avg_stability_by_model(df)
     plot_rif_correlation(df_gs, df_vg, df_n2v, year=2020)
+    plot_rif_reduction_by_model(df)
+    plot_if_vs_rif_per_model(df_gs, df_vg, df_n2v, year=2020)
 
     print("\nAll model comparison figures saved to:", OUTPUT_DIR)
