@@ -91,7 +91,10 @@ def run_perturbation_node2vec(edge_index, embeddings, target_year):
             perturbed_edge_index, removed_edges = perturb_edges(
                 edge_index, fraction=FRACTION
             )
-            scores = compute_reconstruction_scores(z, removed_edges)
+            src = z[removed_edges[0]]
+            dst = z[removed_edges[1]]
+            scores = torch.nn.functional.cosine_similarity(src, dst, dim=1)
+            scores = (scores + 1) / 2  # normalize from [-1,1] to [0,1]
 
         reconstruction_counts, removal_counts = track_reconstruction(
             reconstruction_counts, removal_counts,
