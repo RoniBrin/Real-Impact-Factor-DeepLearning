@@ -64,10 +64,13 @@ def plot_stability_by_journal(df, top_journals, year=2020):
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     df_year  = df[df["year"] == year].copy()
-    df_plot  = df_year[df_year["journal"].isin(top_journals)].copy()
+    df_plot = df_year[df_year["journal"].isin(top_journals)].copy()
 
-    if df_plot.empty:
-        df_plot = df_year.nlargest(10, "baseline_if").copy()
+    # if fewer than 10 journals found, fill up from top IF in that year
+    if len(df_plot) < 10:
+        extra = df_year[~df_year["journal"].isin(df_plot["journal"])] \
+                    .nlargest(10 - len(df_plot), "baseline_if")
+        df_plot = pd.concat([df_plot, extra], ignore_index=True)
 
     fig, ax = plt.subplots(figsize=(14, 6))
     journals_ordered = df_plot.sort_values("baseline_if", ascending=False)["journal"].tolist()
