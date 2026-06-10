@@ -91,10 +91,29 @@ def run_perturbation_node2vec(edge_index, embeddings, target_year):
             perturbed_edge_index, removed_edges = perturb_edges(
                 edge_index, fraction=FRACTION
             )
-            src = z[removed_edges[0]]
-            dst = z[removed_edges[1]]
-            scores = torch.nn.functional.cosine_similarity(src, dst, dim=1)
-            scores = (scores + 1) / 2  # normalize from [-1,1] to [0,1]
+            num_nodes     = z.shape[0]
+            neighbor_avg  = torch.zeros_like(z)
+            neighbor_count = torch.zeros(num_nodes, device=z.device)
+
+            src_all = perturbed_edge_index[0]
+            dst_all = perturbed_edge_index[1]
+            neighbor_avg.index_add_(0, src_all, z[dst_all])
+            neighbor_count.index_add_(0, src_all,
+                torch.ones(src_all.shape[0], device=z.device))
+
+            mask = neighbor_count > 0
+            neighbor_avg[mask] = (
+                neighbor_avg[mask] / neighbor_count[mask].unsqueeze(1)
+            )
+
+            # stability = how expected is removed edge given neighborhood
+            u = removed_edges[0]
+            v = removed_edges[1]
+            score_uv = torch.nn.functional.cosine_similarity(
+                neighbor_avg[u], z[v], dim=1)
+            score_vu = torch.nn.functional.cosine_similarity(
+                neighbor_avg[v], z[u], dim=1)
+            scores = ((score_uv + score_vu) / 2 + 1) / 2
 
         reconstruction_counts, removal_counts = track_reconstruction(
             reconstruction_counts, removal_counts,
