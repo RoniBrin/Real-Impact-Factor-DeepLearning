@@ -12,7 +12,7 @@ import seaborn as sns
 import numpy as np
 import os
 
-RESULTS_CSV  = "/content/drive/MyDrive/RIF/rif_results_v2.csv"
+RESULTS_CSV  = "/content/drive/MyDrive/RIF/rif_results_2010_2022.csv"
 GRAPHS_DIR   = "/content/drive/MyDrive/RIF/graphs"
 OUTPUT_DIR   = os.path.join(os.path.dirname(__file__), "../results/figures_graphsage")
 
