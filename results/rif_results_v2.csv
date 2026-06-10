@@ -1,0 +1,2649 @@
+year,journal,baseline_if,filtered_rif,weighted_rif,stability_threshold
+2018,ACS Applied Materials & Interfaces,0.8125,0.0,0.0275,0.7
+2018,ACS Nano,0.2778,0.0,0.0,0.7
+2018,AIDS,0.6333,0.2,0.1825,0.7
+2018,AIDS and Behavior,0.8947,0.4211,0.4305,0.7
+2018,Academic Medicine,0.6341,0.0,0.0116,0.7
+2018,Acta Biomaterialia,0.4767,0.0116,0.0136,0.7
+2018,Acta Neuropathologica,1.4783,0.3913,0.4549,0.7
+2018,Acta Neuropathologica Communications,1.6944,1.0556,1.0906,0.7
+2018,Acta Ophthalmologica,0.6364,0.2727,0.2638,0.7
+2018,Addiction,0.8913,0.3696,0.4257,0.7
+2018,Addictive Behaviors,0.84,0.48,0.5345,0.7
+2018,Aesthetic Surgery Journal,0.5,0.2273,0.264,0.7
+2018,Age and Ageing,0.9512,0.1463,0.1769,0.7
+2018,Aging,0.8,0.2,0.1956,0.7
+2018,Aging Cell,0.6071,0.0714,0.1021,0.7
+2018,Alimentary Pharmacology & Therapeutics,0.8793,0.1897,0.2257,0.7
+2018,Allergy,0.6977,0.1163,0.1555,0.7
+2018,Alzheimer s & Dementia,2.5,1.4697,1.5233,0.7
+2018,Alzheimer s Research & Therapy,0.3548,0.0,0.0,0.7
+2018,American Heart Journal,0.4688,0.0312,0.0536,0.7
+2018,American Journal Of Pathology,1.0,0.3182,0.3153,0.7
+2018,American Journal of Clinical Nutrition,0.956,0.1758,0.1788,0.7
+2018,American Journal of Epidemiology,0.7297,0.0,0.0042,0.7
+2018,American Journal of Hematology,0.6341,0.0244,0.0362,0.7
+2018,American Journal of Kidney Diseases,0.6207,0.0,0.0,0.7
+2018,American Journal of Neuroradiology,0.619,0.0,0.0075,0.7
+2018,American Journal of Obstetrics and Gynecology,0.7926,0.1407,0.1528,0.7
+2018,American Journal of Ophthalmology,1.7262,1.1786,1.2126,0.7
+2018,American Journal of Physiology-Heart and Circulatory Physiology,0.7308,0.0769,0.0754,0.7
+2018,American Journal of Physiology-Lung Cellular and Molecular Physiology,0.4545,0.0909,0.0909,0.7
+2018,American Journal of Preventive Medicine,0.8788,0.2727,0.3081,0.7
+2018,American Journal of Psychiatry,1.32,0.32,0.3482,0.7
+2018,American Journal of Public Health,1.2791,0.9302,0.9365,0.7
+2018,American Journal of Respiratory Cell and Molecular Biology,0.3636,0.0,0.0,0.7
+2018,American Journal of Respiratory and Critical Care Medicine,1.0606,0.2727,0.2887,0.7
+2018,American Journal of Roentgenology,0.5833,0.0833,0.0947,0.7
+2018,American Journal of Transplantation,1.4717,0.5283,0.6031,0.7
+2018,American Journal of Tropical Medicine and Hygiene,3.5455,3.1364,3.2245,0.7
+2018,Anaesthesia,1.0741,0.1852,0.2095,0.7
+2018,Analytical Chemistry,0.5,0.375,0.3709,0.7
+2018,Anesthesia & Analgesia,0.48,0.02,0.02,0.7
+2018,Anesthesiology,0.5,0.0172,0.0586,0.7
+2018,Angewandte Chemie International Edition,0.913,0.1522,0.1747,0.7
+2018,Annals of Clinical and Translational Neurology,1.2727,0.7727,0.7928,0.7
+2018,Annals of Emergency Medicine,0.825,0.15,0.163,0.7
+2018,Annals of Intensive Care,0.2593,0.0,0.0,0.7
+2018,Annals of Internal Medicine,1.9891,0.6739,0.7449,0.7
+2018,Annals of Neurology,1.2526,0.4211,0.4459,0.7
+2018,Annals of Oncology,1.1187,0.5708,0.6136,0.7
+2018,Annals of Surgery,1.0505,0.2982,0.3383,0.7
+2018,Annals of Surgical Oncology,0.6962,0.0886,0.0907,0.7
+2018,Annals of the American Thoracic Society,0.6607,0.0536,0.07,0.7
+2018,Annals of the Rheumatic Diseases,0.881,0.0952,0.1301,0.7
+2018,Antimicrobial Agents and Chemotherapy,0.8523,0.3977,0.415,0.7
+2018,Antiviral Research,1.0,0.8286,0.8174,0.7
+2018,Appetite,0.4545,0.1818,0.1818,0.7
+2018,Archives of Physical Medicine and Rehabilitation,0.3636,0.0,0.0,0.7
+2018,Arteriosclerosis Thrombosis and Vascular Biology,0.4146,0.0488,0.0403,0.7
+2018,Arthritis & Rheumatology,0.7236,0.0976,0.1242,0.7
+2018,Arthritis Care & Research,0.6042,0.0,0.0146,0.7
+2018,Arthritis Research & Therapy,0.3621,0.0,0.011,0.7
+2018,Arthroscopy The Journal of Arthroscopic and Related Surgery,1.0,0.3721,0.3553,0.7
+2018,Atherosclerosis,1.4412,0.7059,0.7585,0.7
+2018,Autophagy,1.9722,1.3519,1.36,0.7
+2018,BJOG An International Journal of Obstetrics & Gynaecology,0.6286,0.0286,0.0462,0.7
+2018,BMC Cancer,0.5063,0.1519,0.1554,0.7
+2018,BMC Complementary and Alternative Medicine,0.0769,0.0,0.0,0.7
+2018,BMC Genomics,0.24,0.0,0.0,0.7
+2018,BMC Geriatrics,0.4524,0.0476,0.0568,0.7
+2018,BMC Health Services Research,0.4,0.12,0.1154,0.7
+2018,BMC Infectious Diseases,0.2857,0.0,0.0,0.7
+2018,BMC Medical Education,0.2727,0.0,0.0,0.7
+2018,BMC Medicine,0.6923,0.1346,0.1567,0.7
+2018,BMC Musculoskeletal Disorders,0.4324,0.0,0.0178,0.7
+2018,BMC Nephrology,0.1739,0.0435,0.0435,0.7
+2018,BMC Pediatrics,0.4762,0.0,0.0,0.7
+2018,BMC Pregnancy and Childbirth,0.4302,0.0,0.002,0.7
+2018,BMC Psychiatry,0.36,0.0,0.0,0.7
+2018,BMC Public Health,0.486,0.1963,0.197,0.7
+2018,BMC Pulmonary Medicine,0.35,0.0,0.0,0.7
+2018,BMC Research Notes,0.3333,0.0,0.0,0.7
+2018,BMJ,1.4118,0.6618,0.6858,0.7
+2018,BMJ Global Health,0.875,0.2917,0.3106,0.7
+2018,BMJ Open,0.6108,0.1514,0.1532,0.7
+2018,BMJ Open Diabetes Research & Care,0.2857,0.0,0.0,0.7
+2018,BioMed Research International,0.5417,0.0,0.0,0.7
+2018,Biochemical and Biophysical Research Communications,0.5849,0.2264,0.2317,0.7
+2018,Biological Psychiatry,1.0,0.52,0.5637,0.7
+2018,Biology of Blood and Marrow Transplantation,0.3704,0.0,0.0,0.7
+2018,Biomaterials,0.53,0.03,0.0319,0.7
+2018,Biomedical Optics Express,1.0,0.6522,0.6328,0.7
+2018,Biomedical Signal Processing and Control,0.7391,0.3043,0.317,0.7
+2018,Biomedicine & Pharmacotherapy,0.2703,0.0135,0.0131,0.7
+2018,Biosensors and Bioelectronics,0.2593,0.1111,0.1111,0.7
+2018,Blood,1.2264,0.3639,0.402,0.7
+2018,Blood Advances,0.2727,0.0303,0.0303,0.7
+2018,Bone,0.3462,0.0,0.0232,0.7
+2018,Brain,1.6346,0.7628,0.8,0.7
+2018,Brain Behavior and Immunity,0.25,0.0,0.0,0.7
+2018,Breast Cancer Research,0.6154,0.0385,0.1132,0.7
+2018,Breast Cancer Research and Treatment,0.7174,0.1739,0.2606,0.7
+2018,British Journal Of Nutrition,0.6538,0.0769,0.0587,0.7
+2018,British Journal of Anaesthesia,0.4127,0.0476,0.0461,0.7
+2018,British Journal of Cancer,0.4615,0.1154,0.1314,0.7
+2018,British Journal of Dermatology,0.3455,0.0182,0.0414,0.7
+2018,British Journal of Haematology,0.8478,0.1522,0.1929,0.7
+2018,British Journal of Ophthalmology,0.8723,0.5745,0.5846,0.7
+2018,British Journal of Pharmacology,1.0,0.0417,0.0417,0.7
+2018,British Journal of Sports Medicine,1.6824,0.8824,0.9039,0.7
+2018,British Journal of Urology,0.8,0.4286,0.4693,0.7
+2018,British journal of surgery,0.8889,0.1111,0.1478,0.7
+2018,Bulletin of the World Health Organization,1.619,1.2381,1.2381,0.7
+2018,CA A Cancer Journal for Clinicians,23.8,20.9,21.0971,0.7
+2018,CHEST Journal,1.1667,0.3889,0.4173,0.7
+2018,Canadian Medical Association Journal,0.7273,0.2273,0.2182,0.7
+2018,Cancer,1.1073,0.3729,0.3981,0.7
+2018,Cancer Cell,1.5506,0.5169,0.5482,0.7
+2018,Cancer Discovery,2.3286,1.4857,1.5268,0.7
+2018,Cancer Epidemiology Biomarkers & Prevention,0.6429,0.0714,0.1012,0.7
+2018,Cancer Immunology Immunotherapy,0.4091,0.0,0.0309,0.7
+2018,Cancer Immunology Research,1.45,0.6167,0.6808,0.7
+2018,Cancer Letters,0.6047,0.1163,0.1286,0.7
+2018,Cancer Medicine,0.9583,0.4583,0.5089,0.7
+2018,Cancer Research,0.6963,0.2304,0.2622,0.7
+2018,Cancer Science,1.15,0.7,0.7167,0.7
+2018,Carbohydrate Polymers,0.3333,0.0,0.0,0.7
+2018,Cardiovascular Diabetology,0.6452,0.1935,0.1762,0.7
+2018,Cardiovascular Research,0.5185,0.037,0.037,0.7
+2018,Cell,3.7704,2.7333,2.779,0.7
+2018,Cell Death and Differentiation,0.3478,0.0,0.0,0.7
+2018,Cell Death and Disease,0.3333,0.0521,0.0519,0.7
+2018,Cell Host & Microbe,5.4286,4.9,4.9126,0.7
+2018,Cell Metabolism,1.3545,0.4455,0.4499,0.7
+2018,Cell Reports,1.1943,0.6356,0.6606,0.7
+2018,Cell stem cell,4.3467,3.6,3.6279,0.7
+2018,Cellular Physiology and Biochemistry,1.9667,1.5,1.4863,0.7
+2018,Cephalalgia,0.4348,0.0,0.0,0.7
+2018,Chemical Science,1.0,0.5,0.5854,0.7
+2018,Circulation,1.2642,0.4465,0.4808,0.7
+2018,Circulation Arrhythmia and Electrophysiology,1.1364,0.6364,0.7448,0.7
+2018,Circulation Cardiovascular Imaging,0.6182,0.1818,0.1851,0.7
+2018,Circulation Cardiovascular Interventions,0.775,0.2,0.2224,0.7
+2018,Circulation Heart Failure,0.9111,0.0444,0.1467,0.7
+2018,Circulation Research,0.9706,0.2059,0.2565,0.7
+2018,Clinical Cancer Research,1.2294,0.6239,0.6649,0.7
+2018,Clinical Chemistry,0.8966,0.0345,0.0572,0.7
+2018,Clinical Gastroenterology and Hepatology,0.7333,0.1556,0.1844,0.7
+2018,Clinical Infectious Diseases,1.1731,0.4952,0.5262,0.7
+2018,Clinical Journal of the American Society of Nephrology,0.614,0.1228,0.1204,0.7
+2018,Clinical Microbiology and Infection,1.1538,0.1538,0.213,0.7
+2018,Clinical Nutrition,0.9123,0.1228,0.1571,0.7
+2018,Clinical Orthopaedics and Related Research,0.8333,0.2037,0.1933,0.7
+2018,Clinical Pharmacology & Therapeutics,0.5,0.0,0.0198,0.7
+2018,Cochrane Database of Systematic Reviews,0.5217,0.0,0.0,0.7
+2018,Computer Methods and Programs in Biomedicine,0.7586,0.0,0.0028,0.7
+2018,Computers in Biology and Medicine,0.7576,0.3333,0.3392,0.7
+2018,Critical Care,0.825,0.1875,0.2251,0.7
+2018,Critical Care Medicine,0.8833,0.2083,0.2501,0.7
+2018,Current Biology,0.3913,0.0,0.0,0.7
+2018,Development,0.6154,0.0769,0.0769,0.7
+2018,Diabetes,0.9167,0.2738,0.2978,0.7
+2018,Diabetes Care,1.2108,0.4,0.4539,0.7
+2018,Diabetes Obesity and Metabolism,1.2581,0.7581,0.791,0.7
+2018,Diabetes Research and Clinical Practice,1.55,0.45,0.4312,0.7
+2018,Diabetologia,0.9643,0.369,0.4255,0.7
+2018,Digestive Diseases and Sciences,0.5,0.0,0.1262,0.7
+2018,Diseases of the Colon & Rectum,0.4333,0.0,0.0,0.7
+2018,Drug and Alcohol Dependence,1.1282,0.6282,0.639,0.7
+2018,EBioMedicine,1.1667,0.6806,0.6883,0.7
+2018,EMBO Molecular Medicine,0.8857,0.1143,0.1545,0.7
+2018,EP Europace,2.4211,1.9211,1.9897,0.7
+2018,Emerging infectious diseases,1.8795,1.4458,1.4614,0.7
+2018,Endocrinology,0.5455,0.0,0.0182,0.7
+2018,Endoscopy,0.7872,0.1277,0.1647,0.7
+2018,Epilepsia,0.6296,0.0926,0.1062,0.7
+2018,EuroIntervention,1.875,1.0417,1.1659,0.7
+2018,European Heart Journal,2.2178,1.4455,1.5087,0.7
+2018,European Heart Journal - Cardiovascular Imaging,0.7143,0.2,0.2145,0.7
+2018,European Journal of Applied Physiology,0.44,0.0,0.0,0.7
+2018,European Journal of Cancer,1.0,0.4579,0.4977,0.7
+2018,European Journal of Cardio-Thoracic Surgery,0.6389,0.5278,0.5008,0.7
+2018,European Journal of Endocrinology,1.0,0.0357,0.0654,0.7
+2018,European Journal of Heart Failure,1.7558,0.9535,0.972,0.7
+2018,European Journal of Medicinal Chemistry,0.3333,0.0,0.0301,0.7
+2018,European Journal of Neurology,0.3182,0.0455,0.0624,0.7
+2018,European Journal of Nuclear Medicine and Molecular Imaging,1.6986,1.1781,1.2594,0.7
+2018,European Journal of Preventive Cardiology,0.8095,0.1905,0.2205,0.7
+2018,European Journal of Radiology,0.8261,0.1304,0.2078,0.7
+2018,European Journal of Surgical Oncology,0.5769,0.0,0.051,0.7
+2018,European Radiology,0.662,0.2958,0.2764,0.7
+2018,European Respiratory Journal,0.986,0.2238,0.2428,0.7
+2018,European Spine Journal,0.3256,0.0,0.0,0.7
+2018,European Urology,1.7395,0.9832,1.052,0.7
+2018,Eurosurveillance,3.5882,2.8235,2.8579,0.7
+2018,Fertility and Sterility,0.6951,0.0732,0.1036,0.7
+2018,Food & Function,0.5,0.1562,0.1743,0.7
+2018,Food Chemistry,0.5355,0.0219,0.0204,0.7
+2018,Food Research International,0.5,0.0,0.0,0.7
+2018,Foot & Ankle International,0.35,0.0,0.0,0.7
+2018,Free Radical Biology and Medicine,0.4865,0.1892,0.2077,0.7
+2018,Frontiers in Aging Neuroscience,0.64,0.04,0.0789,0.7
+2018,Frontiers in Immunology,0.0816,0.0,0.0,0.7
+2018,Frontiers in Microbiology,0.2295,0.0164,0.0164,0.7
+2018,Frontiers in Neuroscience,0.1905,0.0952,0.0693,0.7
+2018,Frontiers in Pharmacology,0.3514,0.0811,0.0811,0.7
+2018,Frontiers in Physiology,0.3023,0.2093,0.2077,0.7
+2018,Gastric Cancer,0.8333,0.1333,0.1341,0.7
+2018,Gastroenterology,1.4595,0.6054,0.6725,0.7
+2018,Gastrointestinal Endoscopy,0.5921,0.0263,0.0549,0.7
+2018,Genetics in Medicine,1.48,0.4,0.3887,0.7
+2018,Gut,1.3551,0.4275,0.4362,0.7
+2018,Gynecologic Oncology,0.8261,0.1594,0.1936,0.7
+2018,HPB,0.5417,0.125,0.1593,0.7
+2018,Haematologica,0.6716,0.1045,0.0961,0.7
+2018,Health Affairs,2.1212,1.3636,1.3453,0.7
+2018,Health and Quality of Life Outcomes,0.1786,0.0,0.0173,0.7
+2018,Heart,0.8302,0.1509,0.1965,0.7
+2018,Heart Rhythm,0.8929,0.3393,0.376,0.7
+2018,Hepatology,1.1121,0.4673,0.5074,0.7
+2018,Human Brain Mapping,0.881,0.0476,0.0834,0.7
+2018,Human Molecular Genetics,0.5962,0.0769,0.1287,0.7
+2018,Human Reproduction,0.9672,0.0902,0.1091,0.7
+2018,Hypertension,0.6,0.0471,0.0536,0.7
+2018,IEEE Journal of Biomedical and Health Informatics,0.44,0.08,0.0776,0.7
+2018,IEEE Transactions on Biomedical Engineering,0.5897,0.0513,0.0753,0.7
+2018,IEEE Transactions on Medical Imaging,3.4182,2.2727,2.3133,0.7
+2018,Immunity,2.2273,1.2955,1.3701,0.7
+2018,Industrial Crops and Products,0.6129,0.0645,0.0901,0.7
+2018,Injury,0.2759,0.0,0.0,0.7
+2018,Intensive Care Medicine,0.9324,0.3108,0.3724,0.7
+2018,International Immunopharmacology,0.2,0.05,0.05,0.7
+2018,International Journal of Behavioral Nutrition and Physical Activity,0.8909,0.1636,0.1971,0.7
+2018,International Journal of Biological Macromolecules,0.1538,0.0,0.0,0.7
+2018,International Journal of Cancer,0.68,0.0667,0.0654,0.7
+2018,International Journal of Cardiology,0.6667,0.0758,0.0974,0.7
+2018,International Journal of Drug Policy,1.4,0.96,1.0181,0.7
+2018,International Journal of Environmental Research and Public Health,0.0606,0.0,0.0,0.7
+2018,International Journal of Epidemiology,0.5116,0.0233,0.0274,0.7
+2018,International Journal of Molecular Sciences,0.26,0.06,0.06,0.7
+2018,International Journal of Nanomedicine,0.1,0.0,0.0,0.7
+2018,International Journal of Obesity,0.6136,0.0,0.0169,0.7
+2018,International Journal of Pharmaceutics,0.3182,0.0,0.0,0.7
+2018,International Journal of Radiation Oncology*Biology*Physics,0.6702,0.0213,0.0329,0.7
+2018,International Journal of Sports Physiology and Performance,1.1707,0.4146,0.4174,0.7
+2018,International Journal of Stroke,1.6538,0.8462,0.8284,0.7
+2018,Investigative Ophthalmology & Visual Science,1.8618,1.374,1.3846,0.7
+2018,JACC Heart Failure,0.973,0.1351,0.1694,0.7
+2018,JACC. Cardiovascular imaging,0.6129,0.0645,0.0928,0.7
+2018,JACC: Cardiovascular Interventions,0.8224,0.243,0.2629,0.7
+2018,JAIDS Journal of Acquired Immune Deficiency Syndromes,1.875,0.625,0.7689,0.7
+2018,JAMA,2.9617,1.6645,1.7288,0.7
+2018,JAMA Cardiology,1.1633,0.5102,0.5202,0.7
+2018,JAMA Dermatology,0.587,0.1522,0.1839,0.7
+2018,JAMA Internal Medicine,1.7928,0.6216,0.6852,0.7
+2018,JAMA Neurology,1.1774,0.2984,0.3382,0.7
+2018,JAMA Oncology,1.6403,0.9281,0.9659,0.7
+2018,JAMA Ophthalmology,2.1194,1.5672,1.5696,0.7
+2018,JAMA Pediatrics,1.0118,0.2824,0.2858,0.7
+2018,JAMA Psychiatry,1.4242,0.4394,0.4604,0.7
+2018,JAMA Surgery,0.8,0.1875,0.2017,0.7
+2018,JCI Insight,0.7542,0.2458,0.2829,0.7
+2018,JMIR mhealth and uhealth,0.6154,0.0,0.0,0.7
+2018,JNCI Journal of the National Cancer Institute,1.1408,0.5493,0.5627,0.7
+2018,Journal for ImmunoTherapy of Cancer,1.3871,0.9355,0.9505,0.7
+2018,Journal of Affective Disorders,0.6087,0.0652,0.0585,0.7
+2018,Journal of Agricultural and Food Chemistry,0.5106,0.0,0.0072,0.7
+2018,Journal of Allergy and Clinical Immunology,0.881,0.2619,0.2757,0.7
+2018,Journal of Alzheimer s Disease,0.6087,0.087,0.0971,0.7
+2018,Journal of Antimicrobial Chemotherapy,0.9459,0.3243,0.31,0.7
+2018,Journal of Applied Physiology,0.95,0.25,0.3745,0.7
+2018,Journal of Biological Chemistry,0.6526,0.0421,0.0587,0.7
+2018,Journal of Biomechanics,0.2174,0.0,0.0,0.7
+2018,Journal of Bone and Joint Surgery,0.4746,0.0847,0.0907,0.7
+2018,Journal of Bone and Mineral Research,0.9138,0.069,0.1143,0.7
+2018,Journal of Cachexia Sarcopenia and Muscle,1.0233,0.0465,0.0759,0.7
+2018,Journal of Cataract & Refractive Surgery,0.8148,0.037,0.0841,0.7
+2018,Journal of Cellular and Molecular Medicine,0.4583,0.0417,0.0611,0.7
+2018,Journal of Cerebral Blood Flow & Metabolism,0.8571,0.0357,0.0357,0.7
+2018,Journal of Clinical Investigation,1.6242,0.7643,0.7784,0.7
+2018,Journal of Clinical Microbiology,0.6957,0.2174,0.2279,0.7
+2018,Journal of Clinical Oncology,2.0063,1.1008,1.1313,0.7
+2018,Journal of Controlled Release,0.3939,0.0,0.0,0.7
+2018,Journal of Critical Care,0.15,0.0,0.0,0.7
+2018,Journal of Ethnopharmacology,0.1429,0.0,0.0,0.7
+2018,Journal of Functional Foods,0.6774,0.0,0.0089,0.7
+2018,Journal of Gastroenterology and Hepatology,0.75,0.05,0.0896,0.7
+2018,Journal of General Internal Medicine,0.4783,0.2174,0.2404,0.7
+2018,Journal of Hematology & Oncology,0.6522,0.087,0.071,0.7
+2018,Journal of Hepatology,2.311,1.4634,1.5316,0.7
+2018,Journal of Hypertension,0.5455,0.0455,0.0677,0.7
+2018,Journal of Investigative Dermatology,0.7143,0.0476,0.0686,0.7
+2018,Journal of Magnetic Resonance Imaging,1.0333,0.1667,0.3014,0.7
+2018,Journal of Medical Internet Research,0.4419,0.0,0.0,0.7
+2018,Journal of Medicinal Chemistry,0.6562,0.2031,0.2278,0.7
+2018,Journal of Neuro-Oncology,0.2941,0.1176,0.1423,0.7
+2018,Journal of NeuroInterventional Surgery,1.2759,0.4828,0.4771,0.7
+2018,Journal of Neuroinflammation,1.0154,0.5692,0.5758,0.7
+2018,Journal of Neurology,0.8214,0.4286,0.4352,0.7
+2018,Journal of Neurology Neurosurgery & Psychiatry,0.7778,0.2407,0.2408,0.7
+2018,Journal of Neuroscience,0.8257,0.1193,0.1411,0.7
+2018,Journal of Neurosurgery Spine,0.4103,0.0,0.0,0.7
+2018,Journal of Neurotrauma,0.7674,0.1395,0.1525,0.7
+2018,Journal of Nuclear Medicine,2.1429,1.6723,1.6605,0.7
+2018,Journal of Nutrition,1.1538,0.3333,0.3404,0.7
+2018,Journal of Orthopaedic and Sports Physical Therapy,0.75,0.15,0.1377,0.7
+2018,Journal of Pain,1.2121,0.6061,0.6305,0.7
+2018,Journal of Pain and Symptom Management,0.4074,0.0,0.0242,0.7
+2018,Journal of Pediatric Gastroenterology and Nutrition,0.1818,0.0,0.0,0.7
+2018,Journal of Photochemistry and Photobiology B Biology,0.9524,0.6667,0.6672,0.7
+2018,Journal of Physics D Applied Physics,2.0909,1.0909,1.1652,0.7
+2018,Journal of Pineal Research,0.9545,0.0909,0.1868,0.7
+2018,Journal of Shoulder and Elbow Surgery,0.6552,0.0172,0.0514,0.7
+2018,Journal of Sports Sciences,0.9,0.2333,0.2321,0.7
+2018,Journal of Surgical Oncology,0.6,0.0667,0.0539,0.7
+2018,Journal of Thoracic Oncology,1.5649,0.9084,0.9523,0.7
+2018,Journal of Thoracic and Cardiovascular Surgery,0.3731,0.0149,0.0155,0.7
+2018,Journal of Thrombosis and Haemostasis,0.4762,0.0,0.0,0.7
+2018,Journal of Translational Medicine,0.4865,0.1081,0.0924,0.7
+2018,Journal of Vascular Surgery,0.3636,0.0,0.0,0.7
+2018,Journal of Virology,0.9278,0.3093,0.3541,0.7
+2018,Journal of Visualized Experiments,0.1739,0.0435,0.0435,0.7
+2018,Journal of neurosurgery,0.4118,0.0,0.0199,0.7
+2018,Journal of science and medicine in sport,0.4667,0.2,0.1968,0.7
+2018,Journal of the American Academy of Dermatology,0.7895,0.2632,0.2992,0.7
+2018,Journal of the American Chemical Society,1.0625,0.4792,0.4882,0.7
+2018,Journal of the American College of Cardiology,1.5015,0.6283,0.6731,0.7
+2018,Journal of the American College of Radiology,0.4783,0.1304,0.1304,0.7
+2018,Journal of the American College of Surgeons,0.7442,0.1163,0.1249,0.7
+2018,Journal of the American Geriatrics Society,0.6622,0.0541,0.0689,0.7
+2018,Journal of the American Heart Association,0.5745,0.133,0.1449,0.7
+2018,Journal of the American Medical Directors Association,0.9697,0.2424,0.2827,0.7
+2018,Journal of the American Society of Echocardiography,2.3,1.35,1.3742,0.7
+2018,Journal of the American Society of Nephrology,0.605,0.1092,0.1111,0.7
+2018,Journal of the European Academy of Dermatology and Venereology,0.6667,0.1667,0.18,0.7
+2018,Journal of the International AIDS Society,0.6667,0.0,0.063,0.7
+2018,Journal of the National Comprehensive Cancer Network,2.1277,1.1277,1.1436,0.7
+2018,Kidney International,0.809,0.236,0.2494,0.7
+2018,Knee Surgery Sports Traumatology Arthroscopy,0.6508,0.1587,0.1824,0.7
+2018,LWT,0.3824,0.0,0.0,0.7
+2018,Lara D. Veeken,0.56,0.06,0.0765,0.7
+2018,Leukemia,0.8421,0.2211,0.2421,0.7
+2018,Lipids in Health and Disease,0.3,0.0,0.0,0.7
+2018,Liver International,1.1562,0.5,0.4593,0.7
+2018,Liver Transplantation,0.7727,0.1818,0.1749,0.7
+2018,Lung Cancer,1.1905,0.5952,0.6237,0.7
+2018,MMWR Morbidity and Mortality Weekly Report,6.5806,5.7258,5.7623,0.7
+2018,Magnetic Resonance in Medicine,1.0192,0.3269,0.3909,0.7
+2018,Malaria Journal,0.6716,0.2239,0.2188,0.7
+2018,Materials Science and Engineering C,0.3871,0.0,0.0,0.7
+2018,Mayo Clinic Proceedings,0.3846,0.0,0.0,0.7
+2018,Medical Education,0.4,0.0,0.0,0.7
+2018,Medical Physics,1.4,0.6286,0.6723,0.7
+2018,Medical Teacher,0.84,0.72,0.7292,0.7
+2018,Medicine,0.3663,0.0396,0.0447,0.7
+2018,Medicine & Science in Sports & Exercise,0.7571,0.1143,0.1272,0.7
+2018,Menopause The Journal of The North American Menopause Society,1.0,0.3182,0.29,0.7
+2018,Modern Pathology,1.5122,0.8659,0.9067,0.7
+2018,Molecular Cancer Therapeutics,0.8222,0.1556,0.1747,0.7
+2018,Molecular Cell,1.0312,0.3438,0.35,0.7
+2018,Molecular Medicine Reports,0.381,0.0,0.0,0.7
+2018,Molecular Metabolism,0.6,0.2,0.1831,0.7
+2018,Molecular Neurobiology,0.6071,0.0,0.0,0.7
+2018,Molecular Neurodegeneration,0.7931,0.0345,0.0548,0.7
+2018,Molecular Nutrition & Food Research,0.375,0.0,0.0,0.7
+2018,Molecular Psychiatry,0.8889,0.1111,0.0991,0.7
+2018,Molecular Therapy,0.7143,0.449,0.4764,0.7
+2018,Molecules,0.2188,0.0,0.0,0.7
+2018,Movement Disorders,1.0179,0.4464,0.4806,0.7
+2018,Mucosal Immunology,0.4286,0.0,0.0,0.7
+2018,Multiple Sclerosis Journal,1.2157,0.4902,0.5116,0.7
+2018,Nature,3.9697,2.798,2.8324,0.7
+2018,Nature Cell Biology,1.0238,0.0476,0.0463,0.7
+2018,Nature Chemical Biology,1.5312,0.9688,1.0053,0.7
+2018,Nature Communications,0.9982,0.3832,0.4018,0.7
+2018,Nature Genetics,1.9683,0.5238,0.5827,0.7
+2018,Nature Immunology,3.125,2.375,2.375,0.7
+2018,Nature Medicine,2.916,1.5496,1.5914,0.7
+2018,Nature Microbiology,0.9818,0.4909,0.5333,0.7
+2018,Nature Neuroscience,1.25,0.4643,0.4831,0.7
+2018,Nature Structural & Molecular Biology,2.2,1.3,1.2971,0.7
+2018,Nephrology Dialysis Transplantation,0.5854,0.0488,0.0459,0.7
+2018,Neuro-Oncology,0.9762,0.3214,0.3534,0.7
+2018,NeuroImage,1.2422,0.4922,0.5006,0.7
+2018,NeuroImage Clinical,0.2963,0.037,0.0606,0.7
+2018,Neurobiology of Aging,0.7091,0.2545,0.2653,0.7
+2018,Neurobiology of Disease,0.7188,0.0938,0.1289,0.7
+2018,Neuroendocrinology,4.25,3.125,3.2118,0.7
+2018,Neurology,0.9628,0.2872,0.2952,0.7
+2018,Neurology Neuroimmunology & Neuroinflammation,1.2593,0.6667,0.7084,0.7
+2018,Neuron,2.2653,1.551,1.5761,0.7
+2018,Neuropharmacology,0.1,0.0,0.0,0.7
+2018,Neuropsychopharmacology,0.4762,0.0,0.0,0.7
+2018,Neurosurgery,1.2778,0.1944,0.2349,0.7
+2018,Neurosurgical FOCUS,0.375,0.0,0.0,0.7
+2018,New England Journal of Medicine,5.8921,4.271,4.375,0.7
+2018,Nicotine & Tobacco Research,1.6667,0.9524,0.9908,0.7
+2018,Nucleic Acids Research,1.0682,0.5,0.5145,0.7
+2018,Nutrients,0.3084,0.0187,0.0187,0.7
+2018,Nutrition,0.85,0.1,0.1097,0.7
+2018,Obesity,0.5946,0.0,0.0222,0.7
+2018,Obesity Surgery,0.4146,0.0,0.0319,0.7
+2018,Obstetrics and Gynecology,0.9286,0.1633,0.1979,0.7
+2018,OncoImmunology,0.4667,0.2533,0.2829,0.7
+2018,Oncogene,0.3651,0.0,0.0,0.7
+2018,Oncotarget,0.8491,0.3225,0.3627,0.7
+2018,Ophthalmology,1.4338,0.7941,0.814,0.7
+2018,Oral Oncology,0.6452,0.0323,0.0747,0.7
+2018,Orthopaedic Journal of Sports Medicine,0.625,0.0312,0.0887,0.7
+2018,Osteoarthritis and Cartilage,0.4773,0.0,0.0,0.7
+2018,Osteoporosis International,0.5312,0.1562,0.1316,0.7
+2018,Oxidative Medicine and Cellular Longevity,0.1071,0.0,0.0,0.7
+2018,PEDIATRICS,0.988,0.2216,0.2277,0.7
+2018,PLoS Biology,0.65,0.2,0.2303,0.7
+2018,PLoS Genetics,0.5641,0.0513,0.0842,0.7
+2018,PLoS Medicine,0.9597,0.3387,0.3692,0.7
+2018,PLoS ONE,0.5022,0.0613,0.0723,0.7
+2018,PLoS Pathogens,0.9379,0.3241,0.3355,0.7
+2018,PLoS neglected tropical diseases,2.3453,1.8777,1.9179,0.7
+2018,Pain,0.837,0.163,0.1963,0.7
+2018,Parasites & Vectors,0.5152,0.0,0.0346,0.7
+2018,Pediatric Blood & Cancer,0.6667,0.25,0.2777,0.7
+2018,Pediatric Critical Care Medicine,0.3333,0.0333,0.0485,0.7
+2018,Physics in Medicine and Biology,0.4545,0.0,0.0,0.7
+2018,Plasma Sources Science and Technology,2.0455,1.6364,1.6259,0.7
+2018,Plastic & Reconstructive Surgery,0.7297,0.1892,0.2328,0.7
+2018,Preventive Medicine,0.7843,0.3922,0.4131,0.7
+2018,Proceedings of the National Academy of Sciences,1.0089,0.3289,0.3572,0.7
+2018,Psycho-Oncology,0.3667,0.0,0.0,0.7
+2018,Psychological Medicine,0.4242,0.0909,0.1075,0.7
+2018,PubMed,0.9331,0.5,0.5151,0.7
+2018,Public Health Nutrition,0.76,0.4,0.4077,0.7
+2018,RSC Advances,0.65,0.25,0.228,0.7
+2018,Radiology,1.125,0.5938,0.6115,0.7
+2018,Radiotherapy and Oncology,1.0566,0.4151,0.4326,0.7
+2018,Redox Biology,0.3333,0.0606,0.0881,0.7
+2018,Regional Anesthesia & Pain Medicine,1.68,0.56,0.6158,0.7
+2018,Reproductive Health,0.4194,0.0,0.0,0.7
+2018,Respiratory Medicine,0.303,0.0909,0.0744,0.7
+2018,Respiratory Research,0.4242,0.0909,0.0739,0.7
+2018,Resuscitation,0.5091,0.0545,0.0545,0.7
+2018,Retina,1.0345,0.5345,0.5383,0.7
+2018,SLEEP,0.3929,0.0,0.0,0.7
+2018,Scandinavian Journal of Medicine and Science in Sports,0.76,0.48,0.4776,0.7
+2018,Schizophrenia Bulletin,0.7308,0.3462,0.3215,0.7
+2018,Schizophrenia Research,0.2609,0.0,0.0,0.7
+2018,Science,5.0076,3.8015,3.8566,0.7
+2018,Science Advances,0.8387,0.2581,0.3033,0.7
+2018,Science Translational Medicine,1.355,0.6331,0.6562,0.7
+2018,Scientific Reports,0.6118,0.1876,0.1923,0.7
+2018,Seminars in Arthritis and Rheumatism,0.45,0.0,0.0,0.7
+2018,Social Science & Medicine,0.3636,0.0,0.0303,0.7
+2018,Spine,0.4306,0.0,0.0,0.7
+2018,Sports Medicine,1.1481,0.1852,0.2213,0.7
+2018,Stem Cell Reports,0.7442,0.1628,0.1829,0.7
+2018,Stem Cell Research & Therapy,0.2698,0.0159,0.0159,0.7
+2018,Stem Cells,1.0882,0.0882,0.133,0.7
+2018,Stem Cells Translational Medicine,0.6,0.1111,0.1102,0.7
+2018,Stroke,0.7016,0.1414,0.1723,0.7
+2018,Supportive Care in Cancer,0.3846,0.0,0.0,0.7
+2018,Surgery,0.4359,0.0513,0.0642,0.7
+2018,Surgery for Obesity and Related Diseases,0.7586,0.069,0.1016,0.7
+2018,Surgical Endoscopy,0.4722,0.0139,0.0403,0.7
+2018,The American Journal of Cardiology,0.8387,0.1935,0.187,0.7
+2018,The American Journal of Gastroenterology,1.1477,0.2727,0.3537,0.7
+2018,The American Journal of Human Genetics,0.6512,0.0233,0.0192,0.7
+2018,The American Journal of Medicine,0.6757,0.0541,0.085,0.7
+2018,The American Journal of Sports Medicine,0.994,0.2381,0.2587,0.7
+2018,The American Journal of Surgical Pathology,1.1209,0.3736,0.422,0.7
+2018,The Annals of Thoracic Surgery,0.5077,0.0,0.0085,0.7
+2018,The Bone & Joint Journal,0.6212,0.0606,0.0758,0.7
+2018,The EMBO Journal,1.6923,0.8462,0.9019,0.7
+2018,The FASEB Journal,0.4571,0.0,0.0322,0.7
+2018,The Journal of Allergy and Clinical Immunology In Practice,0.35,0.05,0.0681,0.7
+2018,The Journal of Arthroplasty,0.8031,0.126,0.195,0.7
+2018,The Journal of Cell Biology,0.8529,0.2059,0.2351,0.7
+2018,The Journal of Clinical Endocrinology & Metabolism,0.8266,0.1618,0.1698,0.7
+2018,The Journal of Clinical Psychiatry,0.7391,0.2609,0.264,0.7
+2018,The Journal of Experimental Medicine,0.8302,0.3208,0.3434,0.7
+2018,The Journal of Heart and Lung Transplantation,0.9565,0.3043,0.3197,0.7
+2018,The Journal of Immunology,0.4918,0.1148,0.1142,0.7
+2018,The Journal of Infectious Diseases,1.4082,0.8061,0.838,0.7
+2018,The Journal of Pathology,1.125,0.375,0.3763,0.7
+2018,The Journal of Pediatrics,0.5048,0.019,0.0137,0.7
+2018,The Journal of Physiology,1.16,0.0,0.0091,0.7
+2018,The Journal of Rheumatology,0.4828,0.1379,0.1507,0.7
+2018,The Journal of Sexual Medicine,0.6944,0.0278,0.0604,0.7
+2018,The Journal of Strength and Conditioning Research,0.7353,0.2941,0.3241,0.7
+2018,"The Journal of Trauma: Injury, Infection, and Critical Care",0.9216,0.1176,0.12,0.7
+2018,The Journal of Urology,0.7529,0.2471,0.2843,0.7
+2018,The Journals of Gerontology Series A,1.0185,0.2407,0.2631,0.7
+2018,The Lancet,4.4259,3.2281,3.2781,0.7
+2018,The Lancet Diabetes & Endocrinology,1.4286,0.6071,0.6014,0.7
+2018,The Lancet Global Health,1.2857,0.3333,0.3548,0.7
+2018,The Lancet HIV,1.6571,0.5714,0.7051,0.7
+2018,The Lancet Haematology,0.7674,0.1628,0.1806,0.7
+2018,The Lancet Infectious Diseases,3.6,2.72,2.7468,0.7
+2018,The Lancet Neurology,1.7377,0.623,0.6562,0.7
+2018,The Lancet Oncology,3.4355,2.2419,2.3396,0.7
+2018,The Lancet Psychiatry,1.1786,0.3214,0.3663,0.7
+2018,The Lancet Respiratory Medicine,1.2174,0.3188,0.3754,0.7
+2018,The Laryngoscope,0.5417,0.0,0.0,0.7
+2018,The Oncologist,1.0408,0.4082,0.4554,0.7
+2018,The Spine Journal,0.3235,0.0294,0.0294,0.7
+2018,Theranostics,0.8776,0.4898,0.4919,0.7
+2018,Thorax,0.8594,0.0781,0.0914,0.7
+2018,Thrombosis and Haemostasis,0.64,0.16,0.1446,0.7
+2018,Thyroid,1.0714,0.2381,0.27,0.7
+2018,Tobacco Control,2.7353,2.0882,2.1334,0.7
+2018,Transfusion,1.04,0.12,0.2447,0.7
+2018,Translational Psychiatry,0.6071,0.0357,0.0357,0.7
+2018,Transplantation,0.6757,0.1622,0.1811,0.7
+2018,Trends in Food Science & Technology,0.8333,0.1667,0.2249,0.7
+2018,Ultrasound in Obstetrics and Gynecology,2.3143,1.8,1.8672,0.7
+2018,Unknown,0.7907,0.2849,0.3081,0.7
+2018,Vaccine,0.6087,0.087,0.1228,0.7
+2018,World Journal of Gastroenterology,0.3514,0.0,0.0724,0.7
+2018,World Journal of Surgery,1.2,0.0,0.025,0.7
+2018,World Neurosurgery,0.25,0.0,0.0,0.7
+2018,eLife,1.2482,0.4964,0.4999,0.7
+2018,mBio,1.4433,0.5773,0.625,0.7
+2018,mSphere,1.625,0.8333,0.8599,0.7
+2018,The Lancet. Gastroenterology & hepatology,0.5455,0.2424,0.2757,0.7
+2019,ACS Applied Materials & Interfaces,0.6364,0.1364,0.1935,0.7
+2019,ACS Nano,0.4878,0.122,0.1169,0.7
+2019,AIDS,0.9459,0.4324,0.4353,0.7
+2019,AIDS and Behavior,0.6364,0.3636,0.3517,0.7
+2019,Academic Medicine,0.5,0.1053,0.1309,0.7
+2019,Acta Biomaterialia,0.5055,0.011,0.0182,0.7
+2019,Acta Neuropathologica,1.4713,0.908,0.9278,0.7
+2019,Acta Neuropathologica Communications,0.9773,0.5455,0.5754,0.7
+2019,Acta Oncologica,1.5,0.65,0.6626,0.7
+2019,Addiction,1.1489,0.5957,0.6181,0.7
+2019,Addictive Behaviors,1.1714,0.8286,0.8795,0.7
+2019,Age and Ageing,0.7407,0.1481,0.1631,0.7
+2019,Aging,1.0,0.4583,0.4474,0.7
+2019,Aging Cell,0.8222,0.1111,0.1322,0.7
+2019,Alimentary Pharmacology & Therapeutics,0.9091,0.4318,0.5067,0.7
+2019,Allergy,1.0,0.3696,0.4204,0.7
+2019,Alzheimer s & Dementia,1.4605,0.7237,0.746,0.7
+2019,Alzheimer s Research & Therapy,0.6122,0.1429,0.1786,0.7
+2019,American Heart Journal,0.75,0.3571,0.3721,0.7
+2019,American Journal Of Pathology,0.9,0.55,0.6077,0.7
+2019,American Journal of Clinical Nutrition,0.6154,0.0769,0.1027,0.7
+2019,American Journal of Epidemiology,1.0938,0.4375,0.4725,0.7
+2019,American Journal of Hematology,0.587,0.2174,0.2458,0.7
+2019,American Journal of Kidney Diseases,0.6341,0.0244,0.0559,0.7
+2019,American Journal of Neuroradiology,0.7907,0.2558,0.2305,0.7
+2019,American Journal of Obstetrics and Gynecology,0.8785,0.4299,0.4755,0.7
+2019,American Journal of Ophthalmology,0.7561,0.378,0.392,0.7
+2019,American Journal of Physiology-Lung Cellular and Molecular Physiology,1.0,0.4091,0.4326,0.7
+2019,American Journal of Preventive Medicine,1.0,0.6757,0.6525,0.7
+2019,American Journal of Psychiatry,0.9722,0.3889,0.4172,0.7
+2019,American Journal of Public Health,1.525,1.025,1.0617,0.7
+2019,American Journal of Respiratory Cell and Molecular Biology,0.92,0.32,0.3506,0.7
+2019,American Journal of Respiratory and Critical Care Medicine,1.2736,0.6667,0.6894,0.7
+2019,American Journal of Roentgenology,0.9667,0.4,0.4327,0.7
+2019,American Journal of Transplantation,1.5,0.8696,0.8932,0.7
+2019,Anaesthesia,1.3636,0.8182,0.8234,0.7
+2019,Anesthesia & Analgesia,0.6383,0.1915,0.188,0.7
+2019,Anesthesiology,0.56,0.08,0.0829,0.7
+2019,Angewandte Chemie International Edition,0.5806,0.0645,0.0983,0.7
+2019,Annals of Allergy Asthma & Immunology,0.5238,0.0,0.0569,0.7
+2019,Annals of Clinical and Translational Neurology,0.4783,0.2609,0.2609,0.7
+2019,Annals of Emergency Medicine,0.7241,0.2414,0.2875,0.7
+2019,Annals of Intensive Care,0.4,0.08,0.08,0.7
+2019,Annals of Internal Medicine,1.9688,1.0729,1.1329,0.7
+2019,Annals of Neurology,1.3069,0.8515,0.8781,0.7
+2019,Annals of Oncology,1.2974,0.7888,0.8261,0.7
+2019,Annals of Surgery,0.9124,0.5309,0.54,0.7
+2019,Annals of Surgical Oncology,0.6829,0.2805,0.2755,0.7
+2019,Annals of the American Thoracic Society,0.5909,0.0682,0.0948,0.7
+2019,Annals of the Rheumatic Diseases,0.9605,0.3224,0.3374,0.7
+2019,Antimicrobial Agents and Chemotherapy,1.3258,0.8876,0.9207,0.7
+2019,Antiviral Research,0.6875,0.25,0.2546,0.7
+2019,Archives of Disease in Childhood Fetal & Neonatal,0.4286,0.0,0.0,0.7
+2019,Archives of Physical Medicine and Rehabilitation,0.2609,0.0,0.0,0.7
+2019,Arteriosclerosis Thrombosis and Vascular Biology,0.2222,0.0278,0.0278,0.7
+2019,Arthritis & Rheumatology,0.6408,0.1359,0.1515,0.7
+2019,Arthritis Care & Research,0.6857,0.2571,0.2737,0.7
+2019,Arthritis Research & Therapy,0.4828,0.0517,0.0517,0.7
+2019,Arthroscopy The Journal of Arthroscopic and Related Surgery,0.5517,0.1379,0.1784,0.7
+2019,Atherosclerosis,0.5161,0.0323,0.0323,0.7
+2019,Autophagy,0.6087,0.2174,0.2314,0.7
+2019,BJOG An International Journal of Obstetrics & Gynaecology,0.9643,0.3214,0.289,0.7
+2019,BMC Cancer,0.2286,0.0381,0.0599,0.7
+2019,BMC Complementary and Alternative Medicine,0.2927,0.0,0.0,0.7
+2019,BMC Genomics,0.2,0.04,0.0347,0.7
+2019,BMC Geriatrics,0.2222,0.0,0.0075,0.7
+2019,BMC Health Services Research,0.1364,0.0152,0.0152,0.7
+2019,BMC Infectious Diseases,0.3387,0.0,0.0067,0.7
+2019,BMC Medical Education,0.3636,0.0,0.0,0.7
+2019,BMC Medicine,0.6562,0.2188,0.2346,0.7
+2019,BMC Musculoskeletal Disorders,0.3939,0.0,0.0323,0.7
+2019,BMC Nephrology,0.2174,0.0,0.0,0.7
+2019,BMC Pediatrics,0.28,0.0,0.0293,0.7
+2019,BMC Pregnancy and Childbirth,0.1443,0.0515,0.05,0.7
+2019,BMC Psychiatry,0.2857,0.0,0.0,0.7
+2019,BMC Public Health,0.4828,0.25,0.2524,0.7
+2019,BMC Pulmonary Medicine,0.28,0.0,0.0,0.7
+2019,BMC Research Notes,0.25,0.05,0.05,0.7
+2019,BMC Women s Health,0.36,0.0,0.0,0.7
+2019,BMJ,1.4151,0.7736,0.8118,0.7
+2019,BMJ Global Health,0.4324,0.2703,0.2675,0.7
+2019,BMJ Open,0.4633,0.0621,0.0768,0.7
+2019,BioMed Research International,0.1081,0.0,0.0,0.7
+2019,Biochemical and Biophysical Research Communications,0.4583,0.125,0.1236,0.7
+2019,Biological Psychiatry,0.6818,0.1818,0.1965,0.7
+2019,Biology of Blood and Marrow Transplantation,0.5588,0.1176,0.1269,0.7
+2019,Biomaterials,0.6729,0.3084,0.3074,0.7
+2019,Biomedical Optics Express,3.0,2.7778,2.7706,0.7
+2019,Biomedical Signal Processing and Control,0.5455,0.1364,0.1569,0.7
+2019,Biomedicine & Pharmacotherapy,0.3167,0.0583,0.0594,0.7
+2019,Blood,1.3497,0.8366,0.8731,0.7
+2019,Blood Advances,0.5733,0.2667,0.2788,0.7
+2019,Blood Cancer Journal,0.3182,0.1818,0.1978,0.7
+2019,Bone,0.5714,0.1905,0.1659,0.7
+2019,Brain,1.2029,0.7029,0.7259,0.7
+2019,Brain Behavior and Immunity,0.3929,0.0714,0.0714,0.7
+2019,Breast Cancer Research,0.7037,0.3704,0.3734,0.7
+2019,Breast Cancer Research and Treatment,0.7632,0.3158,0.3469,0.7
+2019,British Journal Of Nutrition,0.6667,0.2381,0.2381,0.7
+2019,British Journal of Anaesthesia,0.662,0.1831,0.1898,0.7
+2019,British Journal of Cancer,0.5472,0.1981,0.2176,0.7
+2019,British Journal of Dermatology,0.4894,0.1064,0.1023,0.7
+2019,British Journal of Haematology,0.4848,0.0606,0.0821,0.7
+2019,British Journal of Ophthalmology,0.7619,0.2619,0.287,0.7
+2019,British Journal of Pharmacology,1.4074,0.8148,0.848,0.7
+2019,British Journal of Sports Medicine,1.0462,0.5538,0.5758,0.7
+2019,British Journal of Urology,0.6216,0.2703,0.2871,0.7
+2019,British journal of surgery,0.791,0.209,0.2499,0.7
+2019,CA A Cancer Journal for Clinicians,23.75,22.65,22.7314,0.7
+2019,CHEST Journal,0.5441,0.1765,0.173,0.7
+2019,Canadian Medical Association Journal,1.1905,0.6667,0.6974,0.7
+2019,Cancer,0.8861,0.3861,0.4165,0.7
+2019,Cancer Cell,2.2273,1.5795,1.5679,0.7
+2019,Cancer Discovery,2.5529,2.2,2.2402,0.7
+2019,Cancer Epidemiology Biomarkers & Prevention,0.963,0.4444,0.4928,0.7
+2019,Cancer Immunology Immunotherapy,1.2059,0.8235,0.8204,0.7
+2019,Cancer Immunology Research,1.0167,0.6833,0.7069,0.7
+2019,Cancer Letters,0.7576,0.4545,0.4674,0.7
+2019,Cancer Medicine,0.4667,0.1,0.1144,0.7
+2019,Cancer Research,1.0116,0.5318,0.5553,0.7
+2019,Cancer Science,1.08,0.6,0.5844,0.7
+2019,Carbohydrate Polymers,0.66,0.1,0.1008,0.7
+2019,Cardiovascular Diabetology,1.1538,0.8846,0.856,0.7
+2019,Cardiovascular Research,0.4444,0.037,0.037,0.7
+2019,Cell,2.4094,1.9128,1.9483,0.7
+2019,Cell Death and Differentiation,0.5417,0.0833,0.0922,0.7
+2019,Cell Death and Disease,0.5595,0.125,0.134,0.7
+2019,Cell Host & Microbe,1.0405,0.5676,0.5959,0.7
+2019,Cell Metabolism,1.625,0.8667,0.9025,0.7
+2019,Cell Reports,1.0076,0.4466,0.477,0.7
+2019,Cell stem cell,1.459,0.9344,0.9242,0.7
+2019,Cellular Physiology and Biochemistry,1.5227,1.2727,1.3011,0.7
+2019,Cephalalgia,1.5714,1.0476,1.1103,0.7
+2019,Chemical Science,0.52,0.04,0.0462,0.7
+2019,Circulation,1.4051,0.7445,0.7831,0.7
+2019,Circulation Arrhythmia and Electrophysiology,0.8108,0.3243,0.3381,0.7
+2019,Circulation Cardiovascular Imaging,0.5476,0.0476,0.0668,0.7
+2019,Circulation Cardiovascular Interventions,0.5455,0.2727,0.2644,0.7
+2019,Circulation Cardiovascular Quality and Outcomes,0.7143,0.1905,0.1905,0.7
+2019,Circulation Heart Failure,0.65,0.175,0.2092,0.7
+2019,Circulation Research,0.7083,0.125,0.142,0.7
+2019,Clinical Cancer Research,1.2713,0.8018,0.8261,0.7
+2019,Clinical Chemistry,0.8095,0.4286,0.4107,0.7
+2019,Clinical Gastroenterology and Hepatology,0.6966,0.2247,0.2315,0.7
+2019,Clinical Infectious Diseases,0.8585,0.3756,0.4018,0.7
+2019,Clinical Interventions in Aging,0.4,0.0,0.0,0.7
+2019,Clinical Journal of the American Society of Nephrology,0.6047,0.2093,0.2146,0.7
+2019,Clinical Lung Cancer,0.2273,0.0909,0.0782,0.7
+2019,Clinical Microbiology and Infection,0.5556,0.1111,0.104,0.7
+2019,Clinical Nutrition,0.5192,0.1538,0.1674,0.7
+2019,Clinical Orthopaedics and Related Research,0.5333,0.0667,0.0608,0.7
+2019,Clinical Pharmacology & Therapeutics,0.3103,0.0345,0.0345,0.7
+2019,Computer Methods and Programs in Biomedicine,0.6667,0.1111,0.1144,0.7
+2019,Computers in Biology and Medicine,2.0,1.3261,1.3665,0.7
+2019,Critical Care,0.4058,0.1594,0.1561,0.7
+2019,Critical Care Medicine,1.2273,0.6727,0.7396,0.7
+2019,Current Biology,0.6,0.24,0.2629,0.7
+2019,Development,0.9583,0.2917,0.3526,0.7
+2019,Developmental Cell,0.4062,0.0,0.0,0.7
+2019,Developmental Medicine & Child Neurology,0.1,0.0,0.0,0.7
+2019,Diabetes,0.7385,0.1385,0.1542,0.7
+2019,Diabetes Care,1.3855,0.8072,0.8526,0.7
+2019,Diabetes Obesity and Metabolism,1.7821,1.2051,1.3154,0.7
+2019,Diabetes Research and Clinical Practice,2.6818,2.1818,2.1981,0.7
+2019,Diabetes Technology & Therapeutics,1.4138,1.1379,1.1358,0.7
+2019,Diabetologia,0.9589,0.3836,0.4009,0.7
+2019,Diseases of the Colon & Rectum,0.4516,0.0,0.0,0.7
+2019,Drug and Alcohol Dependence,1.0638,0.6383,0.6843,0.7
+2019,EBioMedicine,0.4359,0.1154,0.1594,0.7
+2019,EFORT Open Reviews,0.1429,0.0,0.0,0.7
+2019,EMBO Molecular Medicine,0.4737,0.1053,0.1309,0.7
+2019,EP Europace,0.7667,0.4,0.377,0.7
+2019,Emerging Microbes & Infections,0.5217,0.1304,0.1304,0.7
+2019,Emerging infectious diseases,1.5634,0.9155,0.9485,0.7
+2019,Endocrinology,0.619,0.1429,0.1185,0.7
+2019,Endoscopy,0.6042,0.1875,0.1924,0.7
+2019,Epilepsia,1.3571,0.7679,0.7684,0.7
+2019,EuroIntervention,1.0741,0.4815,0.5356,0.7
+2019,European Heart Journal,1.4554,1.0,1.0089,0.7
+2019,European Heart Journal - Cardiovascular Imaging,0.8966,0.3793,0.4178,0.7
+2019,European Journal of Cancer,0.7143,0.2679,0.2728,0.7
+2019,European Journal of Cardio-Thoracic Surgery,0.7391,0.2609,0.2713,0.7
+2019,European Journal of Endocrinology,0.6667,0.1852,0.1835,0.7
+2019,European Journal of Epidemiology,1.3913,0.6087,0.6277,0.7
+2019,European Journal of Heart Failure,0.9221,0.5195,0.5285,0.7
+2019,European Journal of Medicinal Chemistry,0.5714,0.0,0.0109,0.7
+2019,European Journal of Neurology,0.6087,0.2609,0.2899,0.7
+2019,European Journal of Nuclear Medicine and Molecular Imaging,1.5312,1.1771,1.1754,0.7
+2019,European Journal of Nutrition,0.1304,0.0,0.0,0.7
+2019,European Journal of Preventive Cardiology,0.619,0.0,0.0238,0.7
+2019,European Journal of Radiology,1.1,0.15,0.2634,0.7
+2019,European Journal of Surgical Oncology,0.3846,0.0,0.0192,0.7
+2019,European Radiology,0.6667,0.3444,0.3405,0.7
+2019,European Respiratory Journal,1.0065,0.526,0.5522,0.7
+2019,European Spine Journal,0.3333,0.0606,0.0551,0.7
+2019,European Urology,1.2143,0.7589,0.7827,0.7
+2019,Eurosurveillance,1.3611,0.6389,0.7495,0.7
+2019,Experimental Gerontology,0.5217,0.0435,0.0484,0.7
+2019,Fertility and Sterility,0.8194,0.3333,0.3419,0.7
+2019,Food & Function,0.4898,0.0612,0.0612,0.7
+2019,Food Chemistry,0.4624,0.0173,0.0247,0.7
+2019,Food Research International,0.9348,0.1957,0.2593,0.7
+2019,Food and Chemical Toxicology,0.7619,0.0476,0.0476,0.7
+2019,Foot & Ankle International,0.4286,0.0,0.0,0.7
+2019,Free Radical Biology and Medicine,0.549,0.1765,0.1895,0.7
+2019,Frontiers in Aging Neuroscience,0.3571,0.0,0.0,0.7
+2019,Frontiers in Immunology,0.2459,0.0246,0.0262,0.7
+2019,Frontiers in Microbiology,0.4651,0.093,0.1087,0.7
+2019,Frontiers in Molecular Neuroscience,0.2273,0.0909,0.0909,0.7
+2019,Frontiers in Neurology,0.3111,0.0444,0.0444,0.7
+2019,Frontiers in Neuroscience,0.4444,0.25,0.2603,0.7
+2019,Frontiers in Oncology,0.1481,0.037,0.0819,0.7
+2019,Frontiers in Pharmacology,0.4815,0.0741,0.076,0.7
+2019,Frontiers in Physiology,0.5952,0.3452,0.3291,0.7
+2019,Frontiers in Psychology,0.3571,0.0,0.0,0.7
+2019,Frontiers in Public Health,0.2857,0.0476,0.0938,0.7
+2019,Gastric Cancer,0.76,0.44,0.4609,0.7
+2019,Gastroenterology,1.0769,0.6462,0.6716,0.7
+2019,Gastrointestinal Endoscopy,0.6623,0.1558,0.1844,0.7
+2019,Genetics in Medicine,0.6486,0.1081,0.136,0.7
+2019,Global Spine Journal,0.1852,0.0,0.0,0.7
+2019,Gut,0.9457,0.1938,0.2153,0.7
+2019,Gynecologic Oncology,0.5345,0.1207,0.1255,0.7
+2019,Haematologica,0.623,0.1803,0.1964,0.7
+2019,Health Affairs,1.7917,1.125,1.1513,0.7
+2019,Health and Quality of Life Outcomes,0.2069,0.0,0.0,0.7
+2019,Heart,0.6087,0.1087,0.1158,0.7
+2019,Heart Rhythm,1.4528,0.8868,0.9018,0.7
+2019,Hepatology,1.2048,0.7286,0.7784,0.7
+2019,Human Brain Mapping,1.0741,0.4815,0.5082,0.7
+2019,Human Molecular Genetics,0.7083,0.2708,0.2956,0.7
+2019,Human Reproduction,0.7172,0.2626,0.2806,0.7
+2019,Hypertension,0.5185,0.1605,0.1615,0.7
+2019,IEEE Access,0.6053,0.1316,0.1389,0.7
+2019,IEEE Journal of Biomedical and Health Informatics,0.625,0.4,0.3992,0.7
+2019,IEEE Transactions on Biomedical Engineering,0.6471,0.2059,0.2222,0.7
+2019,IEEE Transactions on Medical Imaging,1.675,1.175,1.2297,0.7
+2019,Immunity,1.4444,0.9722,0.9927,0.7
+2019,Industrial Crops and Products,0.4688,0.0312,0.0312,0.7
+2019,Inflammatory Bowel Diseases,0.25,0.1,0.1,0.7
+2019,Injury,0.32,0.0,0.0,0.7
+2019,Intensive Care Medicine,1.44,1.0,1.0399,0.7
+2019,International Immunopharmacology,0.36,0.04,0.056,0.7
+2019,International Journal of Behavioral Nutrition and Physical Activity,0.8958,0.4375,0.4368,0.7
+2019,International Journal of Biological Macromolecules,0.3333,0.0533,0.0468,0.7
+2019,International Journal of COPD,0.6,0.25,0.2291,0.7
+2019,International Journal of Cancer,0.6353,0.0824,0.1227,0.7
+2019,International Journal of Cardiology,0.5424,0.1356,0.1531,0.7
+2019,International Journal of Drug Policy,2.1026,1.6667,1.661,0.7
+2019,International Journal of Environmental Research and Public Health,0.3469,0.1837,0.1831,0.7
+2019,International Journal of Epidemiology,0.4571,0.0571,0.0528,0.7
+2019,International Journal of Gynecology & Obstetrics,0.4762,0.0,0.0,0.7
+2019,International Journal of Molecular Medicine,0.1429,0.0,0.0,0.7
+2019,International Journal of Molecular Sciences,0.4375,0.125,0.1221,0.7
+2019,International Journal of Nanomedicine,0.4516,0.0,0.0,0.7
+2019,International Journal of Obesity,0.4286,0.0857,0.1102,0.7
+2019,International Journal of Pharmaceutics,0.1379,0.0,0.0084,0.7
+2019,International Journal of Radiation Oncology*Biology*Physics,0.593,0.1279,0.1367,0.7
+2019,International Journal of Sports Physiology and Performance,1.5938,1.0625,1.0457,0.7
+2019,International Journal of Stroke,1.6,1.1,1.1104,0.7
+2019,International Orthopaedics,0.5652,0.0435,0.0625,0.7
+2019,Investigative Ophthalmology & Visual Science,1.3295,0.8068,0.8195,0.7
+2019,JACC Heart Failure,0.6111,0.3056,0.2764,0.7
+2019,JACC. Cardiovascular imaging,0.5758,0.0707,0.0975,0.7
+2019,JACC. Clinical electrophysiology,0.425,0.05,0.0527,0.7
+2019,JACC: Cardiovascular Interventions,1.05,0.6,0.6547,0.7
+2019,JAIDS Journal of Acquired Immune Deficiency Syndromes,1.0714,0.6071,0.673,0.7
+2019,JAMA,2.1404,1.3801,1.4193,0.7
+2019,JAMA Cardiology,1.2159,0.6136,0.6522,0.7
+2019,JAMA Dermatology,0.6071,0.2143,0.2124,0.7
+2019,JAMA Internal Medicine,1.25,0.6304,0.7204,0.7
+2019,JAMA Network Open,0.1077,0.0615,0.0615,0.7
+2019,JAMA Neurology,1.3769,0.8077,0.855,0.7
+2019,JAMA Oncology,1.5404,1.0124,1.0364,0.7
+2019,JAMA Ophthalmology,1.2273,0.803,0.811,0.7
+2019,JAMA Pediatrics,1.05,0.4125,0.4495,0.7
+2019,JAMA Psychiatry,1.6714,0.9143,0.9512,0.7
+2019,JAMA Surgery,1.2469,0.8642,0.8659,0.7
+2019,JCI Insight,0.7778,0.2941,0.3166,0.7
+2019,JMIR mhealth and uhealth,0.5294,0.0588,0.1039,0.7
+2019,JNCI Journal of the National Cancer Institute,1.125,0.6667,0.6747,0.7
+2019,Journal for ImmunoTherapy of Cancer,1.2653,0.9796,1.0006,0.7
+2019,Journal of Adolescent Health,0.6,0.4,0.3492,0.7
+2019,Journal of Affective Disorders,0.0682,0.0,0.0,0.7
+2019,Journal of Agricultural and Food Chemistry,0.36,0.0,0.0,0.7
+2019,Journal of Allergy and Clinical Immunology,0.7273,0.1273,0.1537,0.7
+2019,Journal of Alzheimer s Disease,0.7121,0.197,0.177,0.7
+2019,Journal of Antimicrobial Chemotherapy,1.36,0.92,0.92,0.7
+2019,Journal of Applied Physiology,0.4762,0.0,0.0453,0.7
+2019,Journal of Biological Chemistry,0.8194,0.3194,0.3333,0.7
+2019,Journal of Biomechanics,0.25,0.0,0.0,0.7
+2019,Journal of Bone and Joint Surgery,0.8056,0.2685,0.279,0.7
+2019,Journal of Bone and Mineral Research,1.0,0.3542,0.3685,0.7
+2019,Journal of Cachexia Sarcopenia and Muscle,2.0,1.3191,1.3401,0.7
+2019,Journal of Cancer Research and Clinical Oncology,0.5714,0.1905,0.1905,0.7
+2019,Journal of Cataract & Refractive Surgery,0.5714,0.0952,0.1787,0.7
+2019,Journal of Cellular Physiology,0.2647,0.0294,0.0467,0.7
+2019,Journal of Cellular and Molecular Medicine,0.4138,0.0,0.0,0.7
+2019,Journal of Clinical Investigation,0.9765,0.5588,0.5824,0.7
+2019,Journal of Clinical Medicine,0.0909,0.0455,0.0669,0.7
+2019,Journal of Clinical Microbiology,1.1702,0.8511,0.8398,0.7
+2019,Journal of Clinical Oncology,2.4469,1.6504,1.7024,0.7
+2019,Journal of Controlled Release,0.2667,0.0,0.0,0.7
+2019,Journal of Critical Care,0.2174,0.0,0.0,0.7
+2019,Journal of Experimental & Clinical Cancer Research,0.2,0.0,0.0,0.7
+2019,Journal of Functional Foods,0.2778,0.0,0.0,0.7
+2019,Journal of General Internal Medicine,0.9,0.3,0.32,0.7
+2019,Journal of Glaucoma,1.6,0.75,0.9357,0.7
+2019,Journal of Hematology & Oncology,0.6207,0.1724,0.2004,0.7
+2019,Journal of Hepatology,1.9355,1.4581,1.4614,0.7
+2019,Journal of Investigative Dermatology,0.5741,0.1296,0.1255,0.7
+2019,Journal of Lipid Research,0.4348,0.0,0.029,0.7
+2019,Journal of Magnetic Resonance Imaging,1.1136,0.6136,0.6568,0.7
+2019,Journal of Medical Internet Research,0.3585,0.0566,0.0675,0.7
+2019,Journal of Medicinal Chemistry,0.44,0.14,0.1289,0.7
+2019,Journal of Neuro-Oncology,0.4118,0.1471,0.1488,0.7
+2019,Journal of NeuroInterventional Surgery,0.9762,0.4762,0.5171,0.7
+2019,Journal of Neuroinflammation,0.3538,0.0,0.0221,0.7
+2019,Journal of Neurology,0.5172,0.2069,0.2058,0.7
+2019,Journal of Neurology Neurosurgery & Psychiatry,0.6833,0.3167,0.3042,0.7
+2019,Journal of Neuroscience,1.0714,0.6286,0.6305,0.7
+2019,Journal of Neurosurgery Spine,0.5926,0.0,0.0185,0.7
+2019,Journal of Neurotrauma,0.6667,0.0784,0.1016,0.7
+2019,Journal of Nuclear Medicine,1.6944,1.2222,1.263,0.7
+2019,Journal of Nutrition,0.9259,0.2593,0.2924,0.7
+2019,Journal of Orthopaedic and Sports Physical Therapy,0.7308,0.1538,0.1787,0.7
+2019,Journal of Pain,0.5357,0.1786,0.1997,0.7
+2019,Journal of Pain and Symptom Management,0.48,0.04,0.0636,0.7
+2019,Journal of Pineal Research,1.381,1.0,0.9879,0.7
+2019,Journal of Shoulder and Elbow Surgery,0.3617,0.0213,0.0213,0.7
+2019,Journal of Sports Sciences,0.7143,0.381,0.381,0.7
+2019,Journal of Substance Abuse Treatment,0.85,0.35,0.3309,0.7
+2019,Journal of Surgical Oncology,0.5455,0.0,0.0394,0.7
+2019,Journal of Thoracic Disease,0.7727,0.1818,0.2093,0.7
+2019,Journal of Thoracic Oncology,1.0167,0.65,0.6758,0.7
+2019,Journal of Thoracic and Cardiovascular Surgery,0.2985,0.0299,0.0457,0.7
+2019,Journal of Thrombosis and Haemostasis,0.4074,0.0741,0.1329,0.7
+2019,Journal of Translational Medicine,0.2759,0.1034,0.1034,0.7
+2019,Journal of Vascular Surgery,0.4194,0.0,0.0088,0.7
+2019,Journal of Virology,0.7326,0.2674,0.3012,0.7
+2019,Journal of clinical lipidology,0.6,0.25,0.2846,0.7
+2019,Journal of neurosurgery,0.493,0.1127,0.1107,0.7
+2019,Journal of science and medicine in sport,0.5909,0.0455,0.092,0.7
+2019,Journal of the American Academy of Dermatology,1.0208,0.4792,0.5188,0.7
+2019,Journal of the American Chemical Society,0.7174,0.3478,0.3503,0.7
+2019,Journal of the American College of Cardiology,1.5215,0.9877,1.0174,0.7
+2019,Journal of the American College of Radiology,1.2069,0.7586,0.7658,0.7
+2019,Journal of the American College of Surgeons,0.7381,0.3095,0.3311,0.7
+2019,Journal of the American Geriatrics Society,0.7097,0.1774,0.1774,0.7
+2019,Journal of the American Heart Association,0.8945,0.2844,0.3058,0.7
+2019,Journal of the American Medical Directors Association,1.3585,0.2264,0.2916,0.7
+2019,Journal of the American Society of Nephrology,0.5876,0.0825,0.1162,0.7
+2019,Journal of the European Academy of Dermatology and Venereology,0.4091,0.0455,0.0455,0.7
+2019,Journal of the International AIDS Society,1.3548,0.4194,0.4824,0.7
+2019,Journal of the National Comprehensive Cancer Network,2.6122,1.7755,1.8576,0.7
+2019,Kidney International,0.7222,0.0889,0.1004,0.7
+2019,Knee Surgery Sports Traumatology Arthroscopy,0.6316,0.1754,0.2036,0.7
+2019,LWT,0.4333,0.2,0.2,0.7
+2019,Lara D. Veeken,0.5606,0.0455,0.0674,0.7
+2019,Leukemia,1.0396,0.495,0.4975,0.7
+2019,Life Sciences,0.2381,0.0,0.0,0.7
+2019,Lipids in Health and Disease,0.32,0.08,0.1137,0.7
+2019,Liver International,1.0714,0.5357,0.5395,0.7
+2019,Liver Transplantation,1.2,0.95,0.9464,0.7
+2019,Lung Cancer,1.5128,1.2051,1.223,0.7
+2019,MMWR Morbidity and Mortality Weekly Report,3.4825,2.7982,2.8439,0.7
+2019,Magnetic Resonance in Medicine,1.75,1.2292,1.2389,0.7
+2019,Malaria Journal,0.7808,0.3699,0.4286,0.7
+2019,Materials Science and Engineering C,0.2308,0.0,0.0,0.7
+2019,Medical Image Analysis,2.04,1.28,1.2921,0.7
+2019,Medical Physics,1.65,1.225,1.2914,0.7
+2019,Medical Teacher,1.0,0.6129,0.6592,0.7
+2019,Medicine,0.3108,0.027,0.023,0.7
+2019,Medicine & Science in Sports & Exercise,0.6724,0.1379,0.1533,0.7
+2019,Menopause The Journal of The North American Menopause Society,0.9583,0.625,0.625,0.7
+2019,Microbiome,0.6207,0.1724,0.1747,0.7
+2019,Modern Pathology,1.2059,0.6765,0.6793,0.7
+2019,Molecular Cancer Research,0.4348,0.087,0.095,0.7
+2019,Molecular Cancer Therapeutics,1.0625,0.7188,0.7116,0.7
+2019,Molecular Cell,0.9524,0.4762,0.485,0.7
+2019,Molecular Metabolism,0.5625,0.25,0.2515,0.7
+2019,Molecular Neurobiology,0.5385,0.0,0.023,0.7
+2019,Molecular Neurodegeneration,0.6875,0.375,0.4001,0.7
+2019,Molecular Nutrition & Food Research,0.4286,0.0,0.0,0.7
+2019,Molecular Pharmaceutics,0.7619,0.5238,0.5813,0.7
+2019,Molecular Psychiatry,1.1111,0.4,0.4374,0.7
+2019,Molecular Therapy,1.5156,1.0781,1.0881,0.7
+2019,Molecules,0.2222,0.0476,0.0514,0.7
+2019,Movement Disorders,0.8103,0.2241,0.2273,0.7
+2019,Multiple Sclerosis Journal,0.8636,0.2955,0.3114,0.7
+2019,Nature,4.4076,3.6967,3.727,0.7
+2019,Nature Biomedical Engineering,0.8485,0.4545,0.4545,0.7
+2019,Nature Cell Biology,1.6098,0.5366,0.5653,0.7
+2019,Nature Chemical Biology,0.9333,0.4,0.4167,0.7
+2019,Nature Communications,0.8926,0.449,0.4588,0.7
+2019,Nature Genetics,2.54,1.6,1.6868,0.7
+2019,Nature Immunology,1.3478,0.4348,0.4979,0.7
+2019,Nature Medicine,1.942,1.413,1.4246,0.7
+2019,Nature Microbiology,0.8868,0.3019,0.313,0.7
+2019,Nature Neuroscience,1.5938,0.8125,0.8285,0.7
+2019,Nephrology Dialysis Transplantation,0.2564,0.0,0.0077,0.7
+2019,Neuro-Oncology,1.3279,0.8689,0.9108,0.7
+2019,NeuroImage,1.2393,0.7265,0.7539,0.7
+2019,NeuroImage Clinical,0.6207,0.2759,0.3128,0.7
+2019,Neurobiology of Aging,0.6122,0.1429,0.2325,0.7
+2019,Neurobiology of Disease,0.8621,0.4138,0.4377,0.7
+2019,Neurology,1.0141,0.4472,0.4681,0.7
+2019,Neurology Neuroimmunology & Neuroinflammation,0.8621,0.4483,0.4612,0.7
+2019,Neuron,1.3696,0.6739,0.7211,0.7
+2019,Neuropharmacology,0.619,0.0,0.0396,0.7
+2019,Neuropsychopharmacology,0.7097,0.2258,0.2458,0.7
+2019,Neurosurgery,0.325,0.0,0.0,0.7
+2019,Neurosurgical FOCUS,0.68,0.0,0.0241,0.7
+2019,New England Journal of Medicine,5.0951,4.2341,4.2933,0.7
+2019,Nicotine & Tobacco Research,1.2083,0.875,0.8949,0.7
+2019,Nucleic Acids Research,1.3333,0.7222,0.762,0.7
+2019,Nutrients,0.3175,0.0952,0.1003,0.7
+2019,Obesity,0.6296,0.1852,0.2398,0.7
+2019,Obesity Surgery,1.0465,0.7907,0.8036,0.7
+2019,Obstetrics and Gynecology,1.2143,0.6224,0.6439,0.7
+2019,OncoImmunology,0.7011,0.3908,0.3784,0.7
+2019,Oncogene,0.4416,0.0909,0.0966,0.7
+2019,Oncotarget,0.8955,0.3582,0.3901,0.7
+2019,Open Forum Infectious Diseases,0.3636,0.1364,0.1364,0.7
+2019,Ophthalmology,1.0455,0.7121,0.721,0.7
+2019,Oral Oncology,0.5714,0.1143,0.1134,0.7
+2019,Orthopaedic Journal of Sports Medicine,0.4118,0.0882,0.0809,0.7
+2019,Osteoarthritis and Cartilage,0.7619,0.119,0.1553,0.7
+2019,Osteoporosis International,0.8462,0.2692,0.2699,0.7
+2019,Otolaryngology,0.25,0.1,0.1,0.7
+2019,Oxidative Medicine and Cellular Longevity,0.3415,0.0244,0.0174,0.7
+2019,PEDIATRICS,0.907,0.4264,0.4377,0.7
+2019,PLoS Biology,0.5417,0.125,0.125,0.7
+2019,PLoS Genetics,0.5,0.0667,0.0667,0.7
+2019,PLoS Medicine,1.0602,0.4436,0.4692,0.7
+2019,PLoS ONE,0.537,0.1461,0.1577,0.7
+2019,PLoS Pathogens,1.3178,0.7907,0.8024,0.7
+2019,PLoS neglected tropical diseases,0.6692,0.1846,0.1845,0.7
+2019,Pain,0.6567,0.1642,0.1883,0.7
+2019,Parasites & Vectors,0.3667,0.0333,0.0335,0.7
+2019,Pediatric Blood & Cancer,1.0952,0.5714,0.5633,0.7
+2019,Pediatric Critical Care Medicine,0.5238,0.1429,0.1173,0.7
+2019,Pediatric Diabetes,0.381,0.1905,0.1905,0.7
+2019,PeerJ,0.2727,0.1364,0.1282,0.7
+2019,Physics in Medicine and Biology,0.6667,0.2083,0.2269,0.7
+2019,Phytomedicine,0.1333,0.0667,0.0811,0.7
+2019,Plastic & Reconstructive Surgery,1.0161,0.5645,0.572,0.7
+2019,Preventive Medicine,0.8974,0.5128,0.4962,0.7
+2019,Proceedings of the National Academy of Sciences,0.8671,0.3896,0.4062,0.7
+2019,Psycho-Oncology,0.28,0.0,0.0,0.7
+2019,Psychological Medicine,0.7143,0.1143,0.1654,0.7
+2019,PubMed,0.9601,0.6379,0.6446,0.7
+2019,Public Health Nutrition,2.2188,1.8125,1.8246,0.7
+2019,Radiology,1.2138,0.7793,0.7943,0.7
+2019,Radiotherapy and Oncology,0.6957,0.2609,0.2828,0.7
+2019,Redox Biology,0.7736,0.5094,0.5094,0.7
+2019,Regional Anesthesia & Pain Medicine,1.8182,1.1364,1.1364,0.7
+2019,Reproductive Health,1.0682,0.75,0.7364,0.7
+2019,Respiratory Medicine,0.24,0.08,0.0749,0.7
+2019,Respiratory Research,0.4324,0.0541,0.0631,0.7
+2019,Resuscitation,0.6444,0.0444,0.0625,0.7
+2019,Retina,0.875,0.325,0.3476,0.7
+2019,Scandinavian Journal of Medicine and Science in Sports,0.4333,0.0667,0.1092,0.7
+2019,Schizophrenia Bulletin,0.45,0.0,0.0,0.7
+2019,Schizophrenia Research,0.3043,0.0,0.0,0.7
+2019,Science,3.7712,3.0339,3.0286,0.7
+2019,Science Advances,0.4667,0.2222,0.2223,0.7
+2019,Science Translational Medicine,1.5402,0.8563,0.869,0.7
+2019,Scientific Reports,0.6678,0.2537,0.2623,0.7
+2019,Sensors,0.4483,0.2069,0.198,0.7
+2019,Social Science & Medicine,0.15,0.0,0.0,0.7
+2019,Spine,0.4286,0.1429,0.1429,0.7
+2019,Sports Medicine,0.84,0.56,0.5626,0.7
+2019,Stem Cell Reports,0.82,0.3,0.3473,0.7
+2019,Stem Cell Research & Therapy,0.4321,0.0494,0.0776,0.7
+2019,Stem Cells Translational Medicine,0.3929,0.0,0.0,0.7
+2019,Stroke,0.6902,0.2554,0.2641,0.7
+2019,Supportive Care in Cancer,0.3902,0.0488,0.0532,0.7
+2019,Surgery,0.3571,0.1786,0.1748,0.7
+2019,Surgery for Obesity and Related Diseases,1.12,0.12,0.2226,0.7
+2019,Surgical Endoscopy,0.6575,0.0959,0.1126,0.7
+2019,The American Journal of Cardiology,0.5909,0.1364,0.1997,0.7
+2019,The American Journal of Gastroenterology,1.0972,0.4861,0.5058,0.7
+2019,The American Journal of Human Genetics,0.6765,0.2353,0.2441,0.7
+2019,The American Journal of Medicine,1.52,0.92,0.9035,0.7
+2019,The American Journal of Sports Medicine,0.8531,0.2448,0.2717,0.7
+2019,The American Journal of Surgical Pathology,1.2073,0.7073,0.7417,0.7
+2019,The Annals of Thoracic Surgery,0.6552,0.1897,0.2522,0.7
+2019,The Bone & Joint Journal,0.9565,0.3696,0.381,0.7
+2019,The EMBO Journal,0.8049,0.2683,0.32,0.7
+2019,The FASEB Journal,0.5319,0.0638,0.0989,0.7
+2019,The Journal of Allergy and Clinical Immunology In Practice,0.6786,0.0357,0.057,0.7
+2019,The Journal of Arthroplasty,0.6583,0.2917,0.3038,0.7
+2019,The Journal of Cell Biology,0.6333,0.2667,0.304,0.7
+2019,The Journal of Clinical Endocrinology & Metabolism,0.75,0.2059,0.2152,0.7
+2019,The Journal of Experimental Medicine,1.9286,1.4107,1.4292,0.7
+2019,The Journal of Headache and Pain,0.375,0.0833,0.114,0.7
+2019,The Journal of Heart and Lung Transplantation,0.7037,0.0741,0.203,0.7
+2019,The Journal of Immunology,0.6296,0.2222,0.2668,0.7
+2019,The Journal of Infectious Diseases,0.7553,0.2021,0.2319,0.7
+2019,The Journal of Nutritional Biochemistry,0.3333,0.0,0.0,0.7
+2019,The Journal of Pathology,1.1667,0.5417,0.5879,0.7
+2019,The Journal of Pediatrics,0.625,0.2375,0.249,0.7
+2019,The Journal of Physiology,1.1818,0.4091,0.4696,0.7
+2019,The Journal of Rheumatology,0.5833,0.0,0.0107,0.7
+2019,The Journal of Strength and Conditioning Research,0.6333,0.1833,0.2016,0.7
+2019,"The Journal of Trauma: Injury, Infection, and Critical Care",0.6667,0.0476,0.0914,0.7
+2019,The Journal of Urology,1.0625,0.5312,0.5714,0.7
+2019,The Journals of Gerontology Series A,0.8148,0.2037,0.2849,0.7
+2019,The Lancet,3.852,3.12,3.1485,0.7
+2019,The Lancet Child & Adolescent Health,0.7143,0.2381,0.2465,0.7
+2019,The Lancet Diabetes & Endocrinology,2.4923,1.8154,1.8511,0.7
+2019,The Lancet Global Health,0.7353,0.1912,0.2044,0.7
+2019,The Lancet HIV,1.7647,1.0588,1.0584,0.7
+2019,The Lancet Haematology,0.7609,0.2391,0.2743,0.7
+2019,The Lancet Infectious Diseases,1.6044,0.978,1.0007,0.7
+2019,The Lancet Neurology,1.1194,0.4627,0.4704,0.7
+2019,The Lancet Oncology,3.0226,2.3898,2.4543,0.7
+2019,The Lancet Psychiatry,0.6364,0.1212,0.1378,0.7
+2019,The Lancet Public Health,0.8462,0.2692,0.3386,0.7
+2019,The Lancet Respiratory Medicine,1.3059,0.7647,0.777,0.7
+2019,The Laryngoscope,0.5,0.0,0.0,0.7
+2019,The Oncologist,0.8333,0.5,0.5046,0.7
+2019,The Spine Journal,0.3684,0.1316,0.1244,0.7
+2019,The journal of nutrition health & aging,0.2857,0.0476,0.0476,0.7
+2019,Theranostics,0.5902,0.3279,0.3583,0.7
+2019,Thorax,1.2449,0.2653,0.3103,0.7
+2019,Thrombosis and Haemostasis,0.9231,0.6538,0.6573,0.7
+2019,Thyroid,0.9333,0.4667,0.4623,0.7
+2019,Tobacco Control,2.4054,2.1081,2.1646,0.7
+2019,Translational Psychiatry,0.7083,0.125,0.141,0.7
+2019,Transplantation,1.2059,0.5,0.5694,0.7
+2019,Trends in Food Science & Technology,1.2759,0.6552,0.6709,0.7
+2019,Ultrasound in Obstetrics and Gynecology,1.1892,0.9189,0.9308,0.7
+2019,Unknown,0.8365,0.3082,0.3358,0.7
+2019,Vaccine,0.6042,0.1458,0.1916,0.7
+2019,World Journal of Gastroenterology,0.75,0.2143,0.2412,0.7
+2019,World Neurosurgery,0.4773,0.0682,0.0563,0.7
+2019,World Psychiatry,2.2083,1.4583,1.4541,0.7
+2019,eLife,1.125,0.5526,0.5956,0.7
+2019,mBio,0.9341,0.3846,0.4057,0.7
+2019,mSphere,0.9048,0.5238,0.5225,0.7
+2019,The Lancet. Gastroenterology & hepatology,0.9737,0.5789,0.628,0.7
+2020,ACS Applied Materials & Interfaces,0.8393,0.25,0.2546,0.7
+2020,ACS Nano,0.4255,0.0426,0.0439,0.7
+2020,AIDS,0.6667,0.0417,0.0553,0.7
+2020,AIDS and Behavior,0.75,0.25,0.2633,0.7
+2020,Academic Medicine,0.6757,0.0,0.007,0.7
+2020,Acta Biomaterialia,0.525,0.075,0.0847,0.7
+2020,Acta Neuropathologica,1.6778,0.9667,1.0041,0.7
+2020,Acta Neuropathologica Communications,0.9298,0.4912,0.5102,0.7
+2020,Addiction,1.381,0.6905,0.7573,0.7
+2020,Addictive Behaviors,0.7188,0.25,0.293,0.7
+2020,Advanced Functional Materials,0.7083,0.3333,0.3333,0.7
+2020,Advanced Healthcare Materials,0.4091,0.0,0.0142,0.7
+2020,Advanced Materials,0.3182,0.0909,0.1171,0.7
+2020,Advanced Science,1.35,0.4,0.4851,0.7
+2020,Advances in Therapy,0.8,0.1,0.1272,0.7
+2020,Age and Ageing,2.619,2.3333,2.3333,0.7
+2020,Aging,0.413,0.1304,0.1295,0.7
+2020,Aging Cell,1.1111,0.4444,0.4581,0.7
+2020,Alimentary Pharmacology & Therapeutics,0.5957,0.2128,0.2409,0.7
+2020,Allergy,1.1042,0.4583,0.4591,0.7
+2020,Alzheimer s & Dementia,2.1039,1.1688,1.3169,0.7
+2020,Alzheimer s Research & Therapy,0.7885,0.2115,0.2225,0.7
+2020,American Heart Journal,1.4444,0.5556,0.6096,0.7
+2020,American Journal of Clinical Nutrition,0.46,0.08,0.1085,0.7
+2020,American Journal of Hematology,0.975,0.3,0.3622,0.7
+2020,American Journal of Kidney Diseases,0.4194,0.0,0.0,0.7
+2020,American Journal of Neuroradiology,0.8333,0.4333,0.4533,0.7
+2020,American Journal of Obstetrics and Gynecology,0.7736,0.3302,0.3658,0.7
+2020,American Journal of Ophthalmology,0.5455,0.1039,0.1142,0.7
+2020,American Journal of Preventive Medicine,1.2581,0.8387,0.8114,0.7
+2020,American Journal of Psychiatry,1.0857,0.2571,0.3643,0.7
+2020,American Journal of Public Health,0.9744,0.5385,0.555,0.7
+2020,American Journal of Respiratory and Critical Care Medicine,1.0833,0.4167,0.4396,0.7
+2020,American Journal of Roentgenology,1.0,0.3333,0.3485,0.7
+2020,American Journal of Transplantation,1.4024,0.5244,0.6302,0.7
+2020,Anaesthesia,1.0,0.3043,0.3589,0.7
+2020,Anesthesia & Analgesia,0.2973,0.027,0.027,0.7
+2020,Anesthesiology,0.6667,0.0926,0.1012,0.7
+2020,Angewandte Chemie International Edition,0.3871,0.0,0.0215,0.7
+2020,Annals of Clinical and Translational Neurology,0.6522,0.2174,0.2194,0.7
+2020,Annals of Intensive Care,0.5185,0.1111,0.1081,0.7
+2020,Annals of Internal Medicine,2.1786,1.3452,1.4455,0.7
+2020,Annals of Neurology,1.3942,0.6827,0.7344,0.7
+2020,Annals of Oncology,1.8298,1.2074,1.2778,0.7
+2020,Annals of Surgery,0.8363,0.2982,0.3394,0.7
+2020,Annals of Surgical Oncology,0.6795,0.0128,0.081,0.7
+2020,Annals of the American Thoracic Society,0.5333,0.0667,0.1284,0.7
+2020,Annals of the Rheumatic Diseases,0.669,0.0634,0.098,0.7
+2020,Antimicrobial Agents and Chemotherapy,0.9474,0.4211,0.4599,0.7
+2020,Antimicrobial Resistance and Infection Control,0.3462,0.0,0.0085,0.7
+2020,Antioxidants,0.2083,0.0208,0.0208,0.7
+2020,Applied Sciences,0.35,0.05,0.05,0.7
+2020,Arteriosclerosis Thrombosis and Vascular Biology,0.4286,0.0238,0.0176,0.7
+2020,Arthritis & Rheumatology,0.7168,0.1239,0.1612,0.7
+2020,Arthritis Care & Research,0.5833,0.0,0.016,0.7
+2020,Arthritis Research & Therapy,0.4833,0.0,0.0084,0.7
+2020,Arthroscopy The Journal of Arthroscopic and Related Surgery,0.7778,0.0,0.0393,0.7
+2020,Atherosclerosis,0.7333,0.2667,0.2636,0.7
+2020,Autophagy,0.6306,0.0721,0.1015,0.7
+2020,BJOG An International Journal of Obstetrics & Gynaecology,0.5833,0.125,0.136,0.7
+2020,BMC Cancer,0.5036,0.1295,0.1624,0.7
+2020,BMC Complementary and Alternative Medicine,0.2727,0.0,0.0,0.7
+2020,BMC Genomics,0.2727,0.0,0.0,0.7
+2020,BMC Geriatrics,0.2676,0.0282,0.0377,0.7
+2020,BMC Health Services Research,0.194,0.0,0.0166,0.7
+2020,BMC Infectious Diseases,0.193,0.0175,0.0322,0.7
+2020,BMC Medical Education,0.0909,0.0,0.0,0.7
+2020,BMC Medicine,0.7662,0.1558,0.1621,0.7
+2020,BMC Musculoskeletal Disorders,0.2083,0.0,0.0,0.7
+2020,BMC Nephrology,0.16,0.0,0.0,0.7
+2020,BMC Pediatrics,0.1304,0.0,0.0,0.7
+2020,BMC Pregnancy and Childbirth,0.2679,0.0179,0.0151,0.7
+2020,BMC Psychiatry,0.087,0.0,0.0,0.7
+2020,BMC Public Health,0.1534,0.0,0.0039,0.7
+2020,BMC Pulmonary Medicine,0.4688,0.0312,0.0403,0.7
+2020,BMC Research Notes,0.3,0.0,0.0271,0.7
+2020,BMC Women s Health,0.5455,0.1515,0.1342,0.7
+2020,BMJ,1.4581,0.7542,0.792,0.7
+2020,BMJ Global Health,0.5789,0.0,0.0,0.7
+2020,BMJ Open,0.4124,0.1017,0.0966,0.7
+2020,BioMed Research International,0.2857,0.0536,0.0426,0.7
+2020,Biochemical and Biophysical Research Communications,1.0263,0.5263,0.5279,0.7
+2020,Biological Psychiatry,0.4815,0.037,0.0513,0.7
+2020,Biology of Blood and Marrow Transplantation,0.5676,0.1351,0.1337,0.7
+2020,Biomaterials,0.7477,0.3604,0.3682,0.7
+2020,Biomedical Optics Express,0.7391,0.087,0.1059,0.7
+2020,Biomedical Signal Processing and Control,0.8696,0.3478,0.3569,0.7
+2020,Biomedicine & Pharmacotherapy,0.4688,0.1797,0.1868,0.7
+2020,Bioorganic Chemistry,0.4348,0.0435,0.0435,0.7
+2020,Blood,1.0036,0.4655,0.5018,0.7
+2020,Blood Advances,0.5524,0.0667,0.0675,0.7
+2020,Bone,0.2381,0.0,0.0,0.7
+2020,Brain,1.0714,0.5195,0.5536,0.7
+2020,Brain Behavior and Immunity,0.2759,0.0,0.0,0.7
+2020,Breast Cancer Research,0.2286,0.0286,0.0286,0.7
+2020,Breast Cancer Research and Treatment,0.5333,0.2,0.2077,0.7
+2020,British Journal of Anaesthesia,0.8676,0.3676,0.3848,0.7
+2020,British Journal of Cancer,0.7973,0.1622,0.2113,0.7
+2020,British Journal of Dermatology,0.7111,0.4,0.4607,0.7
+2020,British Journal of Haematology,0.5455,0.0,0.0263,0.7
+2020,British Journal of Ophthalmology,0.6486,0.1892,0.2043,0.7
+2020,British Journal of Pharmacology,1.1212,0.3636,0.3935,0.7
+2020,British Journal of Sports Medicine,0.4677,0.0645,0.0588,0.7
+2020,British Journal of Urology,0.5333,0.1556,0.1705,0.7
+2020,British journal of surgery,1.0339,0.2373,0.2489,0.7
+2020,CHEST Journal,0.9375,0.3281,0.3483,0.7
+2020,Cancer,0.963,0.4889,0.5032,0.7
+2020,Cancer Cell,2.369,1.6071,1.6226,0.7
+2020,Cancer Discovery,2.8171,1.9756,2.0389,0.7
+2020,Cancer Immunology Immunotherapy,0.9394,0.2424,0.3374,0.7
+2020,Cancer Immunology Research,0.8841,0.3768,0.426,0.7
+2020,Cancer Letters,0.625,0.125,0.132,0.7
+2020,Cancer Management and Research,0.55,0.0,0.0,0.7
+2020,Cancer Medicine,0.7091,0.2909,0.3459,0.7
+2020,Cancer Research,0.812,0.2393,0.2666,0.7
+2020,Cancer Science,0.3636,0.0,0.0,0.7
+2020,Cancers,0.1765,0.0196,0.0323,0.7
+2020,Carbohydrate Polymers,0.5769,0.0962,0.1323,0.7
+2020,Cardiovascular Diabetology,1.0548,0.5342,0.6039,0.7
+2020,Cardiovascular Research,0.3548,0.0,0.0,0.7
+2020,Cell,2.8679,2.0692,2.1336,0.7
+2020,Cell Death and Differentiation,0.7931,0.3793,0.3589,0.7
+2020,Cell Death and Disease,0.5936,0.0321,0.0484,0.7
+2020,Cell Host & Microbe,1.2931,0.3793,0.4348,0.7
+2020,Cell Metabolism,1.6176,0.6863,0.7463,0.7
+2020,Cell Reports,0.9357,0.2851,0.3281,0.7
+2020,Cell stem cell,1.6667,0.8125,0.8238,0.7
+2020,Cells,0.25,0.0,0.0,0.7
+2020,Cellular Physiology and Biochemistry,0.68,0.08,0.1013,0.7
+2020,Cephalalgia,2.5143,1.7429,1.8135,0.7
+2020,Chemical Engineering Journal,2.5,1.6667,1.7179,0.7
+2020,Circulation,1.2245,0.4626,0.5082,0.7
+2020,Circulation Arrhythmia and Electrophysiology,0.7838,0.1892,0.1668,0.7
+2020,Circulation Cardiovascular Imaging,1.2188,0.5938,0.5785,0.7
+2020,Circulation Cardiovascular Interventions,0.8286,0.2286,0.2529,0.7
+2020,Circulation Cardiovascular Quality and Outcomes,0.5455,0.0455,0.0543,0.7
+2020,Circulation Heart Failure,0.6216,0.0811,0.1324,0.7
+2020,Circulation Research,0.4808,0.1346,0.1539,0.7
+2020,Clinical Cancer Research,1.1842,0.5731,0.6062,0.7
+2020,Clinical Gastroenterology and Hepatology,0.73,0.28,0.2881,0.7
+2020,Clinical Infectious Diseases,1.1,0.3824,0.4643,0.7
+2020,Clinical Interventions in Aging,0.3077,0.0,0.0,0.7
+2020,Clinical Journal of the American Society of Nephrology,0.6047,0.0698,0.0826,0.7
+2020,Clinical Lung Cancer,0.6818,0.3182,0.3038,0.7
+2020,Clinical Microbiology and Infection,1.1429,0.3214,0.3736,0.7
+2020,Clinical Nutrition,0.8571,0.3673,0.354,0.7
+2020,Clinical Orthopaedics and Related Research,0.4792,0.0208,0.0447,0.7
+2020,Clinical Pharmacology & Therapeutics,0.3929,0.0,0.0234,0.7
+2020,Clinical Rheumatology,0.25,0.0,0.0,0.7
+2020,Clinical Transplantation,0.4688,0.0938,0.1207,0.7
+2020,Communications Biology,0.2692,0.0769,0.0936,0.7
+2020,Computer Methods and Programs in Biomedicine,1.1707,0.7073,0.7339,0.7
+2020,Computers in Biology and Medicine,2.7727,2.3182,2.3167,0.7
+2020,Critical Care,0.5769,0.0513,0.0971,0.7
+2020,Critical Care Medicine,1.234,0.2979,0.3389,0.7
+2020,Developmental Cell,1.1316,0.2895,0.3359,0.7
+2020,Developmental Medicine & Child Neurology,0.8,0.0,0.0536,0.7
+2020,Diabetes,0.4878,0.0,0.0,0.7
+2020,Diabetes Care,1.4675,0.716,0.7654,0.7
+2020,Diabetes Obesity and Metabolism,1.24,0.48,0.5733,0.7
+2020,Diabetes Research and Clinical Practice,1.8571,1.1429,1.1707,0.7
+2020,Diabetes Technology & Therapeutics,1.9722,1.4167,1.4685,0.7
+2020,Diabetologia,0.8261,0.3188,0.3539,0.7
+2020,Diseases of the Colon & Rectum,0.3478,0.0,0.0,0.7
+2020,Drug Design Development and Therapy,0.2083,0.0,0.0,0.7
+2020,Drug and Alcohol Dependence,1.0476,0.4762,0.485,0.7
+2020,EBioMedicine,0.8609,0.4174,0.4271,0.7
+2020,EClinicalMedicine,0.5238,0.0952,0.1254,0.7
+2020,EMBO Molecular Medicine,0.7879,0.2424,0.2597,0.7
+2020,EMBO Reports,0.95,0.2,0.2197,0.7
+2020,EP Europace,1.1818,0.5152,0.5521,0.7
+2020,Emerging Microbes & Infections,1.2593,0.6296,0.7012,0.7
+2020,Emerging infectious diseases,0.9216,0.3333,0.3475,0.7
+2020,Endoscopy,1.0263,0.3421,0.3532,0.7
+2020,Epilepsia,0.7959,0.1633,0.2208,0.7
+2020,EuroIntervention,0.931,0.4483,0.4471,0.7
+2020,European Heart Journal,1.5992,0.9917,1.0288,0.7
+2020,European Heart Journal - Cardiovascular Imaging,0.9412,0.2941,0.4304,0.7
+2020,European Journal of Cancer,0.945,0.5505,0.5735,0.7
+2020,European Journal of Cardio-Thoracic Surgery,0.619,0.0,0.0,0.7
+2020,European Journal of Endocrinology,0.3846,0.0,0.0069,0.7
+2020,European Journal of Epidemiology,1.0435,0.0,0.0509,0.7
+2020,European Journal of Heart Failure,1.2785,0.5696,0.6043,0.7
+2020,European Journal of Medicinal Chemistry,0.3421,0.0,0.0,0.7
+2020,European Journal of Nuclear Medicine and Molecular Imaging,1.0367,0.367,0.3979,0.7
+2020,European Journal of Nutrition,0.5769,0.2308,0.2466,0.7
+2020,European Journal of Pharmacology,0.35,0.0,0.0,0.7
+2020,European Journal of Preventive Cardiology,0.4074,0.0,0.0341,0.7
+2020,European Journal of Radiology,1.1111,0.6667,0.6635,0.7
+2020,European Journal of Surgical Oncology,0.4815,0.0,0.0,0.7
+2020,European Radiology,1.2754,0.4855,0.6106,0.7
+2020,European Respiratory Journal,0.7985,0.2239,0.2561,0.7
+2020,European Spine Journal,0.6154,0.0,0.0,0.7
+2020,European Urology,1.119,0.5476,0.5907,0.7
+2020,Eurosurveillance,2.0833,1.375,1.4027,0.7
+2020,Experimental & Molecular Medicine,0.1667,0.0,0.0,0.7
+2020,Expert Systems with Applications,2.0952,1.5238,1.6053,0.7
+2020,Fertility and Sterility,0.8806,0.1194,0.1552,0.7
+2020,Food & Function,0.2931,0.0,0.0072,0.7
+2020,Food Chemistry,0.6478,0.0189,0.0341,0.7
+2020,Food Research International,0.8261,0.087,0.1307,0.7
+2020,Food and Chemical Toxicology,0.5909,0.0,0.0483,0.7
+2020,Free Radical Biology and Medicine,0.9057,0.3208,0.3509,0.7
+2020,Frontiers in Aging Neuroscience,0.4364,0.0,0.0165,0.7
+2020,Frontiers in Endocrinology,0.4333,0.1,0.125,0.7
+2020,Frontiers in Immunology,0.3947,0.0197,0.0253,0.7
+2020,Frontiers in Microbiology,0.4731,0.0968,0.094,0.7
+2020,Frontiers in Molecular Neuroscience,0.3182,0.0,0.0,0.7
+2020,Frontiers in Neurology,0.2923,0.0615,0.0595,0.7
+2020,Frontiers in Neuroscience,0.4808,0.0577,0.0603,0.7
+2020,Frontiers in Oncology,0.3333,0.127,0.1193,0.7
+2020,Frontiers in Pharmacology,0.65,0.1667,0.1699,0.7
+2020,Frontiers in Physiology,0.4333,0.0111,0.0471,0.7
+2020,Frontiers in Psychiatry,0.2381,0.0,0.0,0.7
+2020,Frontiers in Psychology,0.5,0.0333,0.0573,0.7
+2020,Frontiers in Public Health,0.35,0.0,0.0,0.7
+2020,Gastric Cancer,1.2333,0.8667,0.8738,0.7
+2020,Gastroenterology,1.4564,0.5692,0.6352,0.7
+2020,Gastrointestinal Endoscopy,0.9,0.3571,0.3662,0.7
+2020,Genetics in Medicine,0.6842,0.1579,0.1562,0.7
+2020,Gut,0.9435,0.2661,0.2996,0.7
+2020,Gynecologic Oncology,0.4737,0.0702,0.079,0.7
+2020,Haematologica,0.8493,0.4247,0.417,0.7
+2020,Health Affairs,0.375,0.0417,0.0907,0.7
+2020,Health and Quality of Life Outcomes,0.1852,0.037,0.0427,0.7
+2020,Heart,1.1471,0.4706,0.4766,0.7
+2020,Heart Rhythm,0.7674,0.3488,0.3586,0.7
+2020,Hepatology,1.2388,0.5871,0.6352,0.7
+2020,Human Brain Mapping,1.1034,0.2414,0.2958,0.7
+2020,Human Molecular Genetics,0.8235,0.0588,0.0525,0.7
+2020,Human Reproduction,0.9286,0.3214,0.3486,0.7
+2020,Hypertension,0.5529,0.0588,0.0868,0.7
+2020,IEEE Access,0.7727,0.2159,0.2582,0.7
+2020,IEEE Journal of Biomedical and Health Informatics,1.3396,0.8302,0.8514,0.7
+2020,IEEE Transactions on Biomedical Engineering,0.8571,0.5714,0.5489,0.7
+2020,IEEE Transactions on Medical Imaging,2.617,1.8511,1.8863,0.7
+2020,Immunity,2.2157,1.6667,1.726,0.7
+2020,Industrial Crops and Products,0.4706,0.0,0.0485,0.7
+2020,Inflammatory Bowel Diseases,0.85,0.65,0.64,0.7
+2020,Intensive Care Medicine,0.9365,0.2063,0.2198,0.7
+2020,International Breastfeeding Journal,0.55,0.0,0.0235,0.7
+2020,International Immunopharmacology,0.3256,0.0,0.0,0.7
+2020,International Journal of Behavioral Nutrition and Physical Activity,0.3333,0.0256,0.0461,0.7
+2020,International Journal of Biological Macromolecules,0.6263,0.1111,0.1198,0.7
+2020,International Journal of Biological Sciences,0.1304,0.0,0.0,0.7
+2020,International Journal of Cancer,0.7684,0.3263,0.3354,0.7
+2020,International Journal of Cardiology,0.75,0.1136,0.1126,0.7
+2020,International Journal of Computer Assisted Radiology and Surgery,0.85,0.1,0.0966,0.7
+2020,International Journal of Drug Policy,1.413,0.8261,0.877,0.7
+2020,International Journal of Environmental Research and Public Health,0.219,0.0,0.0,0.7
+2020,International Journal of Epidemiology,0.6857,0.0857,0.1062,0.7
+2020,International Journal of Gynecology & Obstetrics,1.4762,0.9048,0.9623,0.7
+2020,International Journal of Molecular Medicine,0.2381,0.0,0.0,0.7
+2020,International Journal of Molecular Sciences,0.3043,0.0,0.0014,0.7
+2020,International Journal of Nanomedicine,0.4333,0.0,0.0,0.7
+2020,International Journal of Obesity,0.5217,0.0,0.0,0.7
+2020,International Journal of Pharmaceutics,0.3226,0.0,0.0126,0.7
+2020,International Journal of Radiation Oncology*Biology*Physics,0.5634,0.1549,0.1784,0.7
+2020,Investigative Ophthalmology & Visual Science,0.8361,0.2459,0.2498,0.7
+2020,JACC Heart Failure,1.0,0.2273,0.2378,0.7
+2020,JACC. Cardiovascular imaging,0.9545,0.3409,0.3933,0.7
+2020,JACC. Clinical electrophysiology,1.0,0.4,0.4149,0.7
+2020,JACC: Cardiovascular Interventions,0.9495,0.2222,0.2463,0.7
+2020,JAIDS Journal of Acquired Immune Deficiency Syndromes,0.6364,0.1818,0.2002,0.7
+2020,JAMA,2.0058,1.0522,1.1168,0.7
+2020,JAMA Cardiology,1.1458,0.5208,0.5451,0.7
+2020,JAMA Dermatology,0.7547,0.3585,0.3617,0.7
+2020,JAMA Internal Medicine,1.26,0.6,0.6219,0.7
+2020,JAMA Network Open,0.6009,0.2275,0.2498,0.7
+2020,JAMA Neurology,1.1448,0.4966,0.5672,0.7
+2020,JAMA Oncology,1.7011,0.9655,1.0076,0.7
+2020,JAMA Ophthalmology,1.0678,0.3729,0.4447,0.7
+2020,JAMA Otolaryngology–Head & Neck Surgery,0.2273,0.0909,0.0868,0.7
+2020,JAMA Pediatrics,0.9726,0.2877,0.2949,0.7
+2020,JAMA Psychiatry,1.1875,0.2969,0.334,0.7
+2020,JAMA Surgery,0.5844,0.0649,0.1212,0.7
+2020,JCI Insight,0.7798,0.1369,0.1871,0.7
+2020,JCO Precision Oncology,1.381,0.8095,0.8022,0.7
+2020,JMIR mhealth and uhealth,0.4595,0.027,0.0589,0.7
+2020,JNCI Journal of the National Cancer Institute,0.8667,0.2833,0.3142,0.7
+2020,Journal for ImmunoTherapy of Cancer,0.8657,0.5448,0.5664,0.7
+2020,Journal of Affective Disorders,0.2623,0.0,0.0,0.7
+2020,Journal of Agricultural and Food Chemistry,0.371,0.0161,0.0298,0.7
+2020,Journal of Allergy and Clinical Immunology,0.967,0.4835,0.4866,0.7
+2020,Journal of Alzheimer s Disease,0.7097,0.2742,0.2757,0.7
+2020,Journal of Antimicrobial Chemotherapy,0.5758,0.1515,0.1457,0.7
+2020,Journal of Applied Physiology,0.7826,0.0,0.0,0.7
+2020,Journal of Assisted Reproduction and Genetics,0.3,0.0,0.0,0.7
+2020,Journal of Biological Chemistry,0.625,0.1528,0.1695,0.7
+2020,Journal of Bone and Joint Surgery,0.7423,0.1856,0.1962,0.7
+2020,Journal of Bone and Mineral Research,0.8333,0.2083,0.2306,0.7
+2020,Journal of Cachexia Sarcopenia and Muscle,1.4694,0.7143,0.781,0.7
+2020,Journal of Cancer,0.24,0.0,0.0,0.7
+2020,Journal of Cancer Research and Clinical Oncology,0.8261,0.3043,0.3416,0.7
+2020,Journal of Cardiovascular Magnetic Resonance,0.9524,0.2857,0.2959,0.7
+2020,Journal of Cataract & Refractive Surgery,0.2273,0.0,0.0,0.7
+2020,Journal of Cellular Physiology,0.413,0.1087,0.1062,0.7
+2020,Journal of Cellular and Molecular Medicine,0.5758,0.0,0.0,0.7
+2020,Journal of Clinical Investigation,0.9901,0.3842,0.424,0.7
+2020,Journal of Clinical Medicine,0.3763,0.1183,0.1312,0.7
+2020,Journal of Clinical Microbiology,0.7647,0.1176,0.1586,0.7
+2020,Journal of Clinical Oncology,2.2524,1.5071,1.5379,0.7
+2020,Journal of Controlled Release,0.2821,0.0,0.0,0.7
+2020,Journal of Critical Care,0.6522,0.2174,0.2157,0.7
+2020,Journal of Diabetes Research,0.0952,0.0,0.0,0.7
+2020,Journal of Ethnopharmacology,0.1111,0.0,0.0,0.7
+2020,Journal of Experimental & Clinical Cancer Research,0.2568,0.027,0.0226,0.7
+2020,Journal of Functional Foods,0.8,0.0,0.0082,0.7
+2020,Journal of Gastroenterology,0.5714,0.1429,0.1526,0.7
+2020,Journal of General Internal Medicine,0.5806,0.0,0.0191,0.7
+2020,Journal of Hematology & Oncology,1.0,0.625,0.5547,0.7
+2020,Journal of Hepatology,1.4524,0.7143,0.7566,0.7
+2020,Journal of Hypertension,0.9565,0.4783,0.4679,0.7
+2020,Journal of Investigative Dermatology,1.3333,0.6944,0.6846,0.7
+2020,Journal of Lipid Research,0.5,0.0,0.0303,0.7
+2020,Journal of Magnetic Resonance Imaging,1.3333,0.5714,0.6366,0.7
+2020,Journal of Medical Internet Research,0.4242,0.0303,0.0615,0.7
+2020,Journal of Medicinal Chemistry,0.525,0.025,0.0393,0.7
+2020,Journal of Neuro-Oncology,0.5806,0.0645,0.0938,0.7
+2020,Journal of NeuroInterventional Surgery,1.2222,0.6111,0.6772,0.7
+2020,Journal of Neuroinflammation,0.5769,0.0256,0.0784,0.7
+2020,Journal of Neurology,0.6667,0.2963,0.2642,0.7
+2020,Journal of Neurology Neurosurgery & Psychiatry,0.8511,0.2553,0.3159,0.7
+2020,Journal of Neuroscience,0.8462,0.2615,0.2708,0.7
+2020,Journal of Neurosurgery Spine,0.7037,0.0741,0.1333,0.7
+2020,Journal of Neurotrauma,0.7609,0.1304,0.1421,0.7
+2020,Journal of Nuclear Medicine,1.6875,1.0521,1.0901,0.7
+2020,Journal of Nutrition,0.28,0.0,0.0,0.7
+2020,Journal of Orthopaedic Surgery and Research,0.381,0.1429,0.1126,0.7
+2020,Journal of Orthopaedic and Sports Physical Therapy,0.4074,0.0,0.0254,0.7
+2020,Journal of Pain,0.6552,0.069,0.098,0.7
+2020,Journal of Shoulder and Elbow Surgery,0.3519,0.0,0.0,0.7
+2020,Journal of Surgical Research,0.1905,0.0,0.0,0.7
+2020,Journal of Thoracic Oncology,1.5556,0.9028,0.999,0.7
+2020,Journal of Thoracic and Cardiovascular Surgery,0.2727,0.0,0.0205,0.7
+2020,Journal of Thrombosis and Haemostasis,0.6333,0.2,0.2157,0.7
+2020,Journal of Translational Medicine,0.4324,0.1351,0.176,0.7
+2020,Journal of Vascular Surgery,0.6053,0.0789,0.0893,0.7
+2020,Journal of Virology,0.6538,0.1282,0.16,0.7
+2020,Journal of neurosurgery,0.3607,0.0164,0.0515,0.7
+2020,Journal of the American Academy of Dermatology,1.0877,0.5263,0.5441,0.7
+2020,Journal of the American Chemical Society,0.6591,0.2727,0.2699,0.7
+2020,Journal of the American College of Cardiology,1.4636,0.6727,0.7135,0.7
+2020,Journal of the American College of Radiology,1.44,0.68,0.7304,0.7
+2020,Journal of the American College of Surgeons,0.9412,0.0882,0.1619,0.7
+2020,Journal of the American Geriatrics Society,0.5385,0.0769,0.0827,0.7
+2020,Journal of the American Heart Association,1.0,0.2885,0.3111,0.7
+2020,Journal of the American Medical Directors Association,0.5,0.0417,0.0946,0.7
+2020,Journal of the American Society of Nephrology,0.6164,0.1644,0.1481,0.7
+2020,Journal of the European Academy of Dermatology and Venereology,0.6,0.3667,0.3646,0.7
+2020,Journal of the International AIDS Society,1.6667,0.7407,0.7492,0.7
+2020,Journal of the National Comprehensive Cancer Network,1.9184,1.0408,1.0563,0.7
+2020,Kidney International,0.6857,0.0667,0.0856,0.7
+2020,Knee Surgery Sports Traumatology Arthroscopy,0.6852,0.0741,0.0989,0.7
+2020,LWT,0.4595,0.027,0.0246,0.7
+2020,Lara D. Veeken,0.3607,0.0,0.0,0.7
+2020,Leukemia,0.9894,0.3085,0.3725,0.7
+2020,Life Sciences,0.3778,0.0,0.0,0.7
+2020,Lipids in Health and Disease,0.8333,0.125,0.1544,0.7
+2020,Liver International,0.3636,0.0,0.0188,0.7
+2020,Liver Transplantation,0.8636,0.4091,0.4263,0.7
+2020,Lung Cancer,0.8333,0.2593,0.2953,0.7
+2020,MMWR Morbidity and Mortality Weekly Report,3.5952,2.6667,2.717,0.7
+2020,Magnetic Resonance in Medicine,1.1852,0.5556,0.5757,0.7
+2020,Malaria Journal,0.6167,0.1667,0.1773,0.7
+2020,Materials Science and Engineering C,0.375,0.0,0.0041,0.7
+2020,Mayo Clinic Proceedings,0.619,0.0952,0.1045,0.7
+2020,Medical Image Analysis,1.1163,0.4186,0.4159,0.7
+2020,Medical Physics,1.0244,0.3902,0.4231,0.7
+2020,Medical Science Monitor,0.1304,0.0,0.0124,0.7
+2020,Medical Teacher,0.3571,0.0,0.0,0.7
+2020,Medicine,0.3875,0.0625,0.0653,0.7
+2020,Medicine & Science in Sports & Exercise,0.7949,0.2051,0.2323,0.7
+2020,Menopause The Journal of The North American Menopause Society,0.3636,0.0,0.0,0.7
+2020,Microbiome,1.0385,0.0385,0.0951,0.7
+2020,Modern Pathology,0.8036,0.375,0.3958,0.7
+2020,Molecular Cancer Research,0.3636,0.0455,0.0455,0.7
+2020,Molecular Cancer Therapeutics,0.8571,0.0714,0.121,0.7
+2020,Molecular Cell,1.0385,0.3846,0.3875,0.7
+2020,Molecular Metabolism,0.48,0.04,0.0829,0.7
+2020,Molecular Neurobiology,0.2941,0.0,0.011,0.7
+2020,Molecular Neurodegeneration,1.1923,0.2692,0.3528,0.7
+2020,Molecular Psychiatry,0.7111,0.0444,0.0757,0.7
+2020,Molecular Therapy,0.5476,0.1667,0.2184,0.7
+2020,Molecules,0.4124,0.0412,0.0435,0.7
+2020,Movement Disorders,0.746,0.0635,0.0883,0.7
+2020,Multiple Sclerosis Journal,0.6296,0.1111,0.1517,0.7
+2020,Nature,3.5,2.4612,2.5105,0.7
+2020,Nature Biomedical Engineering,2.0,1.1842,1.2362,0.7
+2020,Nature Cell Biology,0.8889,0.2778,0.3335,0.7
+2020,Nature Chemical Biology,0.931,0.3103,0.3741,0.7
+2020,Nature Communications,0.9688,0.3375,0.369,0.7
+2020,Nature Genetics,3.641,2.5385,2.5637,0.7
+2020,Nature Immunology,1.0323,0.6452,0.6675,0.7
+2020,Nature Medicine,4.2055,3.3151,3.3626,0.7
+2020,Nature Metabolism,0.3,0.0,0.0,0.7
+2020,Nature Microbiology,0.9286,0.1786,0.2354,0.7
+2020,Nature Neuroscience,2.4634,1.6585,1.7044,0.7
+2020,Nephrology Dialysis Transplantation,0.2941,0.0294,0.0294,0.7
+2020,Neuro-Oncology,0.5556,0.1111,0.1427,0.7
+2020,NeuroImage,1.1683,0.4554,0.5175,0.7
+2020,NeuroImage Clinical,0.6545,0.0909,0.1478,0.7
+2020,Neurobiology of Aging,0.8,0.1714,0.185,0.7
+2020,Neurobiology of Disease,0.8,0.3333,0.3611,0.7
+2020,Neurology,0.9124,0.3267,0.3457,0.7
+2020,Neurology Neuroimmunology & Neuroinflammation,0.4,0.0,0.0372,0.7
+2020,Neuron,2.122,1.1707,1.2247,0.7
+2020,Neuropsychopharmacology,0.5,0.0333,0.0813,0.7
+2020,Neurosurgery,0.4048,0.0714,0.0813,0.7
+2020,Neurosurgical FOCUS,0.5385,0.0769,0.0793,0.7
+2020,New England Journal of Medicine,6.0346,4.8469,4.9208,0.7
+2020,Nicotine & Tobacco Research,0.6538,0.3846,0.3844,0.7
+2020,Nucleic Acids Research,0.5172,0.2414,0.279,0.7
+2020,Nutrients,0.6278,0.1928,0.2107,0.7
+2020,Obesity,0.5,0.0,0.0349,0.7
+2020,Obesity Surgery,0.9487,0.3846,0.3835,0.7
+2020,Obstetrics and Gynecology,1.3053,0.6947,0.7048,0.7
+2020,OncoImmunology,1.0,0.4844,0.5039,0.7
+2020,Oncogene,0.6447,0.1184,0.1257,0.7
+2020,Oncotarget,0.8596,0.2281,0.2743,0.7
+2020,Open Forum Infectious Diseases,0.7714,0.0286,0.1622,0.7
+2020,Ophthalmology,1.4397,0.7586,0.7727,0.7
+2020,Oral Oncology,0.92,0.36,0.3824,0.7
+2020,Orphanet Journal of Rare Diseases,0.25,0.0,0.0,0.7
+2020,Orthopaedic Journal of Sports Medicine,0.4118,0.0294,0.0239,0.7
+2020,Osteoarthritis and Cartilage,0.7,0.1,0.1693,0.7
+2020,Osteoporosis International,0.4545,0.1364,0.1504,0.7
+2020,Otolaryngology,0.7143,0.0,0.0,0.7
+2020,Oxidative Medicine and Cellular Longevity,0.4255,0.0638,0.0666,0.7
+2020,PEDIATRICS,0.9167,0.375,0.3987,0.7
+2020,PLoS Biology,0.7941,0.3235,0.3071,0.7
+2020,PLoS Genetics,0.1481,0.0,0.0,0.7
+2020,PLoS Medicine,0.9922,0.4375,0.4512,0.7
+2020,PLoS ONE,0.5339,0.0993,0.1121,0.7
+2020,PLoS Pathogens,0.8333,0.1979,0.2267,0.7
+2020,PLoS neglected tropical diseases,0.5595,0.1429,0.1458,0.7
+2020,Pain,0.7692,0.1731,0.1612,0.7
+2020,Parasites & Vectors,0.3333,0.0,0.0,0.7
+2020,Parkinsonism & Related Disorders,0.4762,0.0952,0.1073,0.7
+2020,Pediatric Blood & Cancer,0.1429,0.0476,0.0476,0.7
+2020,Pediatric Diabetes,1.2727,0.5455,0.5302,0.7
+2020,PeerJ,0.6552,0.0345,0.1111,0.7
+2020,Pharmacological Research,0.381,0.0476,0.0476,0.7
+2020,Physics in Medicine and Biology,0.9677,0.3871,0.3831,0.7
+2020,Phytomedicine,0.3684,0.0,0.0,0.7
+2020,Plastic & Reconstructive Surgery,0.5,0.0625,0.0581,0.7
+2020,Preventive Medicine,0.8889,0.3333,0.3307,0.7
+2020,Proceedings of the National Academy of Sciences,0.8775,0.2918,0.3309,0.7
+2020,Psycho-Oncology,0.2692,0.0,0.0,0.7
+2020,Psychological Medicine,0.6786,0.2143,0.235,0.7
+2020,PubMed,0.5164,0.1475,0.1498,0.7
+2020,Public Health Nutrition,0.96,0.6,0.6532,0.7
+2020,Radiology,1.4768,0.8411,0.8675,0.7
+2020,Radiotherapy and Oncology,0.9245,0.4717,0.4813,0.7
+2020,Redox Biology,0.7414,0.1897,0.2124,0.7
+2020,Regional Anesthesia & Pain Medicine,1.5806,1.2581,1.2448,0.7
+2020,Reproductive Health,0.4595,0.0,0.026,0.7
+2020,Respiratory Research,0.4524,0.0714,0.1044,0.7
+2020,Resuscitation,0.66,0.16,0.1986,0.7
+2020,Retina,1.25,0.35,0.4327,0.7
+2020,Scandinavian Journal of Medicine and Science in Sports,0.7407,0.2222,0.2243,0.7
+2020,Science,2.5763,1.5593,1.627,0.7
+2020,Science Advances,0.5814,0.0349,0.0981,0.7
+2020,Science Translational Medicine,1.0893,0.3512,0.3754,0.7
+2020,Scientific Reports,0.6144,0.1641,0.1828,0.7
+2020,Sensors,0.7,0.5,0.4926,0.7
+2020,Social Science & Medicine,0.3478,0.0435,0.0435,0.7
+2020,Spine,0.8684,0.3947,0.4215,0.7
+2020,Stem Cell Reports,0.7174,0.0652,0.0912,0.7
+2020,Stem Cell Research & Therapy,0.4881,0.0238,0.0282,0.7
+2020,Stem Cells Translational Medicine,0.5,0.0,0.0,0.7
+2020,Stroke,0.6765,0.1765,0.1829,0.7
+2020,Supportive Care in Cancer,0.5,0.0526,0.0856,0.7
+2020,Surgery,0.359,0.0,0.0314,0.7
+2020,Surgical Endoscopy,0.3803,0.0563,0.0829,0.7
+2020,The American Journal of Gastroenterology,1.2881,0.5763,0.6124,0.7
+2020,The American Journal of Human Genetics,0.9706,0.2647,0.2838,0.7
+2020,The American Journal of Sports Medicine,0.6261,0.0696,0.0872,0.7
+2020,The American Journal of Surgical Pathology,0.9118,0.3088,0.3521,0.7
+2020,The Annals of Thoracic Surgery,0.8431,0.1765,0.208,0.7
+2020,The Bone & Joint Journal,0.8302,0.283,0.3083,0.7
+2020,The British Journal of Psychiatry,0.5238,0.0,0.052,0.7
+2020,The EMBO Journal,1.3429,0.4,0.4847,0.7
+2020,The FASEB Journal,0.3934,0.0,0.0113,0.7
+2020,The Journal of Allergy and Clinical Immunology In Practice,0.6429,0.1143,0.1461,0.7
+2020,The Journal of Arthroplasty,0.8113,0.2453,0.271,0.7
+2020,The Journal of Cell Biology,2.0,1.1364,1.2617,0.7
+2020,The Journal of Clinical Endocrinology & Metabolism,0.6269,0.1269,0.1476,0.7
+2020,The Journal of Experimental Medicine,1.1091,0.3273,0.3491,0.7
+2020,The Journal of Headache and Pain,0.8148,0.1111,0.1134,0.7
+2020,The Journal of Heart and Lung Transplantation,1.5667,0.8667,0.8966,0.7
+2020,The Journal of Immunology,0.6061,0.0909,0.0877,0.7
+2020,The Journal of Infectious Diseases,1.2439,0.5366,0.5852,0.7
+2020,The Journal of Pathology,1.0455,0.5,0.5347,0.7
+2020,The Journal of Pediatrics,0.566,0.0,0.0106,0.7
+2020,The Journal of Physiology,0.5333,0.0,0.0024,0.7
+2020,The Journal of Strength and Conditioning Research,0.8085,0.2128,0.2849,0.7
+2020,"The Journal of Trauma: Injury, Infection, and Critical Care",0.3667,0.0333,0.0669,0.7
+2020,The Journal of Urology,0.7302,0.2063,0.2484,0.7
+2020,The Journals of Gerontology Series A,0.814,0.0698,0.1139,0.7
+2020,The Lancet,3.0945,2.0906,2.1664,0.7
+2020,The Lancet Child & Adolescent Health,0.6,0.04,0.044,0.7
+2020,The Lancet Diabetes & Endocrinology,1.8548,1.129,1.214,0.7
+2020,The Lancet Global Health,1.2429,0.3429,0.3797,0.7
+2020,The Lancet HIV,1.7879,1.0606,1.0662,0.7
+2020,The Lancet Haematology,0.6667,0.098,0.0958,0.7
+2020,The Lancet Infectious Diseases,1.4416,0.4545,0.5103,0.7
+2020,The Lancet Neurology,2.1831,1.1127,1.1891,0.7
+2020,The Lancet Oncology,2.7214,1.9154,1.9634,0.7
+2020,The Lancet Psychiatry,0.9333,0.3,0.2775,0.7
+2020,The Lancet Public Health,1.1071,0.5357,0.5874,0.7
+2020,The Lancet Respiratory Medicine,1.3977,0.6023,0.6637,0.7
+2020,The Laryngoscope,0.2,0.0,0.0,0.7
+2020,The Medical Journal of Australia,0.7619,0.1905,0.2202,0.7
+2020,The Oncologist,0.8871,0.5,0.5268,0.7
+2020,The Science of The Total Environment,0.5455,0.0,0.0,0.7
+2020,The Spine Journal,0.4848,0.1818,0.1843,0.7
+2020,The journal of nutrition health & aging,0.6296,0.2963,0.3197,0.7
+2020,Theranostics,0.5526,0.0921,0.0814,0.7
+2020,Thorax,1.0667,0.3333,0.3712,0.7
+2020,Thyroid,0.7447,0.0638,0.0666,0.7
+2020,Tobacco Control,2.7778,2.25,2.3187,0.7
+2020,Translational Psychiatry,0.5238,0.1429,0.1477,0.7
+2020,Transplantation,1.0714,0.25,0.2549,0.7
+2020,Trends in Food Science & Technology,0.8286,0.3429,0.3698,0.7
+2020,Ultrasound in Obstetrics and Gynecology,0.8537,0.3171,0.4009,0.7
+2020,Unknown,0.8022,0.2473,0.2819,0.7
+2020,Vaccine,0.5135,0.027,0.027,0.7
+2020,Viruses,0.4375,0.125,0.1148,0.7
+2020,World Neurosurgery,0.7222,0.0556,0.1168,0.7
+2020,eLife,1.0303,0.4061,0.431,0.7
+2020,mAbs,0.5714,0.0476,0.0591,0.7
+2020,mBio,0.7071,0.101,0.1194,0.7
+2020,npj Digital Medicine,1.8519,1.3333,1.3239,0.7
+2020,The Lancet. Gastroenterology & hepatology,0.6364,0.2045,0.224,0.7
+2021,ACS Applied Materials & Interfaces,0.6667,0.0175,0.0175,0.7
+2021,ACS Nano,2.5161,1.4516,1.4527,0.7
+2021,AIDS and Behavior,0.8571,0.0,0.017,0.7
+2021,Academic Medicine,0.6829,0.0,0.0,0.7
+2021,Academic Radiology,0.8276,0.1034,0.19,0.7
+2021,Acta Biomaterialia,0.4688,0.0,0.0,0.7
+2021,Acta Neuropathologica,1.5781,0.3906,0.4033,0.7
+2021,Acta Neuropathologica Communications,0.7358,0.0189,0.0202,0.7
+2021,Acta Pharmaceutica Sinica B,2.8333,2.0,2.0253,0.7
+2021,Addiction,1.0,0.0,0.0,0.7
+2021,Advanced Functional Materials,1.0213,0.1277,0.1255,0.7
+2021,Advanced Healthcare Materials,0.3043,0.0,0.0,0.7
+2021,Advanced Materials,0.6786,0.1071,0.1293,0.7
+2021,Advanced Science,1.5625,0.0938,0.0814,0.7
+2021,Age and Ageing,0.9722,0.3611,0.3757,0.7
+2021,Aging,0.7802,0.4396,0.4416,0.7
+2021,Aging Cell,1.4583,0.3125,0.3146,0.7
+2021,Alimentary Pharmacology & Therapeutics,0.7727,0.0,0.016,0.7
+2021,Allergy,4.24,3.74,3.7742,0.7
+2021,Alzheimer s & Dementia,2.1475,0.0328,0.1037,0.7
+2021,Alzheimer s Research & Therapy,0.9,0.16,0.1537,0.7
+2021,American Heart Journal,0.44,0.04,0.0848,0.7
+2021,American Journal of Clinical Nutrition,0.56,0.0,0.0007,0.7
+2021,American Journal of Hematology,1.1081,0.4054,0.4045,0.7
+2021,American Journal of Kidney Diseases,1.1282,0.359,0.4126,0.7
+2021,American Journal of Neuroradiology,1.0769,0.4615,0.4343,0.7
+2021,American Journal of Obstetrics and Gynecology,1.7411,0.9554,0.9613,0.7
+2021,American Journal of Ophthalmology,0.7925,0.0,0.0,0.7
+2021,American Journal of Psychiatry,1.3333,0.0,0.0222,0.7
+2021,American Journal of Public Health,0.871,0.0,0.0,0.7
+2021,American Journal of Respiratory and Critical Care Medicine,1.9017,0.9711,0.9927,0.7
+2021,American Journal of Roentgenology,7.0968,6.2903,6.3031,0.7
+2021,American Journal of Transplantation,2.7843,1.9216,1.9417,0.7
+2021,American Journal of Tropical Medicine and Hygiene,0.8571,0.4643,0.5096,0.7
+2021,Anaesthesia,1.871,1.1613,1.1557,0.7
+2021,Anesthesia & Analgesia,0.6053,0.1053,0.0912,0.7
+2021,Anesthesiology,1.12,0.46,0.4607,0.7
+2021,Angewandte Chemie International Edition,0.28,0.0,0.0,0.7
+2021,Annals of Clinical and Translational Neurology,0.7778,0.037,0.0278,0.7
+2021,Annals of Emergency Medicine,1.15,0.35,0.3679,0.7
+2021,Annals of Intensive Care,2.0,1.2333,1.2575,0.7
+2021,Annals of Internal Medicine,2.8105,1.7474,1.7893,0.7
+2021,Annals of Neurology,0.9074,0.1019,0.1005,0.7
+2021,Annals of Oncology,2.4091,0.5227,0.5482,0.7
+2021,Annals of Surgery,1.1523,0.2185,0.2508,0.7
+2021,Annals of Surgical Oncology,0.74,0.0,0.0195,0.7
+2021,Annals of Translational Medicine,1.8,0.9,0.895,0.7
+2021,Annals of the American Thoracic Society,1.1,0.3667,0.3858,0.7
+2021,Annals of the Rheumatic Diseases,1.4054,0.4932,0.4916,0.7
+2021,Antimicrobial Agents and Chemotherapy,1.375,0.575,0.5694,0.7
+2021,Antimicrobial Resistance and Infection Control,0.2,0.0,0.0,0.7
+2021,Antioxidants,0.6329,0.0,0.0,0.7
+2021,Applied Sciences,1.5714,0.898,0.9249,0.7
+2021,Applied Soft Computing,1.5217,1.0435,1.0764,0.7
+2021,Arteriosclerosis Thrombosis and Vascular Biology,0.6444,0.0,0.0293,0.7
+2021,Arthritis & Rheumatology,1.5577,0.5192,0.5307,0.7
+2021,Arthritis Research & Therapy,0.8286,0.0,0.0008,0.7
+2021,Arthroscopy The Journal of Arthroscopic and Related Surgery,0.4375,0.0,0.0,0.7
+2021,Artificial Intelligence in Medicine,1.1304,0.2174,0.268,0.7
+2021,Atherosclerosis,0.3333,0.0,0.0,0.7
+2021,Autophagy,0.75,0.0,0.0004,0.7
+2021,BJOG An International Journal of Obstetrics & Gynaecology,1.4815,1.0,0.9938,0.7
+2021,BMC Cancer,0.4444,0.0,0.0089,0.7
+2021,BMC Geriatrics,0.3061,0.0,0.0,0.7
+2021,BMC Health Services Research,0.175,0.0,0.0,0.7
+2021,BMC Infectious Diseases,0.8182,0.4909,0.4955,0.7
+2021,BMC Medical Education,0.15,0.0,0.0,0.7
+2021,BMC Medicine,1.0,0.2935,0.2942,0.7
+2021,BMC Musculoskeletal Disorders,0.2308,0.0,0.0,0.7
+2021,BMC Nephrology,0.2857,0.0,0.0,0.7
+2021,BMC Neurology,0.619,0.0476,0.0712,0.7
+2021,BMC Pregnancy and Childbirth,0.439,0.0,0.0,0.7
+2021,BMC Psychiatry,0.1923,0.0,0.0,0.7
+2021,BMC Public Health,0.3333,0.0067,0.0067,0.7
+2021,BMC Pulmonary Medicine,0.6,0.0,0.0,0.7
+2021,BMC Research Notes,0.6,0.0,0.0,0.7
+2021,BMC Women s Health,0.4231,0.0,0.0,0.7
+2021,BMJ,4.6866,3.5392,3.5552,0.7
+2021,BMJ Global Health,0.5806,0.0968,0.1032,0.7
+2021,BMJ Open,0.4895,0.0909,0.0899,0.7
+2021,BMJ Open Diabetes Research & Care,0.8,0.4333,0.4407,0.7
+2021,BioMed Research International,0.6087,0.1739,0.1717,0.7
+2021,Bioactive Materials,0.2,0.0,0.0,0.7
+2021,Biochemical and Biophysical Research Communications,1.8182,1.0,0.9978,0.7
+2021,Biology of Blood and Marrow Transplantation,1.1364,0.0455,0.0854,0.7
+2021,Biomaterials,0.5979,0.0,0.0,0.7
+2021,Biomedical Signal Processing and Control,0.6857,0.0286,0.0225,0.7
+2021,Biomedicine & Pharmacotherapy,0.3165,0.0,0.0,0.7
+2021,Biomolecules,0.3448,0.0,0.0,0.7
+2021,Blood,1.5075,0.4737,0.492,0.7
+2021,Blood Advances,0.7872,0.1277,0.1312,0.7
+2021,Brain,1.4815,0.2222,0.2409,0.7
+2021,Brain Behavior and Immunity,1.0588,0.7647,0.7521,0.7
+2021,Breast Cancer Research,0.6087,0.087,0.0785,0.7
+2021,Breast Cancer Research and Treatment,0.5417,0.0,0.0,0.7
+2021,British Journal of Anaesthesia,0.8621,0.1552,0.1854,0.7
+2021,British Journal of Cancer,0.32,0.0,0.0,0.7
+2021,British Journal of Dermatology,1.8,0.4,0.4443,0.7
+2021,British Journal of Haematology,2.4,1.92,1.9339,0.7
+2021,British Journal of Ophthalmology,1.1613,0.4516,0.4645,0.7
+2021,British Journal of Pharmacology,1.2812,0.0312,0.0312,0.7
+2021,British Journal of Sports Medicine,0.9048,0.0635,0.0635,0.7
+2021,British Journal of Urology,1.0,0.0,0.0033,0.7
+2021,British journal of surgery,1.0625,0.2917,0.3222,0.7
+2021,CHEST Journal,2.2759,1.6552,1.6535,0.7
+2021,Canadian Medical Association Journal,0.9259,0.4815,0.496,0.7
+2021,Cancer,0.7963,0.0278,0.0278,0.7
+2021,Cancer Cell,1.6923,0.0769,0.0779,0.7
+2021,Cancer Cell International,0.3636,0.0,0.0,0.7
+2021,Cancer Discovery,2.4667,0.8133,0.8348,0.7
+2021,Cancer Epidemiology Biomarkers & Prevention,0.45,0.0,0.0,0.7
+2021,Cancer Immunology Immunotherapy,0.5484,0.0645,0.0601,0.7
+2021,Cancer Immunology Research,1.4043,0.0,0.0205,0.7
+2021,Cancer Letters,0.6562,0.0312,0.041,0.7
+2021,Cancer Medicine,0.6667,0.0,0.0267,0.7
+2021,Cancer Research,0.5844,0.0,0.0,0.7
+2021,Cancer Science,0.7143,0.0,0.0,0.7
+2021,Cancers,0.39,0.04,0.0411,0.7
+2021,Carbohydrate Polymers,0.6875,0.0,0.0,0.7
+2021,Cardiovascular Diabetology,2.0946,0.8243,0.8438,0.7
+2021,Cardiovascular Research,2.0488,1.6829,1.6959,0.7
+2021,Cell,11.2762,9.9238,9.9411,0.7
+2021,Cell Death and Differentiation,1.303,0.0,0.0,0.7
+2021,Cell Death and Disease,0.5099,0.0132,0.0132,0.7
+2021,Cell Host & Microbe,6.629,6.0161,6.0226,0.7
+2021,Cell Metabolism,2.2366,0.7957,0.7999,0.7
+2021,Cell Proliferation,0.913,0.3043,0.3043,0.7
+2021,Cell Reports,1.3472,0.3704,0.3754,0.7
+2021,Cell Reports Medicine,2.7727,2.6818,2.6818,0.7
+2021,Cell Research,4.3636,3.0455,3.0471,0.7
+2021,Cell stem cell,1.5902,0.541,0.5397,0.7
+2021,Cells,0.8644,0.4407,0.4365,0.7
+2021,Cellular and Molecular Immunology,5.6818,5.5,5.4672,0.7
+2021,Cephalalgia,1.1143,0.0,0.0,0.7
+2021,Chaos Solitons & Fractals,1.1,0.8,0.8,0.7
+2021,Chemical Engineering Journal,2.9545,0.6136,0.6041,0.7
+2021,Circulation,2.5119,0.8452,0.8986,0.7
+2021,Circulation Arrhythmia and Electrophysiology,1.0,0.0976,0.0976,0.7
+2021,Circulation Cardiovascular Imaging,0.875,0.0833,0.0609,0.7
+2021,Circulation Cardiovascular Interventions,0.8696,0.0,0.0,0.7
+2021,Circulation Heart Failure,0.7429,0.1143,0.1067,0.7
+2021,Circulation Research,1.24,0.64,0.64,0.7
+2021,Clinica Chimica Acta,3.5,3.1,3.0663,0.7
+2021,Clinical Cancer Research,1.0675,0.0322,0.0445,0.7
+2021,Clinical Chemistry,6.087,5.6087,5.6248,0.7
+2021,Clinical Chemistry and Laboratory Medicine (CCLM),7.2609,6.7826,6.7725,0.7
+2021,Clinical Gastroenterology and Hepatology,1.0918,0.3776,0.3776,0.7
+2021,Clinical Infectious Diseases,6.1833,5.4727,5.5028,0.7
+2021,Clinical Journal of the American Society of Nephrology,1.1765,0.3529,0.3599,0.7
+2021,Clinical Microbiology and Infection,2.0746,1.6866,1.7119,0.7
+2021,Clinical Nutrition,0.6607,0.0357,0.0357,0.7
+2021,Clinical Orthopaedics and Related Research,0.5357,0.0,0.0,0.7
+2021,Clinical Pharmacology & Therapeutics,0.55,0.15,0.1875,0.7
+2021,Clinical Transplantation,0.8148,0.1852,0.1959,0.7
+2021,Communications Biology,0.6098,0.0976,0.0976,0.7
+2021,Computer Methods and Programs in Biomedicine,2.386,1.2105,1.2359,0.7
+2021,Computers in Biology and Medicine,3.0208,2.1875,2.1832,0.7
+2021,Critical Care,1.3514,0.6306,0.6353,0.7
+2021,Critical Care Medicine,2.1375,0.9875,0.9972,0.7
+2021,Cureus,1.8696,1.3043,1.351,0.7
+2021,Developmental Cell,0.6585,0.2439,0.2456,0.7
+2021,Diabetes,0.7742,0.3226,0.3226,0.7
+2021,Diabetes & Metabolic Syndrome Clinical Research & Reviews,2.2308,1.0385,1.0223,0.7
+2021,Diabetes Care,1.3118,0.4353,0.4554,0.7
+2021,Diabetes Obesity and Metabolism,1.3721,0.6512,0.6762,0.7
+2021,Diabetes Research and Clinical Practice,1.925,1.275,1.2604,0.7
+2021,Diabetes Technology & Therapeutics,2.2812,0.125,0.1715,0.7
+2021,Diabetes/Metabolism Research and Reviews,5.8571,4.5238,4.6106,0.7
+2021,Diabetologia,1.3137,0.6275,0.6396,0.7
+2021,Diagnostics,0.9545,0.4091,0.4091,0.7
+2021,Drug Design Development and Therapy,0.15,0.0,0.0,0.7
+2021,Drug and Alcohol Dependence,1.2653,0.0408,0.0721,0.7
+2021,EBioMedicine,1.8,0.8545,0.8567,0.7
+2021,EClinicalMedicine,1.5,0.9032,0.9554,0.7
+2021,EMBO Molecular Medicine,2.1379,1.0345,1.0355,0.7
+2021,EMBO Reports,1.381,0.1429,0.1538,0.7
+2021,EP Europace,1.1622,0.1081,0.1353,0.7
+2021,ESC Heart Failure,0.5926,0.2222,0.2222,0.7
+2021,Emerging Microbes & Infections,10.85,10.5667,10.5873,0.7
+2021,Emerging infectious diseases,5.6804,4.8969,4.9098,0.7
+2021,Endoscopy,1.75,0.25,0.3054,0.7
+2021,Epilepsia,0.9444,0.1944,0.2133,0.7
+2021,EuroIntervention,0.84,0.0,0.0,0.7
+2021,European Heart Journal,2.4902,1.2314,1.2849,0.7
+2021,European Heart Journal - Cardiovascular Imaging,0.9762,0.2619,0.2609,0.7
+2021,European Journal of Cancer,1.5816,0.1837,0.1964,0.7
+2021,European Journal of Heart Failure,2.1798,0.573,0.5971,0.7
+2021,European Journal of Medicinal Chemistry,0.4167,0.0,0.0,0.7
+2021,European Journal of Neurology,1.1429,0.4286,0.4784,0.7
+2021,European Journal of Nuclear Medicine and Molecular Imaging,1.2294,0.2569,0.2754,0.7
+2021,European Journal of Pharmacology,0.2,0.0,0.0,0.7
+2021,European Journal of Preventive Cardiology,1.1892,0.027,0.0686,0.7
+2021,European Journal of Radiology,2.6897,1.4828,1.5006,0.7
+2021,European Radiology,1.8581,0.7806,0.7885,0.7
+2021,European Respiratory Journal,2.9184,2.0136,2.0295,0.7
+2021,European Urology,1.3839,0.2054,0.2055,0.7
+2021,Eurosurveillance,13.1765,12.098,12.1261,0.7
+2021,Expert Systems with Applications,1.1818,0.0,0.0411,0.7
+2021,Fertility and Sterility,0.9825,0.3509,0.3491,0.7
+2021,Food & Function,0.26,0.0,0.0,0.7
+2021,Food Chemistry,0.5,0.0,0.0,0.7
+2021,Food Research International,0.4444,0.0,0.0,0.7
+2021,Foods,0.2,0.0,0.0,0.7
+2021,Free Radical Biology and Medicine,0.4667,0.0,0.0,0.7
+2021,Frontiers in Aging Neuroscience,0.6389,0.0833,0.0962,0.7
+2021,Frontiers in Bioengineering and Biotechnology,0.3077,0.0,0.0,0.7
+2021,Frontiers in Cell and Developmental Biology,0.2857,0.0952,0.0952,0.7
+2021,Frontiers in Cellular and Infection Microbiology,0.4138,0.1379,0.1379,0.7
+2021,Frontiers in Endocrinology,0.5278,0.0833,0.0833,0.7
+2021,Frontiers in Genetics,0.381,0.0952,0.1177,0.7
+2021,Frontiers in Immunology,0.9315,0.5137,0.5112,0.7
+2021,Frontiers in Medicine,1.0909,0.8182,0.8074,0.7
+2021,Frontiers in Microbiology,1.1351,0.6757,0.6847,0.7
+2021,Frontiers in Neurology,0.4545,0.0909,0.0927,0.7
+2021,Frontiers in Neuroscience,0.55,0.0,0.0,0.7
+2021,Frontiers in Oncology,0.3889,0.0,0.0003,0.7
+2021,Frontiers in Pharmacology,0.6757,0.0676,0.0632,0.7
+2021,Frontiers in Physiology,0.6226,0.1698,0.1687,0.7
+2021,Frontiers in Psychiatry,0.1481,0.0,0.0,0.7
+2021,Frontiers in Psychology,0.3462,0.0,0.0,0.7
+2021,Frontiers in Public Health,1.5294,1.1765,1.1765,0.7
+2021,Future Oncology,0.375,0.0417,0.0417,0.7
+2021,Gastric Cancer,1.2083,0.0,0.0329,0.7
+2021,Gastroenterology,1.7296,0.5102,0.5412,0.7
+2021,Gastrointestinal Endoscopy,1.125,0.4844,0.5386,0.7
+2021,Genetics in Medicine,0.2812,0.0,0.0,0.7
+2021,Genome Medicine,2.24,0.92,0.9234,0.7
+2021,Gut,2.042,0.8182,0.8434,0.7
+2021,Gynecologic Oncology,0.9111,0.0444,0.0319,0.7
+2021,Haematologica,0.6964,0.0,0.001,0.7
+2021,Headache The Journal of Head and Face Pain,0.9524,0.381,0.3692,0.7
+2021,Health Affairs,1.7407,0.5556,0.5379,0.7
+2021,Health and Quality of Life Outcomes,0.2308,0.0,0.0,0.7
+2021,Heart,0.5484,0.1935,0.2146,0.7
+2021,Heart Rhythm,3.1351,0.4054,0.5555,0.7
+2021,Heliyon,0.2414,0.1379,0.1379,0.7
+2021,Hepatology,1.303,0.1697,0.1798,0.7
+2021,Hepatology Communications,0.381,0.0,0.0,0.7
+2021,Histopathology,4.619,3.8095,3.8095,0.7
+2021,Human Brain Mapping,1.7857,0.0,0.0086,0.7
+2021,Human Reproduction,0.6719,0.0,0.0,0.7
+2021,Hypertension,1.1429,0.5595,0.5596,0.7
+2021,IEEE Access,1.4178,0.3699,0.3957,0.7
+2021,IEEE Journal of Biomedical and Health Informatics,0.9667,0.2167,0.2099,0.7
+2021,IEEE Transactions on Biomedical Engineering,0.5238,0.0,0.0,0.7
+2021,IEEE Transactions on Medical Imaging,2.3205,0.8462,0.8501,0.7
+2021,Immunity,3.5286,2.1,2.1254,0.7
+2021,Industrial Crops and Products,0.4615,0.0,0.0,0.7
+2021,Intensive Care Medicine,9.1471,8.1324,8.1274,0.7
+2021,International Immunopharmacology,0.8444,0.6,0.6,0.7
+2021,International Journal of Antimicrobial Agents,14.129,13.3226,13.4656,0.7
+2021,International Journal of Behavioral Nutrition and Physical Activity,0.9688,0.0,0.0,0.7
+2021,International Journal of Biological Macromolecules,0.4444,0.0,0.0,0.7
+2021,International Journal of Biological Sciences,0.76,0.4,0.4,0.7
+2021,International Journal of Cancer,0.6286,0.0,0.0,0.7
+2021,International Journal of Cardiology,0.8333,0.4583,0.4583,0.7
+2021,International Journal of Drug Policy,1.7955,0.0909,0.1155,0.7
+2021,International Journal of Environmental Research and Public Health,0.4171,0.0428,0.0424,0.7
+2021,International Journal of Epidemiology,0.7692,0.1538,0.15,0.7
+2021,International Journal of Gynecological Cancer,0.8696,0.0,0.0,0.7
+2021,International Journal of Gynecology & Obstetrics,2.2083,1.2083,1.2449,0.7
+2021,International Journal of Infectious Diseases,3.1226,2.5943,2.6007,0.7
+2021,International Journal of Molecular Sciences,0.7438,0.314,0.3177,0.7
+2021,International Journal of Nanomedicine,0.2963,0.0,0.0,0.7
+2021,International Journal of Pharmaceutics,0.88,0.0,0.0,0.7
+2021,International Journal of Radiation Oncology*Biology*Physics,1.0312,0.1719,0.1974,0.7
+2021,International Journal of Stroke,1.6522,1.1739,1.1689,0.7
+2021,Investigative Ophthalmology & Visual Science,0.7727,0.0,0.0,0.7
+2021,JACC Heart Failure,1.2174,0.0435,0.0729,0.7
+2021,JACC. Cardiovascular imaging,1.0469,0.3594,0.3666,0.7
+2021,JACC. Clinical electrophysiology,0.7586,0.069,0.0848,0.7
+2021,JACC: Cardiovascular Interventions,1.1596,0.0851,0.0991,0.7
+2021,JAIDS Journal of Acquired Immune Deficiency Syndromes,0.9048,0.381,0.381,0.7
+2021,JAMA,13.7207,11.5287,11.605,0.7
+2021,JAMA Cardiology,4.7317,3.5447,3.5888,0.7
+2021,JAMA Dermatology,1.186,0.0233,0.0827,0.7
+2021,JAMA Internal Medicine,5.75,4.4655,4.5008,0.7
+2021,JAMA Network Open,1.2493,0.3333,0.3478,0.7
+2021,JAMA Neurology,3.5147,1.9779,2.0401,0.7
+2021,JAMA Oncology,2.3154,0.3087,0.3552,0.7
+2021,JAMA Ophthalmology,1.54,0.64,0.6646,0.7
+2021,JAMA Pediatrics,2.7586,2.0345,2.0322,0.7
+2021,JAMA Psychiatry,0.9815,0.0,0.0098,0.7
+2021,JAMA Surgery,0.5976,0.0244,0.0244,0.7
+2021,JCI Insight,1.7551,0.8435,0.8419,0.7
+2021,JMIR Public Health and Surveillance,3.1364,1.2727,1.288,0.7
+2021,JMIR mhealth and uhealth,0.3571,0.0,0.0,0.7
+2021,JNCI Journal of the National Cancer Institute,1.0,0.0167,0.0183,0.7
+2021,Journal for ImmunoTherapy of Cancer,0.9421,0.0526,0.0572,0.7
+2021,Journal of Affective Disorders,0.76,0.14,0.1635,0.7
+2021,Journal of Agricultural and Food Chemistry,0.5932,0.0,0.0,0.7
+2021,Journal of Allergy and Clinical Immunology,2.4646,1.6465,1.6675,0.7
+2021,Journal of Alzheimer s Disease,0.7105,0.1316,0.1202,0.7
+2021,Journal of Antimicrobial Chemotherapy,1.0357,0.5357,0.5308,0.7
+2021,Journal of Biological Chemistry,2.2857,1.449,1.4662,0.7
+2021,Journal of Biomolecular Structure and Dynamics,2.7812,2.4688,2.4764,0.7
+2021,Journal of Bone and Joint Surgery,0.92,0.2533,0.2698,0.7
+2021,Journal of Bone and Mineral Research,0.7547,0.0377,0.0377,0.7
+2021,Journal of Cachexia Sarcopenia and Muscle,1.4783,0.0435,0.0563,0.7
+2021,Journal of Cataract & Refractive Surgery,0.7273,0.0,0.0,0.7
+2021,Journal of Cellular Physiology,0.75,0.0417,0.0417,0.7
+2021,Journal of Cellular and Molecular Medicine,0.7576,0.1212,0.1144,0.7
+2021,Journal of Clinical Investigation,2.6355,1.867,1.8768,0.7
+2021,Journal of Clinical Medicine,0.831,0.2746,0.2797,0.7
+2021,Journal of Clinical Microbiology,6.0323,5.4194,5.4754,0.7
+2021,Journal of Clinical Oncology,1.9952,0.1034,0.1193,0.7
+2021,Journal of Clinical Virology,3.9091,3.3182,3.4504,0.7
+2021,Journal of Controlled Release,0.4043,0.0,0.0,0.7
+2021,Journal of Ethnopharmacology,0.2059,0.0,0.0,0.7
+2021,Journal of Experimental & Clinical Cancer Research,0.3939,0.0,0.0009,0.7
+2021,Journal of Functional Foods,0.4,0.0,0.0,0.7
+2021,Journal of General Internal Medicine,1.0,0.5,0.4904,0.7
+2021,Journal of Hematology & Oncology,1.3415,0.3415,0.3439,0.7
+2021,Journal of Hepatology,1.0898,0.2036,0.2206,0.7
+2021,Journal of Hospital Infection,1.4,0.56,0.6027,0.7
+2021,Journal of Infection,8.1364,7.5227,7.5479,0.7
+2021,Journal of Investigative Dermatology,0.8636,0.0,0.0,0.7
+2021,Journal of Korean Medical Science,6.4583,6.0417,5.9898,0.7
+2021,Journal of Magnetic Resonance Imaging,0.8095,0.0,0.0106,0.7
+2021,Journal of Medical Internet Research,0.7323,0.126,0.1416,0.7
+2021,Journal of Medical Virology,8.3333,7.825,7.8708,0.7
+2021,Journal of Medicinal Chemistry,0.375,0.0,0.0,0.7
+2021,Journal of NeuroInterventional Surgery,0.7692,0.0769,0.0674,0.7
+2021,Journal of Neuroinflammation,0.5,0.0,0.0,0.7
+2021,Journal of Neurology,0.8276,0.2069,0.2431,0.7
+2021,Journal of Neurology Neurosurgery & Psychiatry,0.907,0.1395,0.151,0.7
+2021,Journal of Neuroscience,0.8148,0.0,0.0,0.7
+2021,Journal of Neurotrauma,0.5652,0.0,0.0,0.7
+2021,Journal of Nuclear Medicine,2.044,0.0769,0.1419,0.7
+2021,Journal of Pain and Symptom Management,1.5217,0.6522,0.6523,0.7
+2021,Journal of Shoulder and Elbow Surgery,0.4884,0.0,0.0,0.7
+2021,Journal of Thoracic Oncology,2.0654,0.8879,0.9104,0.7
+2021,Journal of Thoracic and Cardiovascular Surgery,0.4615,0.0577,0.0893,0.7
+2021,Journal of Thrombosis and Haemostasis,16.1957,15.5435,15.5888,0.7
+2021,Journal of Translational Medicine,2.2157,1.5098,1.5115,0.7
+2021,Journal of Vascular Surgery,0.8065,0.2258,0.2153,0.7
+2021,Journal of Virology,6.4,5.7385,5.7938,0.7
+2021,Journal of neurosurgery,0.4706,0.0,0.0,0.7
+2021,Journal of the American Academy of Dermatology,1.4746,0.4576,0.4672,0.7
+2021,Journal of the American Chemical Society,0.5588,0.0,0.0,0.7
+2021,Journal of the American College of Cardiology,1.8051,0.5176,0.5483,0.7
+2021,Journal of the American College of Surgeons,1.5385,0.5385,0.5449,0.7
+2021,Journal of the American Geriatrics Society,1.2553,0.3191,0.3359,0.7
+2021,Journal of the American Heart Association,0.8757,0.0888,0.0914,0.7
+2021,Journal of the American Medical Directors Association,1.3462,0.4231,0.4304,0.7
+2021,Journal of the American Medical Informatics Association,2.0968,0.2581,0.3102,0.7
+2021,Journal of the American Society of Echocardiography,1.0,0.2,0.1979,0.7
+2021,Journal of the American Society of Nephrology,1.7363,1.1319,1.1356,0.7
+2021,Journal of the European Academy of Dermatology and Venereology,1.6,0.9429,0.972,0.7
+2021,Journal of the International AIDS Society,1.6857,0.2,0.2169,0.7
+2021,Journal of the National Comprehensive Cancer Network,2.5455,0.2727,0.2807,0.7
+2021,Kidney International,3.2883,2.5405,2.5418,0.7
+2021,Kidney International Reports,1.3333,1.0833,1.0833,0.7
+2021,Knee Surgery Sports Traumatology Arthroscopy,0.9149,0.0426,0.0751,0.7
+2021,LWT,0.4348,0.0,0.0,0.7
+2021,Lara D. Veeken,0.3654,0.0192,0.0192,0.7
+2021,Leukemia,1.1744,0.407,0.415,0.7
+2021,Life Sciences,0.94,0.46,0.46,0.7
+2021,Lipids in Health and Disease,0.4167,0.2083,0.1942,0.7
+2021,Liver International,1.6591,0.9773,0.994,0.7
+2021,Lung Cancer,1.1111,0.0,0.0037,0.7
+2021,MMWR Morbidity and Mortality Weekly Report,6.5904,3.9157,4.0069,0.7
+2021,Magnetic Resonance in Medicine,1.2439,0.0,0.0005,0.7
+2021,Malaria Journal,0.4634,0.0,0.0084,0.7
+2021,Materials Science and Engineering C,0.7692,0.0,0.0,0.7
+2021,Mayo Clinic Proceedings,2.4286,1.6071,1.6597,0.7
+2021,Medical Hypotheses,1.4231,1.0385,1.0613,0.7
+2021,Medical Image Analysis,1.4627,0.1343,0.138,0.7
+2021,Medical Physics,1.1212,0.0303,0.0303,0.7
+2021,Medical Science Monitor,0.3333,0.0476,0.0803,0.7
+2021,Medical Teacher,0.4762,0.0,0.0,0.7
+2021,Medicine,0.6667,0.2632,0.2722,0.7
+2021,Medicine & Science in Sports & Exercise,1.08,0.0,0.0,0.7
+2021,Metabolism,2.32,1.96,1.947,0.7
+2021,Modern Pathology,1.8772,1.1053,1.1172,0.7
+2021,Molecular Cell,2.0392,0.9216,0.9175,0.7
+2021,Molecular Neurodegeneration,0.68,0.0,0.0,0.7
+2021,Molecular Psychiatry,0.6818,0.1136,0.1276,0.7
+2021,Molecular Therapy,0.5625,0.0938,0.0885,0.7
+2021,Molecules,0.4318,0.0227,0.0227,0.7
+2021,Movement Disorders,0.9,0.0833,0.0864,0.7
+2021,Multiple Sclerosis Journal,0.8261,0.1739,0.2224,0.7
+2021,Multiple Sclerosis and Related Disorders,1.1111,0.6296,0.6706,0.7
+2021,Nano Letters,0.6818,0.4091,0.3921,0.7
+2021,Nature,12.8793,10.7931,10.8259,0.7
+2021,Nature Biomedical Engineering,0.6585,0.0488,0.0488,0.7
+2021,Nature Biotechnology,1.9474,1.2895,1.3456,0.7
+2021,Nature Cancer,1.2121,0.3636,0.4417,0.7
+2021,Nature Cell Biology,1.0698,0.0698,0.0861,0.7
+2021,Nature Chemical Biology,0.8214,0.0,0.0133,0.7
+2021,Nature Communications,1.4334,0.6704,0.6787,0.7
+2021,Nature Genetics,4.5556,1.2222,1.3709,0.7
+2021,Nature Immunology,3.4082,1.4694,1.5315,0.7
+2021,Nature Medicine,8.0882,5.6412,5.7092,0.7
+2021,Nature Metabolism,0.881,0.0476,0.0395,0.7
+2021,Nature Microbiology,9.5926,8.5185,8.5026,0.7
+2021,Nature Neuroscience,2.15,0.0,0.0,0.7
+2021,Nature Structural & Molecular Biology,5.52,4.24,4.2398,0.7
+2021,Nephrology Dialysis Transplantation,1.1379,0.7586,0.7784,0.7
+2021,Neuro-Oncology,0.8026,0.0,0.0,0.7
+2021,NeuroImage,0.7952,0.0361,0.0498,0.7
+2021,NeuroImage Clinical,0.5833,0.0,0.0049,0.7
+2021,Neurobiology of Disease,0.4444,0.0,0.0,0.7
+2021,Neurology,1.3775,0.3373,0.3446,0.7
+2021,Neurology Neuroimmunology & Neuroinflammation,1.3409,0.5909,0.6122,0.7
+2021,Neuron,1.3778,0.0,0.0,0.7
+2021,Neuropsychopharmacology,0.4,0.0,0.0,0.7
+2021,Neurosurgery,0.7,0.0,0.0086,0.7
+2021,New England Journal of Medicine,16.7127,13.0837,13.2061,0.7
+2021,Nicotine & Tobacco Research,0.7391,0.0,0.0,0.7
+2021,Nucleic Acids Research,1.4103,0.3077,0.3292,0.7
+2021,Nutrients,0.7557,0.1932,0.1925,0.7
+2021,Obesity,4.3077,3.0256,3.0622,0.7
+2021,Obesity Surgery,0.15,0.0,0.0,0.7
+2021,Obstetrics and Gynecology,1.0879,0.2198,0.2377,0.7
+2021,OncoImmunology,0.9333,0.0,0.0,0.7
+2021,Oncogene,0.3778,0.0,0.0,0.7
+2021,Open Forum Infectious Diseases,1.4286,0.5143,0.5471,0.7
+2021,Ophthalmology,0.8947,0.0632,0.0699,0.7
+2021,Orthopaedic Journal of Sports Medicine,0.3,0.0,0.0,0.7
+2021,Osteoarthritis and Cartilage,0.7391,0.0,0.0,0.7
+2021,Osteoporosis International,0.6,0.0,0.0,0.7
+2021,Oxidative Medicine and Cellular Longevity,0.3,0.0,0.0,0.7
+2021,PEDIATRICS,1.9647,1.5529,1.5669,0.7
+2021,PLoS Biology,1.6667,0.5758,0.6134,0.7
+2021,PLoS Genetics,0.55,0.0,0.0,0.7
+2021,PLoS Medicine,0.7179,0.0513,0.0509,0.7
+2021,PLoS ONE,0.7058,0.1636,0.1696,0.7
+2021,PLoS Pathogens,1.3875,0.65,0.6663,0.7
+2021,PLoS neglected tropical diseases,0.9455,0.1455,0.1712,0.7
+2021,Pain,0.5778,0.0222,0.0222,0.7
+2021,Parasites & Vectors,0.2917,0.0,0.0,0.7
+2021,PeerJ,0.9565,0.087,0.1365,0.7
+2021,Pharmacological Research,0.8095,0.381,0.3968,0.7
+2021,Physics in Medicine and Biology,1.3333,0.0,0.0182,0.7
+2021,Physics of Fluids,4.9565,4.9565,4.9429,0.7
+2021,Phytomedicine,0.3846,0.2308,0.2308,0.7
+2021,Plastic & Reconstructive Surgery,0.4848,0.0,0.0,0.7
+2021,Preventive Medicine,1.2381,0.0,0.0168,0.7
+2021,Proceedings of the National Academy of Sciences,2.076,1.1054,1.1101,0.7
+2021,PubMed,2.3114,1.7024,1.7182,0.7
+2021,Radiology,9.9842,8.7737,8.792,0.7
+2021,Radiology Artificial Intelligence,2.7083,0.5417,0.5542,0.7
+2021,Radiology Cardiothoracic Imaging,10.8571,10.6667,10.692,0.7
+2021,Radiotherapy and Oncology,1.8302,0.1132,0.1515,0.7
+2021,Redox Biology,0.7903,0.0,0.0,0.7
+2021,Regional Anesthesia & Pain Medicine,0.7586,0.0345,0.0326,0.7
+2021,Reproductive Health,0.6296,0.0,0.0,0.7
+2021,Respiratory Research,1.2667,0.5556,0.5718,0.7
+2021,Resuscitation,1.1667,0.2381,0.2388,0.7
+2021,Science,11.3317,9.8995,9.9086,0.7
+2021,Science Advances,1.1605,0.4877,0.4957,0.7
+2021,Science Immunology,5.05,4.5,4.5088,0.7
+2021,Science Translational Medicine,1.3353,0.3642,0.3827,0.7
+2021,Scientific Data,1.913,0.3043,0.2996,0.7
+2021,Scientific Reports,0.7295,0.2391,0.2473,0.7
+2021,Sensors,1.125,0.4107,0.4145,0.7
+2021,Social Science & Medicine,0.75,0.125,0.1178,0.7
+2021,Stem Cell Reports,1.2692,0.0,0.0289,0.7
+2021,Stem Cell Research & Therapy,0.3067,0.0,0.0,0.7
+2021,Stroke,1.0402,0.3563,0.3855,0.7
+2021,Surgery,0.2727,0.0303,0.0303,0.7
+2021,Surgical Endoscopy,0.5476,0.0,0.0,0.7
+2021,Telemedicine Journal and e-Health,1.381,0.0,0.034,0.7
+2021,The American Journal of Emergency Medicine,0.9333,0.5333,0.543,0.7
+2021,The American Journal of Gastroenterology,1.4655,0.8621,0.8705,0.7
+2021,The American Journal of Human Genetics,0.8276,0.0,0.0,0.7
+2021,The American Journal of Sports Medicine,0.4889,0.0,0.0,0.7
+2021,The American Journal of Surgical Pathology,0.5909,0.0227,0.0227,0.7
+2021,The Annals of Thoracic Surgery,0.6857,0.2571,0.247,0.7
+2021,The Bone & Joint Journal,0.6154,0.0385,0.0471,0.7
+2021,The EMBO Journal,3.475,2.0,2.0183,0.7
+2021,The FASEB Journal,0.7647,0.1765,0.1977,0.7
+2021,The Journal of Allergy and Clinical Immunology In Practice,1.0735,0.2647,0.2656,0.7
+2021,The Journal of Arthroplasty,0.5373,0.0299,0.0299,0.7
+2021,The Journal of Clinical Endocrinology & Metabolism,1.0,0.1597,0.1686,0.7
+2021,The Journal of Experimental Medicine,1.7143,0.9365,0.9489,0.7
+2021,The Journal of Headache and Pain,0.8485,0.0606,0.0548,0.7
+2021,The Journal of Heart and Lung Transplantation,0.5652,0.0435,0.0435,0.7
+2021,The Journal of Immunology,1.75,0.9,0.9,0.7
+2021,The Journal of Infectious Diseases,2.5253,1.8081,1.8413,0.7
+2021,The Journal of Pediatrics,1.7778,1.3056,1.2881,0.7
+2021,The Journal of Physiology,0.4286,0.0,0.0,0.7
+2021,The Journal of Strength and Conditioning Research,0.76,0.0,0.0,0.7
+2021,"The Journal of Trauma: Injury, Infection, and Critical Care",0.65,0.05,0.0828,0.7
+2021,The Journal of Urology,0.5686,0.0,0.0,0.7
+2021,The Journals of Gerontology Series A,1.75,0.7188,0.717,0.7
+2021,The Lancet,21.8885,19.0912,19.1393,0.7
+2021,The Lancet Child & Adolescent Health,3.0833,1.8889,1.9073,0.7
+2021,The Lancet Diabetes & Endocrinology,2.2542,0.6441,0.6766,0.7
+2021,The Lancet Digital Health,1.3478,0.3478,0.4168,0.7
+2021,The Lancet Global Health,1.6974,0.6842,0.6969,0.7
+2021,The Lancet HIV,1.3636,0.3636,0.3636,0.7
+2021,The Lancet Haematology,2.8793,1.4483,1.4718,0.7
+2021,The Lancet Infectious Diseases,8.4608,7.2647,7.3073,0.7
+2021,The Lancet Neurology,3.0435,0.7246,0.7185,0.7
+2021,The Lancet Oncology,3.695,1.115,1.1692,0.7
+2021,The Lancet Psychiatry,2.45,1.25,1.2386,0.7
+2021,The Lancet Public Health,2.7222,1.1667,1.1871,0.7
+2021,The Lancet Respiratory Medicine,10.2605,9.0084,9.06,0.7
+2021,The Lancet Rheumatology,3.6857,3.2,3.192,0.7
+2021,The Medical Journal of Australia,2.3182,1.5455,1.5854,0.7
+2021,The Ocular Surface,0.3636,0.2727,0.2727,0.7
+2021,The Oncologist,0.68,0.02,0.0476,0.7
+2021,The Science of The Total Environment,4.5733,4.2,4.2297,0.7
+2021,The Spine Journal,0.3636,0.0,0.0,0.7
+2021,The journal of nutrition health & aging,1.65,0.7,0.7051,0.7
+2021,Theranostics,0.913,0.1652,0.1678,0.7
+2021,Thorax,0.4857,0.0571,0.0454,0.7
+2021,Thyroid,0.6458,0.0,0.0,0.7
+2021,Translational Psychiatry,0.2273,0.0,0.0,0.7
+2021,Trends in Food Science & Technology,0.35,0.0,0.0125,0.7
+2021,UNC Libraries,0.913,0.0,0.0,0.7
+2021,Ultrasound in Obstetrics and Gynecology,1.2121,0.7879,0.7797,0.7
+2021,Unknown,1.1159,0.3476,0.3532,0.7
+2021,Vaccine,1.0938,0.4375,0.4629,0.7
+2021,Viruses,5.7021,5.0426,5.0664,0.7
+2021,World Neurosurgery,0.6452,0.0,0.0048,0.7
+2021,eLife,1.4678,0.3977,0.4143,0.7
+2021,iScience,0.8824,0.4412,0.4327,0.7
+2021,mBio,1.6593,0.8681,0.8939,0.7
+2021,mSphere,1.4762,0.7143,0.7385,0.7
+2021,npj Digital Medicine,1.6809,0.1064,0.1128,0.7
+2021,The Lancet. Gastroenterology & hepatology,5.8689,4.2623,4.2654,0.7
+2022,ACS Applied Materials & Interfaces,1.7286,0.0,0.0,0.7
+2022,ACS Central Science,6.5455,4.0909,4.4028,0.7
+2022,ACS Nano,4.6479,1.5915,1.7396,0.7
+2022,ACS Omega,0.8846,0.5,0.5245,0.7
+2022,AIDS and Behavior,2.1304,0.0,0.0368,0.7
+2022,Academic Medicine,0.7083,0.0,0.0,0.7
+2022,Academic Radiology,1.8077,0.1154,0.2142,0.7
+2022,Acta Biomaterialia,0.8475,0.0,0.0,0.7
+2022,Acta Neuropathologica,3.2553,0.8085,0.8793,0.7
+2022,Acta Neuropathologica Communications,0.7143,0.0714,0.0665,0.7
+2022,Acta Pharmaceutica Sinica B,2.7632,1.3947,1.4785,0.7
+2022,Acta Pharmacologica Sinica,0.6897,0.0,0.0,0.7
+2022,Addiction,1.2941,0.0,0.0,0.7
+2022,Advanced Functional Materials,2.8933,0.04,0.0492,0.7
+2022,Advanced Healthcare Materials,1.24,0.0,0.0,0.7
+2022,Advanced Materials,0.75,0.0833,0.0954,0.7
+2022,Advanced Science,1.4286,0.0204,0.0151,0.7
+2022,Age and Ageing,2.0,0.2903,0.3784,0.7
+2022,Aging,1.5,0.3372,0.4156,0.7
+2022,Aging Cell,1.5641,0.4359,0.4537,0.7
+2022,Alimentary Pharmacology & Therapeutics,1.1739,0.0,0.0,0.7
+2022,Allergy,5.2182,4.0182,4.0451,0.7
+2022,Alzheimer s & Dementia,1.9136,0.1728,0.196,0.7
+2022,Alzheimer s Research & Therapy,1.1304,0.029,0.0987,0.7
+2022,American Journal of Clinical Nutrition,0.78,0.0,0.0,0.7
+2022,American Journal of Hematology,2.1951,0.2683,0.3261,0.7
+2022,American Journal of Infection Control,3.2174,0.1739,0.2338,0.7
+2022,American Journal of Kidney Diseases,1.6744,0.3256,0.4177,0.7
+2022,American Journal of Neuroradiology,1.1786,0.2143,0.306,0.7
+2022,American Journal of Obstetrics & Gynecology MFM,6.5217,4.3913,4.5199,0.7
+2022,American Journal of Obstetrics and Gynecology,3.2184,1.1034,1.1758,0.7
+2022,American Journal of Ophthalmology,1.2703,0.0,0.0,0.7
+2022,American Journal of Respiratory and Critical Care Medicine,2.6824,0.9824,1.086,0.7
+2022,American Journal of Roentgenology,11.16,7.28,7.6924,0.7
+2022,American Journal of Transplantation,3.6893,1.4272,1.6081,0.7
+2022,American Journal of Tropical Medicine and Hygiene,2.1379,0.6897,0.686,0.7
+2022,Anaesthesia,2.9333,0.4333,0.5672,0.7
+2022,Analytical Chemistry,2.2174,0.8261,1.0037,0.7
+2022,Anesthesia & Analgesia,1.16,0.32,0.2924,0.7
+2022,Anesthesiology,1.5366,0.0732,0.0952,0.7
+2022,Angewandte Chemie International Edition,1.0345,0.2414,0.2484,0.7
+2022,Annals of Clinical and Translational Neurology,1.7143,0.4762,0.4908,0.7
+2022,Annals of Emergency Medicine,1.35,0.25,0.2572,0.7
+2022,Annals of Intensive Care,2.5,0.7667,0.9025,0.7
+2022,Annals of Internal Medicine,5.1667,2.6765,2.7655,0.7
+2022,Annals of Neurology,1.5294,0.1275,0.1546,0.7
+2022,Annals of Oncology,2.5879,0.4303,0.443,0.7
+2022,Annals of Surgery,1.292,0.0442,0.0542,0.7
+2022,Annals of Surgical Oncology,0.4242,0.0,0.0,0.7
+2022,Annals of Translational Medicine,3.25,1.1667,1.4615,0.7
+2022,Annals of the American Thoracic Society,2.3,0.8667,0.9536,0.7
+2022,Annals of the Rheumatic Diseases,3.0853,0.9457,1.056,0.7
+2022,Antimicrobial Agents and Chemotherapy,3.4545,1.9697,2.0736,0.7
+2022,Antioxidants,0.5139,0.0,0.0,0.7
+2022,Applied Intelligence,6.3,2.9,3.3211,0.7
+2022,Applied Sciences,2.0,0.623,0.6578,0.7
+2022,Applied Soft Computing,4.3929,1.75,1.8585,0.7
+2022,Arteriosclerosis Thrombosis and Vascular Biology,1.1429,0.2286,0.275,0.7
+2022,Arthritis & Rheumatology,2.625,0.9875,1.0492,0.7
+2022,Arthroscopy The Journal of Arthroscopic and Related Surgery,0.0952,0.0,0.0,0.7
+2022,Autophagy,0.7363,0.0,0.0,0.7
+2022,BJOG An International Journal of Obstetrics & Gynaecology,2.2857,0.3714,0.4256,0.7
+2022,BMC Cancer,0.4545,0.0,0.0,0.7
+2022,BMC Geriatrics,0.4583,0.0,0.0,0.7
+2022,BMC Health Services Research,0.8438,0.3438,0.3601,0.7
+2022,BMC Infectious Diseases,1.0588,0.451,0.4765,0.7
+2022,BMC Medical Informatics and Decision Making,0.68,0.0,0.0,0.7
+2022,BMC Medicine,1.3636,0.1364,0.1982,0.7
+2022,BMC Musculoskeletal Disorders,0.2,0.0,0.0,0.7
+2022,BMC Pregnancy and Childbirth,0.3377,0.0,0.0,0.7
+2022,BMC Psychiatry,0.1818,0.0,0.0,0.7
+2022,BMC Public Health,0.4412,0.0,0.0,0.7
+2022,BMC Women s Health,0.25,0.0,0.0,0.7
+2022,BMJ,8.2573,5.3817,5.5586,0.7
+2022,BMJ Global Health,1.1304,0.0,0.0,0.7
+2022,BMJ Open,1.3019,0.2642,0.2757,0.7
+2022,BMJ Open Diabetes Research & Care,1.3636,0.303,0.3046,0.7
+2022,BioMed Research International,0.8421,0.0526,0.1123,0.7
+2022,Bioactive Materials,1.1077,0.0,0.0,0.7
+2022,Biochemical and Biophysical Research Communications,3.0455,1.2727,1.2801,0.7
+2022,Biomaterials,1.0333,0.0,0.0,0.7
+2022,Biomedical Signal Processing and Control,1.3571,0.0893,0.1153,0.7
+2022,Biomedicine & Pharmacotherapy,0.5873,0.0476,0.0452,0.7
+2022,Biomolecules,0.75,0.0,0.0,0.7
+2022,Biosensors and Bioelectronics,2.1765,0.3235,0.4601,0.7
+2022,Blood,1.9676,0.7986,0.8207,0.7
+2022,Blood Advances,1.4485,0.1636,0.1801,0.7
+2022,Blood Cancer Journal,1.1154,0.1538,0.179,0.7
+2022,Brain,1.6912,0.4779,0.4883,0.7
+2022,Brain Behavior and Immunity,2.0323,0.7742,0.7985,0.7
+2022,Brain Communications,1.25,0.0417,0.1042,0.7
+2022,Breast Cancer Research and Treatment,0.7,0.0,0.0,0.7
+2022,British Journal of Anaesthesia,0.8163,0.0,0.0159,0.7
+2022,British Journal of Cancer,0.7143,0.0,0.0,0.7
+2022,British Journal of Dermatology,2.5294,0.3824,0.5423,0.7
+2022,British Journal of Haematology,2.8378,1.2432,1.4212,0.7
+2022,British Journal of Ophthalmology,1.3784,0.0,0.0,0.7
+2022,British Journal of Pharmacology,1.0,0.4,0.3669,0.7
+2022,British Journal of Sports Medicine,1.9444,0.1111,0.1421,0.7
+2022,British journal of surgery,1.8857,0.1143,0.1238,0.7
+2022,Building and Environment,2.7931,0.8276,0.9804,0.7
+2022,CHEST Journal,2.8868,1.783,1.8405,0.7
+2022,Canadian Medical Association Journal,2.0,0.5455,0.565,0.7
+2022,Cancer,1.0795,0.0455,0.0591,0.7
+2022,Cancer Cell,2.1333,0.2933,0.3107,0.7
+2022,Cancer Cell International,0.381,0.0,0.0,0.7
+2022,Cancer Discovery,2.1712,0.7027,0.7075,0.7
+2022,Cancer Epidemiology Biomarkers & Prevention,0.45,0.0,0.0,0.7
+2022,Cancer Immunology Immunotherapy,0.7586,0.0,0.0,0.7
+2022,Cancer Immunology Research,0.5238,0.0,0.0,0.7
+2022,Cancer Letters,0.3929,0.0,0.0,0.7
+2022,Cancer Medicine,0.6579,0.0,0.0,0.7
+2022,Cancer Research,0.4306,0.0,0.0,0.7
+2022,Cancer Science,0.7826,0.0,0.0,0.7
+2022,Cancers,0.5849,0.0,0.0,0.7
+2022,Carbohydrate Polymers,0.7167,0.0,0.0,0.7
+2022,Cardiovascular Diabetology,2.0253,0.1013,0.1436,0.7
+2022,Cardiovascular Research,2.9375,2.125,2.1616,0.7
+2022,Cell,28.1964,26.3304,26.412,0.7
+2022,Cell Death and Differentiation,0.9412,0.0882,0.0722,0.7
+2022,Cell Death and Disease,0.6419,0.0135,0.0155,0.7
+2022,Cell Discovery,5.7727,4.2727,4.2796,0.7
+2022,Cell Host & Microbe,17.1974,16.1316,16.1391,0.7
+2022,Cell Metabolism,2.8681,1.022,1.11,0.7
+2022,Cell Proliferation,1.45,0.05,0.1828,0.7
+2022,Cell Reports,2.5622,1.6452,1.6533,0.7
+2022,Cell Reports Medicine,5.7895,5.1053,5.0974,0.7
+2022,Cell Research,6.1818,4.303,4.2798,0.7
+2022,Cell stem cell,2.6538,0.9615,1.0185,0.7
+2022,Cells,1.2097,0.5161,0.5137,0.7
+2022,Cellular and Molecular Gastroenterology and Hepatology,0.5,0.0833,0.1055,0.7
+2022,Cellular and Molecular Immunology,11.0,9.625,9.7259,0.7
+2022,Cephalalgia,1.6296,0.0741,0.1003,0.7
+2022,Chaos Solitons & Fractals,4.9655,2.2759,2.4627,0.7
+2022,Chemical Engineering Journal,2.2297,0.0405,0.0438,0.7
+2022,Chinese Medical Journal,16.0,11.5,11.9683,0.7
+2022,Circulation,3.3801,1.0221,1.1135,0.7
+2022,Circulation Arrhythmia and Electrophysiology,1.1395,0.0698,0.0927,0.7
+2022,Circulation Heart Failure,1.3056,0.0278,0.0563,0.7
+2022,Circulation Research,1.7467,0.8,0.8204,0.7
+2022,Clinica Chimica Acta,5.4167,2.75,2.9302,0.7
+2022,Clinical Cancer Research,1.0714,0.0,0.0,0.7
+2022,Clinical Chemistry,8.9091,7.7273,7.881,0.7
+2022,Clinical Chemistry and Laboratory Medicine (CCLM),8.5185,5.7407,5.7942,0.7
+2022,Clinical Gastroenterology and Hepatology,1.9432,0.5227,0.5583,0.7
+2022,Clinical Infectious Diseases,9.2663,6.6147,6.8118,0.7
+2022,Clinical Journal of the American Society of Nephrology,1.7925,0.3585,0.4329,0.7
+2022,Clinical Medicine,1.1154,0.0769,0.1996,0.7
+2022,Clinical Microbiology and Infection,4.6344,2.3656,2.5462,0.7
+2022,Clinical Nutrition,0.6912,0.0,0.0005,0.7
+2022,Clinical and Translational Medicine,1.5667,0.3,0.3094,0.7
+2022,Cochrane Database of Systematic Reviews,1.913,1.2174,1.2854,0.7
+2022,Communications Biology,1.0426,0.4681,0.48,0.7
+2022,Computer Methods and Programs in Biomedicine,3.8333,2.1296,2.1436,0.7
+2022,Computers in Biology and Medicine,3.7115,2.5288,2.5263,0.7
+2022,Critical Care,2.4135,0.782,0.8817,0.7
+2022,Critical Care Medicine,2.88,1.2933,1.3733,0.7
+2022,Cureus,4.3182,1.3636,1.6113,0.7
+2022,Current Biology,7.0952,5.0,5.14,0.7
+2022,Developmental Cell,1.5128,0.4359,0.4387,0.7
+2022,Diabetes,1.0,0.3793,0.3653,0.7
+2022,Diabetes & Metabolic Syndrome Clinical Research & Reviews,3.7333,0.4333,0.5798,0.7
+2022,Diabetes Care,1.9664,0.2349,0.2746,0.7
+2022,Diabetes Obesity and Metabolism,2.1111,0.4889,0.5905,0.7
+2022,Diabetes Research and Clinical Practice,1.8,0.2,0.3189,0.7
+2022,Diabetes Technology & Therapeutics,2.0,0.0,0.0045,0.7
+2022,Diabetes/Metabolism Research and Reviews,6.625,2.5417,2.6647,0.7
+2022,Diabetologia,1.7895,0.7368,0.8279,0.7
+2022,Diagnostics,1.4359,0.4103,0.4469,0.7
+2022,Drug Design Development and Therapy,0.25,0.0,0.0,0.7
+2022,Drug and Alcohol Dependence,1.375,0.0,0.0,0.7
+2022,EBioMedicine,2.4364,1.7818,1.8157,0.7
+2022,EClinicalMedicine,3.521,1.6639,1.7572,0.7
+2022,EMBO Molecular Medicine,2.6389,0.9167,1.0518,0.7
+2022,EP Europace,0.641,0.2308,0.2417,0.7
+2022,ERJ Open Research,3.3,2.05,2.051,0.7
+2022,ESC Heart Failure,0.8621,0.3103,0.3409,0.7
+2022,ESMO Open,0.7353,0.0294,0.0276,0.7
+2022,Emerging Microbes & Infections,14.8169,12.2113,12.4037,0.7
+2022,Emerging infectious diseases,8.9138,6.1724,6.4443,0.7
+2022,Endoscopy,0.8108,0.0,0.0011,0.7
+2022,Environmental Research,3.3333,1.7917,1.8394,0.7
+2022,Epilepsia,1.3421,0.2368,0.2756,0.7
+2022,EuroIntervention,1.0323,0.0968,0.0787,0.7
+2022,European Heart Journal,3.0887,0.9476,1.0015,0.7
+2022,European Heart Journal - Cardiovascular Imaging,0.9737,0.1316,0.1914,0.7
+2022,European Journal of Cancer,1.0109,0.1087,0.1115,0.7
+2022,European Journal of Heart Failure,2.5063,0.5949,0.6653,0.7
+2022,European Journal of Neurology,2.5,0.3947,0.4515,0.7
+2022,European Journal of Nuclear Medicine and Molecular Imaging,2.2439,0.2276,0.2879,0.7
+2022,European Journal of Pharmacology,0.5238,0.0476,0.0495,0.7
+2022,European Journal of Preventive Cardiology,1.6364,0.0,0.048,0.7
+2022,European Journal of Radiology,4.1364,2.5,2.6037,0.7
+2022,European Radiology,2.5921,1.6184,1.6635,0.7
+2022,European Respiratory Journal,4.7244,2.7885,2.9193,0.7
+2022,European Urology,1.3412,0.1529,0.1449,0.7
+2022,Eurosurveillance,14.622,11.5854,11.8528,0.7
+2022,Expert Systems with Applications,1.7,0.4,0.4655,0.7
+2022,Fertility and Sterility,1.413,0.4783,0.5596,0.7
+2022,Food & Function,0.475,0.0,0.0,0.7
+2022,Food Chemistry,0.6744,0.0,0.0,0.7
+2022,Food Research International,0.6667,0.0,0.0,0.7
+2022,Foods,0.6042,0.0,0.0,0.7
+2022,Free Radical Biology and Medicine,1.1333,0.0,0.0,0.7
+2022,Frontiers in Aging Neuroscience,0.1923,0.0,0.0,0.7
+2022,Frontiers in Bioengineering and Biotechnology,1.2273,0.1364,0.1644,0.7
+2022,Frontiers in Cardiovascular Medicine,0.5417,0.0417,0.0386,0.7
+2022,Frontiers in Cell and Developmental Biology,0.4324,0.1892,0.1874,0.7
+2022,Frontiers in Cellular and Infection Microbiology,0.9268,0.2439,0.2997,0.7
+2022,Frontiers in Endocrinology,0.5714,0.2321,0.2134,0.7
+2022,Frontiers in Genetics,0.6667,0.2963,0.2729,0.7
+2022,Frontiers in Immunology,1.2798,0.7202,0.7468,0.7
+2022,Frontiers in Medicine,1.6842,0.7895,0.7961,0.7
+2022,Frontiers in Microbiology,1.5957,0.7872,0.7781,0.7
+2022,Frontiers in Neurology,0.8333,0.2424,0.2678,0.7
+2022,Frontiers in Neuroscience,0.45,0.0,0.0,0.7
+2022,Frontiers in Nutrition,0.2,0.0,0.0,0.7
+2022,Frontiers in Oncology,0.3874,0.0,0.0,0.7
+2022,Frontiers in Pharmacology,0.6699,0.1068,0.1065,0.7
+2022,Frontiers in Physiology,1.0,0.1081,0.128,0.7
+2022,Frontiers in Psychiatry,0.9643,0.0,0.0112,0.7
+2022,Frontiers in Psychology,0.2917,0.0,0.0,0.7
+2022,Frontiers in Public Health,2.375,1.25,1.2846,0.7
+2022,Future Oncology,0.76,0.04,0.0585,0.7
+2022,Gastric Cancer,0.6,0.0,0.0,0.7
+2022,Gastroenterology,1.989,0.4176,0.4879,0.7
+2022,Gastrointestinal Endoscopy,1.25,0.0179,0.0633,0.7
+2022,Genetics in Medicine,0.5185,0.0,0.0,0.7
+2022,Genome Medicine,3.0312,1.6562,1.7272,0.7
+2022,Gut,2.2593,0.5778,0.6368,0.7
+2022,Gut Microbes,0.3462,0.0,0.0,0.7
+2022,Gynecologic Oncology,0.4,0.0,0.0,0.7
+2022,Haematologica,1.05,0.1,0.1445,0.7
+2022,Headache The Journal of Head and Face Pain,1.6296,0.1111,0.1547,0.7
+2022,Health Affairs,2.6087,0.5652,0.5747,0.7
+2022,Health and Quality of Life Outcomes,0.45,0.1,0.1285,0.7
+2022,Heart,1.7857,0.3571,0.373,0.7
+2022,Heart Rhythm,1.5294,0.2059,0.3468,0.7
+2022,Heliyon,0.6944,0.2222,0.2389,0.7
+2022,Hepatology,1.2615,0.0923,0.1308,0.7
+2022,Hepatology Communications,0.64,0.0,0.0,0.7
+2022,Human Reproduction,0.7586,0.0345,0.0466,0.7
+2022,Hypertension,1.506,0.4458,0.4565,0.7
+2022,IEEE Access,2.3357,0.7762,0.8221,0.7
+2022,IEEE Journal of Biomedical and Health Informatics,1.541,0.3607,0.378,0.7
+2022,IEEE Transactions on Medical Imaging,3.6575,1.6164,1.7723,0.7
+2022,Immunity,7.6543,6.5926,6.6247,0.7
+2022,Indian Journal of Ophthalmology,1.1304,0.087,0.1536,0.7
+2022,Industrial Crops and Products,0.6667,0.0,0.0,0.7
+2022,Informatics in Medicine Unlocked,4.5652,2.0435,2.0882,0.7
+2022,Intensive Care Medicine,11.7619,8.5357,8.7998,0.7
+2022,International Immunopharmacology,1.3333,0.5333,0.6501,0.7
+2022,International Journal of Antimicrobial Agents,18.8387,14.3871,14.7555,0.7
+2022,International Journal of Behavioral Nutrition and Physical Activity,0.6,0.0,0.0,0.7
+2022,International Journal of Biological Macromolecules,0.7094,0.0,0.0074,0.7
+2022,International Journal of Biological Sciences,0.875,0.375,0.3948,0.7
+2022,International Journal of Cancer,0.9302,0.0,0.0,0.7
+2022,International Journal of Cardiology,1.4545,0.3636,0.4932,0.7
+2022,International Journal of Drug Policy,1.5161,0.0,0.0,0.7
+2022,International Journal of Environmental Research and Public Health,0.9909,0.1644,0.1891,0.7
+2022,International Journal of Epidemiology,1.8788,0.6364,0.6967,0.7
+2022,International Journal of Gynecology & Obstetrics,3.8387,0.5161,0.5739,0.7
+2022,International Journal of Infectious Diseases,4.6103,2.6029,2.795,0.7
+2022,International Journal of Molecular Sciences,0.9219,0.2188,0.2358,0.7
+2022,International Journal of Nanomedicine,0.3103,0.0,0.0,0.7
+2022,International Journal of Pharmaceutics,0.6,0.0,0.0,0.7
+2022,International Journal of Radiation Oncology*Biology*Physics,1.3833,0.0,0.0124,0.7
+2022,International Journal of Stroke,2.75,0.45,0.6176,0.7
+2022,Investigative Ophthalmology & Visual Science,0.9394,0.0,0.0,0.7
+2022,JACC Heart Failure,1.5,0.0588,0.0941,0.7
+2022,JACC. Cardiovascular imaging,1.3188,0.3333,0.3674,0.7
+2022,JACC. Clinical electrophysiology,0.9655,0.069,0.109,0.7
+2022,JACC: Cardiovascular Interventions,1.4318,0.1818,0.2455,0.7
+2022,JAMA,18.677,14.8836,15.0999,0.7
+2022,JAMA Cardiology,7.687,5.4261,5.549,0.7
+2022,JAMA Dermatology,1.2093,0.0,0.0292,0.7
+2022,JAMA Internal Medicine,9.6759,7.1944,7.2558,0.7
+2022,JAMA Network Open,1.7255,0.3787,0.4261,0.7
+2022,JAMA Neurology,4.8319,2.9664,3.0204,0.7
+2022,JAMA Oncology,2.3088,0.3015,0.3148,0.7
+2022,JAMA Ophthalmology,2.35,0.3,0.3559,0.7
+2022,JAMA Pediatrics,4.2105,2.5263,2.6329,0.7
+2022,JAMA Psychiatry,1.1277,0.0,0.0,0.7
+2022,JAMA Surgery,0.9405,0.0238,0.0282,0.7
+2022,JCI Insight,2.3478,1.1304,1.1648,0.7
+2022,JHEP Reports,0.35,0.0,0.0,0.7
+2022,JMIR Public Health and Surveillance,4.8696,0.3913,0.5872,0.7
+2022,JMIR mhealth and uhealth,0.3478,0.0,0.0,0.7
+2022,JNCI Journal of the National Cancer Institute,1.1475,0.0328,0.0302,0.7
+2022,Journal for ImmunoTherapy of Cancer,0.9144,0.0267,0.0272,0.7
+2022,Journal of Affective Disorders,1.4651,0.0,0.0,0.7
+2022,Journal of Agricultural and Food Chemistry,0.8333,0.0,0.0,0.7
+2022,Journal of Allergy and Clinical Immunology,4.2857,2.8776,2.9793,0.7
+2022,Journal of Alzheimer s Disease,1.303,0.0,0.0337,0.7
+2022,Journal of Biological Chemistry,4.6571,3.5143,3.6301,0.7
+2022,Journal of Biomolecular Structure and Dynamics,4.5946,1.4324,1.7513,0.7
+2022,Journal of Bone and Joint Surgery,2.2195,0.0,0.0172,0.7
+2022,Journal of Bone and Mineral Research,0.7941,0.0,0.0203,0.7
+2022,Journal of Cachexia Sarcopenia and Muscle,1.0426,0.0,0.0,0.7
+2022,Journal of Cellular and Molecular Medicine,0.825,0.05,0.0577,0.7
+2022,Journal of Clinical Investigation,4.7632,3.6526,3.6868,0.7
+2022,Journal of Clinical Medicine,1.3206,0.458,0.5135,0.7
+2022,Journal of Clinical Microbiology,8.6667,6.3333,6.5005,0.7
+2022,Journal of Clinical Oncology,1.8554,0.0224,0.0241,0.7
+2022,Journal of Clinical Virology,7.0278,3.875,4.209,0.7
+2022,Journal of Controlled Release,0.5405,0.0,0.0,0.7
+2022,Journal of Cystic Fibrosis,0.7143,0.0,0.0,0.7
+2022,Journal of Ethnopharmacology,0.2432,0.0,0.0,0.7
+2022,Journal of Experimental & Clinical Cancer Research,0.2778,0.0,0.0,0.7
+2022,Journal of Functional Foods,0.2609,0.0,0.0,0.7
+2022,Journal of Fungi,2.5,0.85,1.0658,0.7
+2022,Journal of Gastroenterology and Hepatology,0.85,0.0,0.021,0.7
+2022,Journal of General Internal Medicine,2.2941,0.3529,0.4098,0.7
+2022,Journal of Hazardous Materials,1.0,0.1,0.1117,0.7
+2022,Journal of Hematology & Oncology,1.814,0.5581,0.5605,0.7
+2022,Journal of Hepatology,1.5521,0.1779,0.1957,0.7
+2022,Journal of Hospital Infection,2.3667,0.1,0.215,0.7
+2022,Journal of Infection,11.0189,6.3774,6.8934,0.7
+2022,Journal of Investigative Dermatology,0.6,0.0,0.0,0.7
+2022,Journal of Korean Medical Science,7.5714,4.8571,5.0818,0.7
+2022,Journal of Magnetic Resonance Imaging,0.6667,0.0952,0.0799,0.7
+2022,Journal of Medical Internet Research,1.3655,0.0621,0.0735,0.7
+2022,Journal of Medical Virology,9.1279,5.8547,6.1449,0.7
+2022,Journal of Medicinal Chemistry,0.5536,0.1071,0.1336,0.7
+2022,Journal of Molecular Structure,0.913,0.0,0.0,0.7
+2022,Journal of Nanobiotechnology,0.2857,0.0714,0.0619,0.7
+2022,Journal of NeuroInterventional Surgery,0.7727,0.0,0.0,0.7
+2022,Journal of Neuroinflammation,0.5479,0.0,0.0,0.7
+2022,Journal of Neurology,1.1389,0.1667,0.2173,0.7
+2022,Journal of Neurology Neurosurgery & Psychiatry,1.4634,0.2195,0.2646,0.7
+2022,Journal of Neuroscience,0.4857,0.0,0.0,0.7
+2022,Journal of Nuclear Medicine,1.5443,0.0,0.0071,0.7
+2022,Journal of Pain and Symptom Management,2.25,0.0,0.0269,0.7
+2022,Journal of Shoulder and Elbow Surgery,0.75,0.0,0.0,0.7
+2022,Journal of Thoracic Oncology,2.3261,1.2609,1.2729,0.7
+2022,Journal of Thoracic and Cardiovascular Surgery,0.5,0.0278,0.0407,0.7
+2022,Journal of Thrombosis and Haemostasis,18.35,15.55,15.7489,0.7
+2022,Journal of Translational Medicine,2.9123,1.5263,1.6286,0.7
+2022,Journal of Vascular Surgery,1.04,0.28,0.3,0.7
+2022,Journal of Virology,9.8966,8.7931,8.8665,0.7
+2022,Journal of the American Academy of Dermatology,2.037,0.0741,0.1853,0.7
+2022,Journal of the American Chemical Society,0.5106,0.1277,0.1396,0.7
+2022,Journal of the American College of Cardiology,2.1699,0.4286,0.49,0.7
+2022,Journal of the American Geriatrics Society,2.0789,0.5263,0.5389,0.7
+2022,Journal of the American Heart Association,0.9769,0.1,0.1347,0.7
+2022,Journal of the American Medical Directors Association,2.8571,0.2857,0.3558,0.7
+2022,Journal of the American Medical Informatics Association,4.1111,0.0833,0.1047,0.7
+2022,Journal of the American Society of Echocardiography,0.6957,0.0,0.0022,0.7
+2022,Journal of the American Society of Nephrology,2.8416,1.2376,1.3395,0.7
+2022,Journal of the European Academy of Dermatology and Venereology,2.7667,0.4,0.3949,0.7
+2022,Journal of the International AIDS Society,2.2963,0.0,0.0461,0.7
+2022,Journal of the National Comprehensive Cancer Network,1.6087,0.0,0.0276,0.7
+2022,Kidney International,5.9773,3.7045,3.8915,0.7
+2022,Kidney International Reports,2.3438,1.0,1.0271,0.7
+2022,Knee Surgery Sports Traumatology Arthroscopy,0.8235,0.0,0.0,0.7
+2022,LWT,0.5345,0.0,0.0,0.7
+2022,Lara D. Veeken,0.6,0.06,0.06,0.7
+2022,Leukemia,1.6712,0.5616,0.5957,0.7
+2022,Life Sciences,1.2381,0.3571,0.4262,0.7
+2022,Lipids in Health and Disease,1.1,0.0,0.0022,0.7
+2022,Liver Cancer,0.8182,0.0,0.0,0.7
+2022,Liver International,3.1818,0.5152,0.6819,0.7
+2022,Lung Cancer,0.6,0.0,0.0,0.7
+2022,MMWR Morbidity and Mortality Weekly Report,9.2991,4.5327,4.786,0.7
+2022,Magnetic Resonance in Medicine,0.9524,0.0,0.0,0.7
+2022,Malaria Journal,0.8108,0.0,0.0,0.7
+2022,Materials Science and Engineering C,1.093,0.0,0.0,0.7
+2022,Mayo Clinic Proceedings,3.8966,1.6207,1.8423,0.7
+2022,Med,5.5217,4.087,4.0551,0.7
+2022,Medical Hypotheses,3.1724,1.7586,1.802,0.7
+2022,Medical Image Analysis,1.4051,0.1519,0.1707,0.7
+2022,Medical Physics,2.16,0.2,0.2845,0.7
+2022,Medicine,1.0645,0.0645,0.1154,0.7
+2022,Metabolism,2.75,0.9688,1.0741,0.7
+2022,Modern Pathology,3.1667,2.3125,2.3005,0.7
+2022,Molecular Cancer Therapeutics,0.9048,0.0,0.0,0.7
+2022,Molecular Cell,4.2955,2.9318,2.9617,0.7
+2022,Molecular Metabolism,0.2727,0.0,0.0,0.7
+2022,Molecular Neurodegeneration,0.6667,0.0,0.0238,0.7
+2022,Molecular Psychiatry,1.6765,0.2353,0.3088,0.7
+2022,Molecular Therapy,0.8519,0.1481,0.1445,0.7
+2022,Molecules,0.4268,0.0,0.0098,0.7
+2022,Movement Disorders,1.1481,0.0185,0.0227,0.7
+2022,Multiple Sclerosis Journal,1.2727,0.0909,0.168,0.7
+2022,Multiple Sclerosis and Related Disorders,2.0,0.2857,0.5284,0.7
+2022,Nano Letters,1.5,0.2273,0.2244,0.7
+2022,Nature,21.8532,19.1722,19.291,0.7
+2022,Nature Biomedical Engineering,0.8868,0.2075,0.2225,0.7
+2022,Nature Biotechnology,7.0,4.8605,4.9593,0.7
+2022,Nature Cancer,2.4194,0.2419,0.2603,0.7
+2022,Nature Cell Biology,2.4595,0.1081,0.1402,0.7
+2022,Nature Chemical Biology,2.0,0.2308,0.2682,0.7
+2022,Nature Communications,2.5954,1.5463,1.5734,0.7
+2022,Nature Genetics,2.6061,0.8485,0.9236,0.7
+2022,Nature Immunology,7.037,5.8333,5.8691,0.7
+2022,Nature Machine Intelligence,4.65,1.95,2.2255,0.7
+2022,Nature Medicine,13.4239,10.0412,10.1468,0.7
+2022,Nature Metabolism,1.2321,0.2857,0.3051,0.7
+2022,Nature Microbiology,18.04,16.7,16.7956,0.7
+2022,Nature Neuroscience,1.0,0.1333,0.1555,0.7
+2022,Nature Protocols,1.05,0.35,0.356,0.7
+2022,Nature Structural & Molecular Biology,9.4333,7.8333,7.9321,0.7
+2022,Nephrology Dialysis Transplantation,2.7667,0.4333,0.5605,0.7
+2022,Neural Computing and Applications,1.0909,0.1818,0.2476,0.7
+2022,Neuro-Oncology,0.6375,0.0,0.0,0.7
+2022,NeuroImage,0.9859,0.0,0.0,0.7
+2022,NeuroImage Clinical,0.65,0.0,0.0,0.7
+2022,Neurobiology of Disease,1.1,0.35,0.3623,0.7
+2022,Neurology,1.9636,0.4727,0.5216,0.7
+2022,Neurology Neuroimmunology & Neuroinflammation,1.6604,0.6038,0.6293,0.7
+2022,Neuron,1.3111,0.0,0.0,0.7
+2022,New England Journal of Medicine,26.1419,20.947,21.1222,0.7
+2022,Nucleic Acids Research,1.0513,0.0256,0.0358,0.7
+2022,Nutrients,0.974,0.0649,0.1165,0.7
+2022,Obesity,7.1667,3.7333,3.9574,0.7
+2022,Obstetrics and Gynecology,1.6,0.3067,0.3262,0.7
+2022,OncoImmunology,0.3913,0.0,0.0,0.7
+2022,Oncogene,0.2759,0.0,0.0,0.7
+2022,Open Forum Infectious Diseases,2.1842,0.6842,0.8413,0.7
+2022,Ophthalmology,0.8506,0.0,0.005,0.7
+2022,Oxidative Medicine and Cellular Longevity,0.5909,0.0,0.0,0.7
+2022,PEDIATRICS,2.9444,1.8889,1.9394,0.7
+2022,PLoS Biology,3.3488,1.6279,1.6774,0.7
+2022,PLoS Medicine,1.3333,0.1714,0.1991,0.7
+2022,PLoS ONE,1.2248,0.3663,0.3996,0.7
+2022,PLoS Pathogens,3.2442,2.1512,2.1798,0.7
+2022,PLoS neglected tropical diseases,0.7561,0.1707,0.1743,0.7
+2022,Pain,0.75,0.0,0.0025,0.7
+2022,Pathogens,1.9048,1.4286,1.3672,0.7
+2022,Pattern Recognition,2.15,0.5,0.6135,0.7
+2022,Pharmaceutics,0.75,0.0,0.0,0.7
+2022,Pharmacological Research,1.2174,0.1739,0.2418,0.7
+2022,Physics of Fluids,7.3158,2.7895,3.2432,0.7
+2022,Phytomedicine,0.5,0.0,0.0102,0.7
+2022,Plastic & Reconstructive Surgery,0.2,0.0,0.0,0.7
+2022,Preventive Medicine,0.8095,0.0,0.0,0.7
+2022,Proceedings of the National Academy of Sciences,3.8175,2.6323,2.671,0.7
+2022,PubMed,3.5761,1.3086,1.4881,0.7
+2022,Radiology,15.4327,12.8246,12.9566,0.7
+2022,Radiology Cardiothoracic Imaging,14.125,11.1667,11.4428,0.7
+2022,Radiotherapy and Oncology,0.9762,0.0,0.0,0.7
+2022,Redox Biology,0.7875,0.0,0.0,0.7
+2022,Regional Anesthesia & Pain Medicine,0.6087,0.0,0.0,0.7
+2022,Reproductive Health,0.3077,0.0,0.0,0.7
+2022,Respiratory Medicine,2.0476,0.2857,0.4425,0.7
+2022,Respiratory Research,2.3111,1.0222,1.1067,0.7
+2022,Resuscitation,3.3514,0.6486,1.007,0.7
+2022,Science,24.811,22.4252,22.5722,0.7
+2022,Science Advances,1.7455,0.5893,0.6169,0.7
+2022,Science Immunology,10.4493,9.3188,9.3609,0.7
+2022,Science Translational Medicine,2.5657,1.4545,1.4517,0.7
+2022,Scientific Data,2.1154,0.0769,0.0956,0.7
+2022,Scientific Reports,1.168,0.4577,0.4812,0.7
+2022,Sensors,1.1351,0.2162,0.2148,0.7
+2022,Signal Transduction and Targeted Therapy,1.566,0.9057,0.942,0.7
+2022,Stem Cell Reports,0.6,0.05,0.05,0.7
+2022,Stem Cell Research & Therapy,0.5733,0.0533,0.047,0.7
+2022,Stroke,1.5493,0.2183,0.2725,0.7
+2022,Surgery,0.5,0.05,0.0547,0.7
+2022,Surgical Endoscopy,0.4074,0.0,0.0,0.7
+2022,Sustainable Cities and Society,3.95,1.55,1.8532,0.7
+2022,Telemedicine Journal and e-Health,2.3548,0.0,0.0,0.7
+2022,The American Journal of Emergency Medicine,2.1613,0.3226,0.4936,0.7
+2022,The American Journal of Gastroenterology,2.3818,1.0727,1.1263,0.7
+2022,The American Journal of Human Genetics,0.8696,0.0,0.0195,0.7
+2022,The American Journal of Sports Medicine,0.4237,0.0,0.0,0.7
+2022,The American Journal of Surgical Pathology,1.0435,0.1739,0.1739,0.7
+2022,The Annals of Thoracic Surgery,0.6667,0.0,0.0,0.7
+2022,The Bone & Joint Journal,0.4848,0.0,0.0,0.7
+2022,The EMBO Journal,5.4222,3.8889,3.929,0.7
+2022,The FASEB Journal,1.0312,0.125,0.1166,0.7
+2022,The Journal of Allergy and Clinical Immunology In Practice,1.5672,0.2388,0.2667,0.7
+2022,The Journal of Arthroplasty,0.6087,0.0435,0.0415,0.7
+2022,The Journal of Clinical Endocrinology & Metabolism,1.6593,0.2857,0.3886,0.7
+2022,The Journal of Experimental Medicine,4.3944,3.5352,3.5513,0.7
+2022,The Journal of Headache and Pain,1.8788,0.0606,0.059,0.7
+2022,The Journal of Heart and Lung Transplantation,1.2273,0.0455,0.1489,0.7
+2022,The Journal of Infectious Diseases,4.7193,3.1404,3.217,0.7
+2022,The Journal of Pediatrics,2.9444,1.6389,1.6991,0.7
+2022,The Journal of Urology,0.4722,0.0,0.0,0.7
+2022,The Journals of Gerontology Series A,2.4412,0.7353,0.8789,0.7
+2022,The Lancet,31.3636,27.1234,27.2707,0.7
+2022,The Lancet Child & Adolescent Health,4.4,1.22,1.3521,0.7
+2022,The Lancet Diabetes & Endocrinology,1.8361,0.2131,0.3052,0.7
+2022,The Lancet Digital Health,1.6774,0.0806,0.1168,0.7
+2022,The Lancet Global Health,2.7733,0.2933,0.3869,0.7
+2022,The Lancet HIV,2.075,0.375,0.5006,0.7
+2022,The Lancet Haematology,4.9592,2.8163,2.8703,0.7
+2022,The Lancet Infectious Diseases,10.4571,7.7643,7.9137,0.7
+2022,The Lancet Microbe,8.3235,6.5,6.557,0.7
+2022,The Lancet Neurology,4.1719,1.8594,1.8852,0.7
+2022,The Lancet Oncology,3.8134,1.1435,1.1642,0.7
+2022,The Lancet Psychiatry,5.5714,3.4286,3.42,0.7
+2022,The Lancet Public Health,3.9302,0.907,1.0355,0.7
+2022,The Lancet Regional Health - Europe,1.2826,0.2174,0.2552,0.7
+2022,The Lancet Respiratory Medicine,12.755,9.8344,10.0187,0.7
+2022,The Lancet Rheumatology,4.9825,2.6842,2.8516,0.7
+2022,The Ocular Surface,1.25,0.2,0.2054,0.7
+2022,The Oncologist,0.5517,0.0,0.0,0.7
+2022,The Science of The Total Environment,7.7557,5.9618,6.056,0.7
+2022,The Spine Journal,0.2857,0.0,0.0,0.7
+2022,The journal of nutrition health & aging,2.5,0.6,0.6909,0.7
+2022,Theranostics,0.9048,0.1508,0.1454,0.7
+2022,Thorax,3.2667,0.8889,0.9339,0.7
+2022,Thyroid,1.2059,0.0,0.0827,0.7
+2022,Translational Psychiatry,0.6897,0.0,0.0269,0.7
+2022,Translational Vision Science & Technology,1.2,0.0,0.0,0.7
+2022,Transplantation,1.5926,0.2963,0.336,0.7
+2022,Trends in Food Science & Technology,0.5192,0.0,0.0,0.7
+2022,UNC Libraries,0.6522,0.0,0.0,0.7
+2022,Ultrasound in Obstetrics and Gynecology,1.9062,0.0938,0.2035,0.7
+2022,Unknown,2.0678,0.3898,0.4674,0.7
+2022,Vaccine,2.2075,0.8113,0.8999,0.7
+2022,Vaccines,1.7632,0.6316,0.6451,0.7
+2022,Viruses,6.3378,4.5541,4.7024,0.7
+2022,Water Research,9.963,9.3704,9.3152,0.7
+2022,World Neurosurgery,0.6667,0.0,0.0025,0.7
+2022,eLife,2.55,1.2111,1.257,0.7
+2022,iScience,2.24,0.9,1.0711,0.7
+2022,mBio,4.7612,2.9104,2.9546,0.7
+2022,mSphere,2.2174,0.913,0.9447,0.7
+2022,mSystems,5.85,5.0,5.0599,0.7
+2022,npj Digital Medicine,1.4386,0.0702,0.0956,0.7
+2022,The Lancet. Gastroenterology & hepatology,8.1607,5.1964,5.2398,0.7
