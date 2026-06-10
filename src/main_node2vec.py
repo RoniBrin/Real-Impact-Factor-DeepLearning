@@ -110,8 +110,15 @@ def run_perturbation_node2vec(edge_index, embeddings, target_year):
     with open(scores_path, "w") as f:
         json.dump(list(stability_scores.values()), f)
 
-    print(f"  Threshold: {THRESHOLD}")
-    return stability_scores, THRESHOLD
+    if stability_scores:
+        scores_list       = sorted(stability_scores.values())
+        idx               = int(len(scores_list) * 0.8)
+        dynamic_threshold = scores_list[min(idx, len(scores_list) - 1)]
+        print(f"  Dynamic threshold (80th pct): {dynamic_threshold:.4f}")
+    else:
+        dynamic_threshold = THRESHOLD
+
+    return stability_scores, dynamic_threshold
 
 
 def save_results(results):
