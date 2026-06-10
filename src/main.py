@@ -16,22 +16,15 @@ from stability import compute_stability_scores, summarize_stability
 from rif import compute_filtered_rif, compute_weighted_rif, print_rif_comparison
 
 # Configuration
-YEAR_START   = 2019
-YEAR_END     = 2019
-"""
 YEAR_START   = 2018
 YEAR_END     = 2022
-"""
 N_ITERATIONS = 100
 FRACTION     = 0.3
 THRESHOLD    = 0.7
 GRAPH_DIR    = "/content/drive/MyDrive/RIF/graphs"
-RESULTS_CSV  = "/content/drive/MyDrive/RIF/rif_results_2019_fix.csv"
-RESULTS_XLSX = "/content/drive/MyDrive/RIF/rif_results_2019_fix.xlsx"
-"""
 RESULTS_CSV  = "/content/drive/MyDrive/RIF/rif_results_v2.csv"
 RESULTS_XLSX = "/content/drive/MyDrive/RIF/rif_results_v2.xlsx"
-"""
+
 
 def build_pyg_data(G):
     """
