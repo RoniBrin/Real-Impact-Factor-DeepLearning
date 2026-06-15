@@ -7,3 +7,5 @@ results/*
 !results/rif_results.xlsx
 !results/figures/
 !results/figures/*
+!results/figures_graphsage/
+!results/figures_graphsage/*
