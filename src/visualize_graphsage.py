@@ -148,10 +148,18 @@ def plot_citation_stability_heatmap(df):
         annot_kws={"weight": "bold"},
         cbar_kws={"label": "RIF Reduction (%)"}
     )
-    ax.tick_params(axis="x", labelsize=9)
+    ax.tick_params(axis="both", labelsize=9)
+    plt.setp(ax.get_xticklabels(), fontweight="normal")
+    plt.setp(ax.get_yticklabels(), fontweight="normal")
+
+    cbar = ax.collections[0].colorbar
+    cbar.ax.tick_params(labelsize=9)
+    plt.setp(cbar.ax.get_yticklabels(), fontweight="normal")
+    cbar.set_label("RIF Reduction (%)", fontsize=11, fontweight="normal")
+
     ax.set_title("Citation Instability Heatmap - Top 15 Journals by IF", fontsize=TITLE_SIZE)
-    ax.set_xlabel("Year", fontsize=LABEL_SIZE)
-    ax.set_ylabel("Journal", fontsize=LABEL_SIZE)
+    ax.set_xlabel("Year", fontsize=11, fontweight="normal")
+    ax.set_ylabel("Journal", fontsize=11, fontweight="normal")
     plt.tight_layout()
 
     path = os.path.join(OUTPUT_DIR, "3_citation_stability_heatmap.png")
@@ -228,7 +236,7 @@ def plot_rank_change(df, year=2020, top_n=20):
     ax.set_yticks([])
     ax.set_title(f"Journal Rank Change: IF to RIF ({year})", fontsize=TITLE_SIZE)
     ax.grid(axis="y", linestyle="--", alpha=0.3)
-    fig.subplots_adjust(left=0.26, right=0.74, top=0.93, bottom=0.06)
+    fig.subplots_adjust(left=0.18, right=0.82, top=0.93, bottom=0.06)
 
     path = os.path.join(OUTPUT_DIR, f"5_rank_change_{year}.png")
     plt.savefig(path, dpi=150, bbox_inches="tight")
