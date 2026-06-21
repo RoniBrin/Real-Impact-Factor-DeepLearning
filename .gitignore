@@ -11,3 +11,6 @@ results/*
 !results/figures_graphsage/*
 !results/rif_results_2010_2022.csv
 !results/rif_results_2010_2022.xlsx
+data/
+!tests/data/
+!tests/data/*
