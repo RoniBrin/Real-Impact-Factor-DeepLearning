@@ -13,4 +13,5 @@ results/*
 !results/rif_results_2010_2022.xlsx
 data/
 !tests/data/
-!tests/data/*
+!tests/data/*!results/figures_models/
+!results/figures_models/*
