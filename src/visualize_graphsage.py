@@ -166,7 +166,6 @@ def plot_citation_stability_heatmap(df):
     plt.savefig(path, dpi=150, bbox_inches="tight")
     plt.show()
     print(f"Saved -> {path}")
-
 # ─────────────────────────────────────────────
 # Group 3: Proving RIF is better than IF
 # ─────────────────────────────────────────────
@@ -236,7 +235,7 @@ def plot_rank_change(df, year=2020, top_n=20):
     ax.set_yticks([])
     ax.set_title(f"Journal Rank Change: IF to RIF ({year})", fontsize=TITLE_SIZE)
     ax.grid(axis="y", linestyle="--", alpha=0.3)
-    fig.subplots_adjust(left=0.18, right=0.82, top=0.93, bottom=0.06)
+    fig.subplots_adjust(left=0.16, right=0.84, top=0.93, bottom=0.06)
 
     path = os.path.join(OUTPUT_DIR, f"5_rank_change_{year}.png")
     plt.savefig(path, dpi=150, bbox_inches="tight")
