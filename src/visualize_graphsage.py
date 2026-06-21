@@ -145,7 +145,7 @@ def plot_citation_stability_heatmap(df):
     sns.heatmap(
         pivot, annot=True, fmt=".1f",
         cmap="YlOrRd", linewidths=0.5, ax=ax,
-        annot_kws={"size": TICK_SIZE, "weight": "bold"},
+        annot_kws={"weight": "bold"},
         cbar_kws={"label": "RIF Reduction (%)"}
     )
     ax.set_title("Citation Instability Heatmap - Top 15 Journals by IF", fontsize=TITLE_SIZE)
@@ -210,7 +210,7 @@ def plot_rank_change(df, year=2020, top_n=20):
     df_year["rank_if"]  = df_year["baseline_if"].rank(ascending=False).astype(int)
     df_year["rank_rif"] = df_year["weighted_rif"].rank(ascending=False).astype(int)
 
-    fig, ax = plt.subplots(figsize=(8, 10))
+    fig, ax = plt.subplots(figsize=(13, 10))
 
     for _, row in df_year.iterrows():
         color = "#DD8452" if row["rank_rif"] > row["rank_if"] else "#55A868"
@@ -225,13 +225,14 @@ def plot_rank_change(df, year=2020, top_n=20):
     ax.set_ylim(top_n + 1, 0)
     ax.set_xticks([0, 1])
     ax.set_xticklabels(["Rank by IF", "Rank by RIF"], fontsize=LABEL_SIZE)
+    ax.set_yticks([])
     ax.set_ylabel("Rank", fontsize=LABEL_SIZE)
     ax.set_title(f"Journal Rank Change: IF to RIF ({year})", fontsize=TITLE_SIZE)
     ax.grid(axis="y", linestyle="--", alpha=0.3)
-    plt.tight_layout()
+    fig.subplots_adjust(left=0.26, right=0.74, top=0.93, bottom=0.06)
 
     path = os.path.join(OUTPUT_DIR, f"5_rank_change_{year}.png")
-    plt.savefig(path, dpi=150)
+    plt.savefig(path, dpi=150, bbox_inches="tight")
     plt.show()
     print(f"Saved -> {path}")
 
