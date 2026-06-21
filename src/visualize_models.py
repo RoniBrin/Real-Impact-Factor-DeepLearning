@@ -9,6 +9,24 @@ import matplotlib.pyplot as plt
 import numpy as np
 import os
 
+# ─────────────────────────────────────────────
+# Global font styling - bold everywhere, titles
+# bigger than axis labels, bigger than before
+# ─────────────────────────────────────────────
+plt.rcParams["font.weight"]      = "bold"
+plt.rcParams["axes.titleweight"] = "bold"
+plt.rcParams["axes.labelweight"] = "bold"
+plt.rcParams["xtick.labelsize"]  = 13
+plt.rcParams["ytick.labelsize"]  = 13
+plt.rcParams["legend.fontsize"]  = 13
+
+TITLE_SIZE      = 20
+SUPTITLE_SIZE   = 22
+SUBPLOT_TITLE   = 18
+LABEL_SIZE      = 16
+TICK_SIZE       = 13
+LEGEND_SIZE     = 13
+
 RESULTS_GRAPHSAGE = "/content/drive/MyDrive/RIF/rif_results_v2.csv"
 RESULTS_VGAE      = "/content/drive/MyDrive/RIF/rif_results_vgae.csv"
 RESULTS_NODE2VEC  = "/content/drive/MyDrive/RIF/rif_results_node2vec.csv"
@@ -48,11 +66,11 @@ def plot_avg_stability_by_model(df):
         ax.bar(x + i * width, vals, width, label=model, color=color, alpha=0.85)
 
     ax.set_xticks(x + width)
-    ax.set_xticklabels(years)
-    ax.set_xlabel("Year", fontsize=12)
-    ax.set_ylabel("Average Weighted RIF", fontsize=12)
-    ax.set_title("Average Weighted RIF per Model and Year", fontsize=13)
-    ax.legend(fontsize=10)
+    ax.set_xticklabels(years, fontsize=TICK_SIZE)
+    ax.set_xlabel("Year", fontsize=LABEL_SIZE)
+    ax.set_ylabel("Average Weighted RIF", fontsize=LABEL_SIZE)
+    ax.set_title("Average Weighted RIF per Model and Year", fontsize=TITLE_SIZE)
+    ax.legend(fontsize=LEGEND_SIZE)
     ax.grid(axis="y", linestyle="--", alpha=0.4)
     plt.tight_layout()
 
@@ -90,13 +108,13 @@ def plot_rif_correlation(df_gs, df_vg, df_n2v, year=2020):
         ax.plot([0, max_val], [0, max_val], color="red",
                 linestyle="--", linewidth=1.2, label="Perfect agreement")
         corr = df_merged[[xcol, ycol]].corr().iloc[0, 1]
-        ax.set_xlabel(xlabel, fontsize=11)
-        ax.set_ylabel(ylabel, fontsize=11)
-        ax.set_title(f"{xlabel} vs {ylabel}\n(r = {corr:.3f})", fontsize=11)
-        ax.legend(fontsize=9)
+        ax.set_xlabel(xlabel, fontsize=LABEL_SIZE)
+        ax.set_ylabel(ylabel, fontsize=LABEL_SIZE)
+        ax.set_title(f"{xlabel} vs {ylabel}\n(r = {corr:.3f})", fontsize=SUBPLOT_TITLE)
+        ax.legend(fontsize=LEGEND_SIZE)
         ax.grid(linestyle="--", alpha=0.3)
 
-    fig.suptitle(f"How Well Do the Models Agree? RIF Correlation ({year})", fontsize=13)
+    fig.suptitle(f"How Well Do the Models Agree? RIF Correlation ({year})", fontsize=SUPTITLE_SIZE)
     plt.tight_layout()
 
     path = os.path.join(OUTPUT_DIR, f"9_rif_correlation_{year}.png")
@@ -131,11 +149,11 @@ def plot_rif_reduction_by_model(df):
         ax.bar(x + i * width, vals, width, label=model, color=color, alpha=0.85)
 
     ax.set_xticks(x + width)
-    ax.set_xticklabels(years)
-    ax.set_xlabel("Year", fontsize=12)
-    ax.set_ylabel("Average IF Reduction (%)", fontsize=12)
-    ax.set_title("How Much Does Each Model Reduce IF? (2018-2022)", fontsize=13)
-    ax.legend(fontsize=10)
+    ax.set_xticklabels(years, fontsize=TICK_SIZE)
+    ax.set_xlabel("Year", fontsize=LABEL_SIZE)
+    ax.set_ylabel("Average IF Reduction (%)", fontsize=LABEL_SIZE)
+    ax.set_title("How Much Does Each Model Reduce IF? (2018-2022)", fontsize=TITLE_SIZE)
+    ax.legend(fontsize=LEGEND_SIZE)
     ax.grid(axis="y", linestyle="--", alpha=0.4)
     plt.tight_layout()
 
@@ -168,13 +186,13 @@ def plot_if_vs_rif_per_model(df_gs, df_vg, df_n2v, year=2020):
         ax.plot([0, max_val], [0, max_val], color="red",
                 linestyle="--", linewidth=1.2, label="IF = RIF")
 
-        ax.set_xlabel("Baseline IF", fontsize=11)
-        ax.set_ylabel("Weighted RIF", fontsize=11)
-        ax.set_title(f"{model} ({year})", fontsize=12)
-        ax.legend(fontsize=9)
+        ax.set_xlabel("Baseline IF", fontsize=LABEL_SIZE)
+        ax.set_ylabel("Weighted RIF", fontsize=LABEL_SIZE)
+        ax.set_title(f"{model} ({year})", fontsize=SUBPLOT_TITLE)
+        ax.legend(fontsize=LEGEND_SIZE)
         ax.grid(linestyle="--", alpha=0.3)
 
-    fig.suptitle(f"IF vs Weighted RIF - Comparing All Three Models ({year})", fontsize=14)
+    fig.suptitle(f"IF vs Weighted RIF - Comparing All Three Models ({year})", fontsize=SUPTITLE_SIZE)
     plt.tight_layout()
 
     path = os.path.join(OUTPUT_DIR, f"11_if_vs_rif_all_models_{year}.png")

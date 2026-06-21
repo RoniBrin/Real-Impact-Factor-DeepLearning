@@ -12,6 +12,23 @@ import seaborn as sns
 import numpy as np
 import os
 
+# ─────────────────────────────────────────────
+# Global font styling - bold everywhere, titles
+# bigger than axis labels, bigger than before
+# ─────────────────────────────────────────────
+plt.rcParams["font.weight"]      = "bold"
+plt.rcParams["axes.titleweight"] = "bold"
+plt.rcParams["axes.labelweight"] = "bold"
+plt.rcParams["xtick.labelsize"]  = 13
+plt.rcParams["ytick.labelsize"]  = 13
+plt.rcParams["legend.fontsize"]  = 13
+
+TITLE_SIZE  = 20
+LABEL_SIZE  = 16
+TICK_SIZE   = 13
+LEGEND_SIZE = 13
+ANNOT_SIZE  = 10
+
 RESULTS_CSV  = "/content/drive/MyDrive/RIF/rif_results_2010_2022.csv"
 GRAPHS_DIR   = "/content/drive/MyDrive/RIF/graphs"
 OUTPUT_DIR   = os.path.join(os.path.dirname(__file__), "../results/figures_graphsage")
@@ -49,10 +66,10 @@ def plot_stability_histogram(year=2018):
     fig, ax = plt.subplots(figsize=(9, 5))
     ax.hist(scores, bins=30, color="#4C72B0", edgecolor="white", linewidth=0.5)
     ax.axvline(x=0.7, color="red", linestyle="--", linewidth=1.5, label="Threshold = 0.7")
-    ax.set_title(f"Stability Score Distribution - GraphSAGE ({year})", fontsize=14)
-    ax.set_xlabel("Stability Score", fontsize=12)
-    ax.set_ylabel("Number of Citation Edges", fontsize=12)
-    ax.legend(fontsize=11)
+    ax.set_title(f"Stability Score Distribution - GraphSAGE ({year})", fontsize=TITLE_SIZE)
+    ax.set_xlabel("Stability Score", fontsize=LABEL_SIZE)
+    ax.set_ylabel("Number of Citation Edges", fontsize=LABEL_SIZE)
+    ax.legend(fontsize=LEGEND_SIZE)
     plt.tight_layout()
     path = os.path.join(OUTPUT_DIR, f"1_stability_histogram_{year}.png")
     plt.savefig(path, dpi=150)
@@ -85,10 +102,10 @@ def plot_stability_by_journal(df, top_journals, year=2020):
     ax.bar(x + width/2, weighted, width, label="Weighted RIF", color="#55A868", alpha=0.85)
 
     ax.set_xticks(x)
-    ax.set_xticklabels(journals_ordered, rotation=30, ha="right", fontsize=9)
-    ax.set_ylabel("Score", fontsize=11)
-    ax.set_title(f"Baseline IF vs Weighted RIF by Journal ({year})", fontsize=13)
-    ax.legend(fontsize=10)
+    ax.set_xticklabels(journals_ordered, rotation=30, ha="right", fontsize=TICK_SIZE)
+    ax.set_ylabel("Score", fontsize=LABEL_SIZE)
+    ax.set_title(f"Baseline IF vs Weighted RIF by Journal ({year})", fontsize=TITLE_SIZE)
+    ax.legend(fontsize=LEGEND_SIZE)
     ax.grid(axis="y", linestyle="--", alpha=0.4)
     plt.tight_layout()
 
@@ -128,11 +145,12 @@ def plot_citation_stability_heatmap(df):
     sns.heatmap(
         pivot, annot=True, fmt=".1f",
         cmap="YlOrRd", linewidths=0.5, ax=ax,
+        annot_kws={"size": TICK_SIZE, "weight": "bold"},
         cbar_kws={"label": "RIF Reduction (%)"}
     )
-    ax.set_title("Citation Instability Heatmap - Top 15 Journals by IF", fontsize=13)
-    ax.set_xlabel("Year", fontsize=11)
-    ax.set_ylabel("Journal", fontsize=11)
+    ax.set_title("Citation Instability Heatmap - Top 15 Journals by IF", fontsize=TITLE_SIZE)
+    ax.set_xlabel("Year", fontsize=LABEL_SIZE)
+    ax.set_ylabel("Journal", fontsize=LABEL_SIZE)
     plt.tight_layout()
 
     path = os.path.join(OUTPUT_DIR, "3_citation_stability_heatmap.png")
@@ -166,14 +184,14 @@ def plot_if_vs_rif_scatter(df, top_journals, year=2020):
         ax.annotate(
             row["journal"].split()[0],
             (row["baseline_if"], row["weighted_rif"]),
-            fontsize=7, alpha=0.8,
+            fontsize=ANNOT_SIZE, alpha=0.8,
             xytext=(4, 4), textcoords="offset points"
         )
 
-    ax.set_xlabel("Baseline IF", fontsize=12)
-    ax.set_ylabel("Weighted RIF", fontsize=12)
-    ax.set_title(f"Baseline IF vs Weighted RIF - GraphSAGE ({year})", fontsize=13)
-    ax.legend(fontsize=10)
+    ax.set_xlabel("Baseline IF", fontsize=LABEL_SIZE)
+    ax.set_ylabel("Weighted RIF", fontsize=LABEL_SIZE)
+    ax.set_title(f"Baseline IF vs Weighted RIF - GraphSAGE ({year})", fontsize=TITLE_SIZE)
+    ax.legend(fontsize=LEGEND_SIZE)
     ax.grid(linestyle="--", alpha=0.3)
     plt.tight_layout()
 
@@ -199,16 +217,16 @@ def plot_rank_change(df, year=2020, top_n=20):
         ax.plot([0, 1], [row["rank_if"], row["rank_rif"]],
                 color=color, alpha=0.7, linewidth=1.5)
         ax.text(-0.05, row["rank_if"], row["journal"][:25],
-                ha="right", va="center", fontsize=7)
+                ha="right", va="center", fontsize=ANNOT_SIZE)
         ax.text(1.05, row["rank_rif"], row["journal"][:25],
-                ha="left", va="center", fontsize=7)
+                ha="left", va="center", fontsize=ANNOT_SIZE)
 
     ax.set_xlim(-0.5, 1.5)
     ax.set_ylim(top_n + 1, 0)
     ax.set_xticks([0, 1])
-    ax.set_xticklabels(["Rank by IF", "Rank by RIF"], fontsize=11)
-    ax.set_ylabel("Rank", fontsize=11)
-    ax.set_title(f"Journal Rank Change: IF to RIF ({year})", fontsize=13)
+    ax.set_xticklabels(["Rank by IF", "Rank by RIF"], fontsize=LABEL_SIZE)
+    ax.set_ylabel("Rank", fontsize=LABEL_SIZE)
+    ax.set_title(f"Journal Rank Change: IF to RIF ({year})", fontsize=TITLE_SIZE)
     ax.grid(axis="y", linestyle="--", alpha=0.3)
     plt.tight_layout()
 
@@ -229,10 +247,10 @@ def plot_if_rif_difference_histogram(df):
     ax.axvline(x=0, color="red", linestyle="--", linewidth=1.5, label="No difference")
     ax.axvline(x=df["diff"].mean(), color="orange", linestyle="--",
                linewidth=1.5, label=f"Mean = {df['diff'].mean():.3f}")
-    ax.set_xlabel("Baseline IF - Weighted RIF", fontsize=12)
-    ax.set_ylabel("Number of Journals", fontsize=12)
-    ax.set_title("How Much Does IF Overestimate Impact? (IF minus RIF)", fontsize=13)
-    ax.legend(fontsize=10)
+    ax.set_xlabel("Baseline IF - Weighted RIF", fontsize=LABEL_SIZE)
+    ax.set_ylabel("Number of Journals", fontsize=LABEL_SIZE)
+    ax.set_title("How Much Does IF Overestimate Impact? (IF minus RIF)", fontsize=TITLE_SIZE)
+    ax.legend(fontsize=LEGEND_SIZE)
     plt.tight_layout()
 
     path = os.path.join(OUTPUT_DIR, "6_if_rif_difference_histogram.png")
@@ -262,10 +280,10 @@ def plot_threshold_sensitivity(df):
             simulated.append(avg_rif)
         ax.plot(years, simulated, marker="o", linewidth=2, label=f"threshold = {t}")
 
-    ax.set_xlabel("Year", fontsize=12)
-    ax.set_ylabel("Average Weighted RIF", fontsize=12)
-    ax.set_title("Sensitivity to Stability Threshold", fontsize=13)
-    ax.legend(fontsize=10)
+    ax.set_xlabel("Year", fontsize=LABEL_SIZE)
+    ax.set_ylabel("Average Weighted RIF", fontsize=LABEL_SIZE)
+    ax.set_title("Sensitivity to Stability Threshold", fontsize=TITLE_SIZE)
+    ax.legend(fontsize=LEGEND_SIZE)
     ax.xaxis.set_major_locator(ticker.MaxNLocator(integer=True))
     ax.grid(linestyle="--", alpha=0.4)
     plt.tight_layout()
