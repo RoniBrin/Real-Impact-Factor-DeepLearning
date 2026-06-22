@@ -33,33 +33,3 @@ def summarize_stability(stability_scores):
     print(f"  Low    (< 0.25) : {low}  ({100*low/total:.1f}%)")
     print(f"  Medium (0.25-0.75): {medium} ({100*medium/total:.1f}%)")
     print(f"  High   (>= 0.75): {high}  ({100*high/total:.1f}%)")
-
-
-if __name__ == "__main__":
-    import torch
-    from data_loader import load_pubmed
-    from model import build_model
-    from perturbation import perturb_edges, compute_reconstruction_scores, track_reconstruction
-
-    data, G = load_pubmed()
-    model = build_model(num_features=data.num_node_features)
-
-    reconstruction_counts = {}
-    removal_counts = {}
-
-    # Run 5 perturbation iterations
-    print("\nRunning 5 perturbation iterations...")
-    model.eval()
-    for i in range(5):
-        with torch.no_grad():
-            perturbed_edge_index, removed_edges = perturb_edges(data.edge_index, fraction=0.3)
-            z = model(data.x, perturbed_edge_index)
-            scores = compute_reconstruction_scores(z, removed_edges)
-        reconstruction_counts, removal_counts = track_reconstruction(
-            reconstruction_counts, removal_counts, removed_edges, scores
-        )
-        print(f"  Iteration {i+1} done")
-
-    # Compute and summarize stability scores
-    stability_scores = compute_stability_scores(reconstruction_counts, removal_counts)
-    summarize_stability(stability_scores)
